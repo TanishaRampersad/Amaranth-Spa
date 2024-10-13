@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Whyte-light';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+    font-family: 'Whyte-regular'; /* Name you want to use for the font */
+    src: url('./fonts/Whyte-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+    font-family: 'Whyte-extralight'; 
+    src: url('./fonts/Whyte-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+    font-family: 'Whyte-extraLightItalic'; 
+    src: url('./fonts/Whyte-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-link {
-  color: #61dafb;
+
+@font-face {
+    font-family: 'Whyte-italic'; 
+    src: url('./fonts/Whyte-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+    font-family: 'Whyte-light';
+    src: url('./fonts/Whyte-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('./fonts/Whyte-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Bold'; 
+    src:  url('./fonts/WhyteInktrap-Bold\ \(1\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Regular'; /* Name you want to use for the font */
+    src:  url('./fonts/WhyteInktrap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+      
+
+nav{
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.319);
+    display: flex; 
+    align-items: center;
+}
+
+.menu{
+    width: 1.2%;
+    height: 1.2%;
+    margin-right: 1rem;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav li{
+    text-decoration: none;
+    padding-right: 1.3rem;
+    font-size: 0.9rem;
+}
+
+ul p{
+    padding-right: 2em;
+    padding-left: 1em;
+}
+
+
+ul h4{
+    font-size: 1.8rem;
+    padding-left: 8.5rem;
+    font-family: 'Whyte-Inktrap-Bold';
+}
+
+.booking{
+    padding: 0.7rem 0.9rem;
+    border-radius: 1em;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.381);
+}
+
+ 

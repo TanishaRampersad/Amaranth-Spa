@@ -61,11 +61,15 @@
     font-weight: normal;
     font-style: normal;
 }
-      
+
+
+
+
+/* ----------------------- Navbar --------------------------- */
 
 nav{
     height: 5rem;
-    background-color: rgba(255, 255, 255, 0.319);
+    background-color: rgba(185, 85, 85, 0.319);
     display: flex; 
     align-items: center;
 }
@@ -92,22 +96,37 @@ ul p{
     padding-left: 1em;
 }
 
-.booking{
-    padding: 0.7rem 0.9rem;
+
+ul h4{
+    font-size: 1.8rem;
+    padding-left: 8.5rem;
+    font-family: 'Whyte-Inktrap-Bold';
+}
+
+.booking button{
+    padding: 0.7rem 1rem;
     border-radius: 1em;
     border: none;
-    background-color: rgba(255, 255, 255, 0.381);
+    background-color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transition: background-color 0.2s ease;
 }
-li .link{
+
+ .booking{
+    padding-right: 2rem;
+}
+
+.booking button:active{
+    background-color: rgba(255, 255, 255, 0.463);
+}
+
+
+.link{
     text-decoration: none;
     color: inherit; /* Inherits the color from its parent */
 }
 
-h4 .link {
-    font-family: 'Whyte-Inktrap-Bold';
-    text-decoration: none;
-    color: inherit; /* Inherits the color from its parent */
-    font-size: 1.8rem;
-    padding-left: 8.5rem;
-}
  

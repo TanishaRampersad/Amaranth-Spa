@@ -33,13 +33,15 @@ function App() {
           <li>
             <Link className='link' href="/contact">Contact</Link>
           </li>
-          <h4>
-            <Link className='link' href="/">Amaranth</Link>
-          </h4>
+          <li>
+            <h4>Amaranth</h4>
+          </li>
         </ul>
 
-        <button className="booking">Book your stay</button>
-      
+        <div className='booking'>
+          <button className='shrink-button'>Book your stay</button>
+        </div>
+
       </nav>
 
       <Routes>

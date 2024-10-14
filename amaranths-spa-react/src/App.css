@@ -5,6 +5,7 @@
     font-family: 'Whyte-light';
     background-color: #EAE5DF;
     color: #322018;
+    overscroll-behavior: none;
 }
 
 @font-face {
@@ -249,13 +250,15 @@ ul h4{
  }
 
  .reviews img{
-    width: 1rem;
+    width: 0.9em;
+
  }
 
  .reviews p .link{
     padding-left: 1rem;
     margin: 0;
     font-family: Whyte-thin ;
+    font-size: 0.9em;
  }
 
 
@@ -277,6 +280,7 @@ ul h4{
     padding-right: 2rem;
     font-family: 'Whyte-thin';
     text-decoration: none;
+    font-size: 0.9em;
  }
 
 
@@ -290,9 +294,64 @@ ul h4{
  .copyright p{
     padding-left: 2rem;
     font-family: "Whyte-thin";
+    font-size: 0.9em;
  }
 
  .copyright p img{
     width: 3.5%;
     padding-right: 0.3rem;
  }
+
+ .footer-image{
+    position: relative;
+    width: 100vw;
+ }
+
+
+.footer-image::before{
+    width: 100vw;
+    height: 60%;
+    content: "";
+    background-image: url('./images/candles\ 2.png');
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1; /* Place it behind other content */
+}
+
+
+.footer-image button{
+    position: absolute;
+    z-index: 1;
+}
+
+.booking-treatment{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 10rem; */
+}
+
+.booking-treatment button{
+    display: flex;
+    font-family: 'Whyte-light';
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #2F4730;
+    color: white;
+}
+
+.booking-treatment img{
+    width: 1rem;
+    background-color: #2F4730; /* Set your desired background color */
+}
+
+
+
+/* .main{
+    height: 100vh;
+} */
+

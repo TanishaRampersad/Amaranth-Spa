@@ -4,6 +4,9 @@ import { Link, Routes, Route } from 'react-router-dom';
 import ErrorPage from './components/Errorpage';
 import star from './images/star.png';
 import copyright from './images/copyright (1).png';
+import flower from './images/Mediamodifier-Design.svg';
+//import candles from './images/candles 2.png';
+//import candles from './images/candles 2.png';
 //import Home from './components/home';
 // import specials from './components/specials'
 // import Packages from './components/packages';
@@ -16,7 +19,7 @@ function App() {
 
       <nav>
         <ul>
-        <img className="menu" src={hamburger} alt="hamburger menu"></img>
+          <img className="menu" src={hamburger} alt="hamburger menu"></img>
           <p>|</p>
           <li>
             <Link className='link'href="/">Home</Link>
@@ -46,15 +49,11 @@ function App() {
 
       </nav>
 
-      <Routes>
-          <Route path='/' errorElement={<ErrorPage />} /> {/*for each route add the errorElement if the url doesnt work */}
-          <Route path='#' /*element={<Home/>}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Specials />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Packages />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Massages />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Contact />}*/ errorElement={<ErrorPage />} />
-          <Route path='*' element={<ErrorPage />} /> {/* The '*' path will match any route that hasn’t been explicitly defined, helping you catch 404 errors more gracefully. */}
-      </Routes>
+
+
+      <div className='main'>
+
+      </div>
 
 
       <footer>
@@ -94,7 +93,7 @@ function App() {
             <p>Bangkok 10110</p>
             <br/>
 
-            <p>+66818230296</p>
+            <p>+66819810932</p>
             <br/>
             <p>Line ID & Kakao ID: josylee</p>
             <p>Mail: josie835@gmail.com</p>
@@ -135,6 +134,23 @@ function App() {
         </div>
       </footer>
 
+      <div className='footer-image'>
+        <div className='booking-treatment'>
+          <button><img src={flower} alt="flower"/>Book your treatment<img src={flower} alt="flower"/></button>
+        </div>
+        {/* <img className="candles" alt="candles" src={candles}/> */}
+       
+      </div>
+
+
+      <Routes>
+          <Route path='/' /*element={<Home/>}*/ errorElement={<ErrorPage />} /> {/*for each route add the errorElement if the url doesnt work */}
+          <Route path='#' /*element={<Specials />}*/ errorElement={<ErrorPage />} />
+          <Route path='#' /*element={<Packages />}*/ errorElement={<ErrorPage />} />
+          <Route path='#' /*element={<Massages />}*/ errorElement={<ErrorPage />} />
+          <Route path='#' /*element={<Contact />}*/ errorElement={<ErrorPage />} />
+          <Route path='*' element={<ErrorPage />} /> {/* The '*' path will match any route that hasn’t been explicitly defined, helping you catch 404 errors more gracefully. */}
+      </Routes>
 
     </div>
   );

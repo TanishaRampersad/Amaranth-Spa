@@ -6,15 +6,50 @@ import star from './images/star.png';
 import copyright from './images/copyright (1).png';
 import flower from './images/Mediamodifier-Design.svg';
 //import candles from './images/candles 2.png';
-//import candles from './images/candles 2.png';
 import Home from './components/home';
-//import { useEffect } from 'react';
+import { useEffect } from 'react';
+//import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from 'gsap';
 // import specials from './components/specials'
 // import Packages from './components/packages';
 // import Massages from './components/massages';
 // import Contact from './components/contact';
 
 function App() {
+
+  useEffect(() => {
+    const textAnimation = document.querySelectorAll('nav ul li');
+
+    gsap.defaults({duration: 0.3});
+
+    textAnimation.forEach(function(item, index) {
+      const tl = gsap.timeline({paused: true})
+        .to(textAnimation[index], {
+          y: "-100%",
+          opacity: 0,
+          duration: 0.1,
+          ease: 'none',
+        })
+        .to(textAnimation[index], {
+          y: "100%",
+          opacity: 1,
+          duration: 0.1,
+          ease: 'none',
+        })
+        .to(textAnimation[index],{
+          y: 0,
+          opacity: 1,
+          duration: 0.1,
+          ease: 'none',
+        })
+
+        item.addEventListener("mouseenter", () => tl.play());
+        item.addEventListener("mouseleave", () => tl.pause().progress(0));
+    })
+
+  })
+
+
   return (
     <div className="App">
 
@@ -52,9 +87,6 @@ function App() {
 
 
       <Home />
-      {/* <div className='main'>
-
-      </div> */}
 
 
       <footer>

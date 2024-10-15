@@ -443,13 +443,8 @@ ul h4{
 
 .booking-treatment img{
     width: 1rem;
-    background-color: #2F4730; /* Set your desired background color */
     filter: hue-rotate(180deg);
 }
 
 
-
-/* .main{
-    height: 100vh;
-} */
 

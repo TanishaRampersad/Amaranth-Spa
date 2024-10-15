@@ -20,9 +20,11 @@ function App() {
   useEffect(() => {
     const textAnimation = document.querySelectorAll('nav ul li');
 
+    const itemsWithoutLast = Array.from(textAnimation).slice(0, -1); //0 means start at first index and remove last item
+
     gsap.defaults({duration: 0.3});
 
-    textAnimation.forEach(function(item, index) {
+    itemsWithoutLast.forEach(function(item, index) {
       const tl = gsap.timeline({paused: true})
         .to(textAnimation[index], {
           y: "-100%",

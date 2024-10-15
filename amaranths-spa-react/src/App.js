@@ -7,7 +7,8 @@ import copyright from './images/copyright (1).png';
 import flower from './images/Mediamodifier-Design.svg';
 //import candles from './images/candles 2.png';
 //import candles from './images/candles 2.png';
-//import Home from './components/home';
+import Home from './components/home';
+//import { useEffect } from 'react';
 // import specials from './components/specials'
 // import Packages from './components/packages';
 // import Massages from './components/massages';
@@ -50,10 +51,10 @@ function App() {
       </nav>
 
 
+      <Home />
+      {/* <div className='main'>
 
-      <div className='main'>
-
-      </div>
+      </div> */}
 
 
       <footer>
@@ -144,7 +145,7 @@ function App() {
 
 
       <Routes>
-          <Route path='/' /*element={<Home/>}*/ errorElement={<ErrorPage />} /> {/*for each route add the errorElement if the url doesnt work */}
+          <Route path='/' /*element={<Home/>}*/ errorElement={<ErrorPage />} /> for each route add the errorElement if the url doesnt work
           <Route path='#' /*element={<Specials />}*/ errorElement={<ErrorPage />} />
           <Route path='#' /*element={<Packages />}*/ errorElement={<ErrorPage />} />
           <Route path='#' /*element={<Massages />}*/ errorElement={<ErrorPage />} />

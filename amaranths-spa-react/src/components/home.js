@@ -1,6 +1,6 @@
 import '../components/home.css';
 import AmaranthLogo from '../images/amaranth 2.png';
-import massage from '../images/3780085-hd_1920_1080_25fps.mp4';
+import couples from '../images/3780085-hd_1920_1080_25fps.mp4';
 import flower from '../images/Mediamodifier-Design.svg';
 import React, { useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,6 +10,8 @@ import amaranth from '../images/amaranth spa.png';
 import candles from '../images/candles-spa.jpg';
 import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
+//import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
+import bannerVideo from '../images/banner-vid.mp4';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +99,7 @@ export default function Home() {
             </div>
 
             <video className='banner-video' autoPlay muted loop>
-                <source src={massage} type="video/mp4" />
+                <source className="bannerV" src={bannerVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
@@ -116,6 +118,38 @@ export default function Home() {
             <p>Situated close to the airport. Here you will find the best Korean Massages right in the heart of Thailand. Welcome to Amaranth.</p>
             <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
           </div>
+        </div>
+
+        <hr/>
+
+
+        <div className='Packages-section'>
+          <h2>View Our Packages</h2>
+
+          <div className='Packages-section2'>
+            <div className='packages'>
+              <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
+              <h3>Couples Package</h3>
+              <img alt=""/>
+            </div>
+
+            <div className='vid-section'>
+              <video className='couples-video' autoPlay muted loop>
+                    <source className="couplesV" src={couples} type="video/mp4" alt="couples massage"/>
+                    Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+
+    
+          <div className='package-extra-image'></div>
+        </div>
+
+
+        <div className='flower-line'>
+          <div className='horizontal-line1'></div>
+          <img src={lotus} alt="lotus"/>
+          <div className='horizontal-line2'></div>
         </div>
 
 

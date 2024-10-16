@@ -76,11 +76,16 @@
     position: absolute;
    top: 50%;
    left: 50%;
-   min-width: 100%;
+   max-width: 100%;
    min-height: 100%;
    transform: translate(-50%, -50%);
    z-index: 1; /* Ensure video stays behind the text */
    object-fit: cover; /* Ensures video covers the entire background */
+ }
+
+ .bannerV{
+    width: 100%;
+    height: 100%;
  }
  
  .banner-text {
@@ -230,3 +235,83 @@
     margin-left: 64rem;
     height: 26rem;
   }
+
+
+  /* ----------------------- Packages section --------------------------- */
+
+.Packages-section{
+    background-color:  #EAE5DF;
+}
+
+  .Packages-section2{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    color: #EAE5DF;
+  }
+
+
+  .couplesV{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensure video stays behind the text */
+    object-fit: cover; /* Ensures video covers the entire background */
+  }
+
+
+  .packages{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Ensures text stays above the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .Packages-section h2{
+    font-family: kaftan-regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    color: #322018;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    z-index: 3; /* This makes sure the content appears above the video */
+}
+
+
+.packages p{
+    font-family: Whyte-extralight;
+    font-size: 1.5rem;
+    color: #EAE5DF;
+    padding-bottom: 3rem;
+}
+
+.packages h3{
+    color: #EAE5DF;
+    font-family: kaftan-regular;
+    font-size: 4rem;
+}
+
+.package-extra-image {
+    width: 15rem;
+    height: 20rem;
+    background-color: rgb(195, 182, 166);
+    position: relative;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+    z-index: 2; /* Ensures text stays above the video */
+}
+
+.flower-line{
+    background-color: #EAE5DF;
+}

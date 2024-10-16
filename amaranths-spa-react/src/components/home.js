@@ -1,11 +1,15 @@
-//import App from '../App.css';
+import '../components/home.css';
 import AmaranthLogo from '../images/amaranth 2.png';
 import massage from '../images/3780085-hd_1920_1080_25fps.mp4';
 import flower from '../images/Mediamodifier-Design.svg';
 import React, { useEffect } from 'react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
-
+import lotus from '../images/lotus (1).png';
+import amaranth from '../images/amaranth spa.png';
+import candles from '../images/candles-spa.jpg';
+import massage2 from '../images/massage 2.jpeg';
+import massage3 from '../images/massage 3.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,6 +27,7 @@ export default function Home() {
 
        let navigation = gsap.to(nav, {
         backgroundColor: "#EAE5DF",
+        borderBottom: "0.1px solid #55361d97",
         color: "#322018",
         paused: true,
         ease: "none"
@@ -97,6 +102,24 @@ export default function Home() {
             </video>
 
         </div>
+
+
+        <div className='spa-content'>
+          <img className="amaranthSpa" src={amaranth} alt="amaranth"/>
+          <img className="candles-spa" src={candles} alt="candles"/>
+          <img className="massage2" src={massage2} alt="Massage"/>
+          <img className="massage3" src={massage3} alt="Massage"/>
+
+          <div className='spa-info'>
+            <img src={lotus} alt="lotus"/>
+            <h3>Enjoy lavish tranquility</h3>
+            <p>Situated close to the airport. Here you will find the best Korean Massages right in the heart of Thailand. Welcome to Amaranth.</p>
+            <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
+          </div>
+        </div>
+
+
+
       </div>
     );
   }

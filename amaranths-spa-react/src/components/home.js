@@ -3,6 +3,7 @@ import AmaranthLogo from '../images/amaranth 2.png';
 import couples from '../images/3780085-hd_1920_1080_25fps.mp4';
 import flower from '../images/Mediamodifier-Design.svg';
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
 import lotus from '../images/lotus (1).png';
@@ -10,8 +11,13 @@ import amaranth from '../images/amaranth spa.png';
 import candles from '../images/candles-spa.jpg';
 import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
+//import BWMassage from '../images/massage-black.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
+import couplesMassage from '../images/couplesMassage.jpg';
 import bannerVideo from '../images/banner-vid.mp4';
+import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
+import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSS
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,7 +90,56 @@ export default function Home() {
           nButton.reverse();
         },
        })
-    })
+
+
+       const cursor = new MouseFollower({
+        el: null,
+        container: document.body,
+        className: 'mf-cursor',
+        innerClassName: 'mf-cursor-inner',
+        textClassName: 'mf-cursor-text',
+        mediaClassName: 'mf-cursor-media',
+        mediaBoxClassName: 'mf-cursor-media-box',
+        iconSvgClassName: 'mf-svgsprite',
+        iconSvgNamePrefix: '-',
+        iconSvgSrc: '',
+        dataAttr: 'cursor',
+        hiddenState: '-hidden',
+        textState: '-text',
+        iconState: '-icon',
+        activeState: '-active',
+        mediaState: '-media',
+        stateDetection: {
+            '-pointer': 'a,button',
+            '-hidden': 'iframe',
+            '-view': '[data-cursor="-view"]'
+        },
+        visible: true,
+        visibleOnState: false,
+        speed: 0.55,
+        ease: 'expo.out',
+        overwrite: true,
+        skewing: 0,
+        skewingText: 0,
+        skewingIcon: 2,
+        skewingMedia: 2,
+        skewingDelta: 0.001,
+        skewingDeltaMax: 0.15,
+        stickDelta: 0.15,
+        showTimeout: 20,
+        hideOnLeave: true,
+        hideTimeout: 300,
+        hideMediaTimeout: 300
+    });
+  
+
+    return () => {
+      cursor.destroy(); // Cleanup to prevent memory leaks
+    };
+    
+    }, []);
+
+
     return (
       <div className="Home">
 
@@ -123,22 +178,39 @@ export default function Home() {
         <hr/>
 
 
-        <div className='Packages-section'>
+        <div className='Packages-section slideshow-container'>
           <h2>View Our Packages</h2>
 
-          <div className='Packages-section2'>
-            <div className='packages'>
-              <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
-              <h3>Couples Package</h3>
-              <img alt=""/>
-            </div>
+          <div className='Packages-section1'>
+            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <div className='packages'>
+                <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
+                <h3>Couples Package</h3>
+                <img alt=""/>
+              </div>
 
-            <div className='vid-section'>
-              <video className='couples-video' autoPlay muted loop>
-                    <source className="couplesV" src={couples} type="video/mp4" alt="couples massage"/>
-                    Your browser does not support the video tag.
-              </video>
-            </div>
+              <div className='image-section'>
+                  <img className="couplesImage" src={couplesMassage} alt="couples massage"/>
+              </div>
+            </span></Link>
+          </div>
+
+
+          <div className='Packages-section2'>
+            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <div className='packages'>
+                <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
+                <h3>Signature Korean Massage Package</h3>
+                <img alt=""/>
+              </div>
+
+              <div className='vid-section'>
+                <video className='couples-video' autoPlay muted loop>
+                      <source className="couplesV" src={couples} type="video/mp4" alt="couples massage"/>
+                      Your browser does not support the video tag.
+                </video>
+              </div>
+            </span></Link>
           </div>
 
     
@@ -151,7 +223,6 @@ export default function Home() {
           <img src={lotus} alt="lotus"/>
           <div className='horizontal-line2'></div>
         </div>
-
 
 
       </div>

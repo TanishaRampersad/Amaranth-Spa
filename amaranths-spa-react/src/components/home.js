@@ -1,6 +1,6 @@
 import '../components/home.css';
 import AmaranthLogo from '../images/amaranth 2.png';
-import couples from '../images/3780085-hd_1920_1080_25fps.mp4';
+//import couples from '../images/3780085-hd_1920_1080_25fps.mp4';
 import flower from '../images/Mediamodifier-Design.svg';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,8 @@ import amaranth from '../images/amaranth spa.png';
 import candles from '../images/candles-spa.jpg';
 import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
+import korean from '../images/korean.jpg';
+import detox from '../images/detox.jpg';
 //import BWMassage from '../images/massage-black.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
 import couplesMassage from '../images/couplesMassage.jpg';
@@ -112,7 +114,8 @@ export default function Home() {
         stateDetection: {
             '-pointer': 'a,button',
             '-hidden': 'iframe',
-            '-view': '[data-cursor="-view"]'
+            '-view': '[data-cursor="-view"]',
+            '-no-cursor': '.hide-cursor'
         },
         visible: true,
         visibleOnState: false,
@@ -131,13 +134,59 @@ export default function Home() {
         hideTimeout: 300,
         hideMediaTimeout: 300
     });
-  
+
+
+    // Package slider
+let slideIndex = 0;
+const master = gsap.timeline({ repeatDelay: 1, paused: true });
+
+
+function packageSlider(panel) {
+  let tl = gsap.timeline(); 
+
+  let pSlider = document.getElementsByClassName('package-slider');
+  let packageTitle = document.querySelector(`.${panel} .packages`); // Targeting the class within the panel
+  let imageSection = document.querySelector(`.${panel} .image-section`);
+
+  if (slideIndex >= pSlider.length) {
+    slideIndex = 0;
+  }
+
+  // Hide all sliders before showing the current one
+  for (let i = 0; i < pSlider.length; i++) {
+    pSlider[i].style.display = "none";
+  }
+
+  pSlider[slideIndex].style.display = "block"; 
+
+  // Animate the text and image sections
+  // tl.from(packageTitle, {x:600, ease:"none", duration: 1})
+    tl.to(packageTitle, {opacity: 1, delay: 3})
+    tl.to(packageTitle, { x: -600, ease: "none", duration: 2}) 
+    .to(imageSection, { opacity: 0, duration: 0.5 }, "<")
+    // .set(pSlider[slideIndex], { display: "none" })
+    .call(() => {
+      slideIndex = (slideIndex + 1) % pSlider.length; // Update slideIndex for next animation
+      packageSlider(`panel${slideIndex + 1}`); // Call the next panel
+    }); // Call the next panel after the current one is hidden
+
+  return tl; // Return the timeline for this panel
+}
+
+// Master timeline to sequence the panels
+master.add(packageSlider("panel1"))
+  .add(packageSlider("panel2")) 
+  .add(packageSlider("panel3"));
+master.repeat(-1); // Repeat the animation infinitely
+
+packageSlider();
+
 
     return () => {
       cursor.destroy(); // Cleanup to prevent memory leaks
     };
     
-    }, []);
+}, []);
 
 
     return (
@@ -178,10 +227,10 @@ export default function Home() {
         <hr/>
 
 
-        <div className='Packages-section slideshow-container'>
+        <div className='Packages-section'>
           <h2>View Our Packages</h2>
 
-          <div className='Packages-section1'>
+          <div className='Packages-section1 package-slider panel1'>
             <Link href="#"><span data-cursor-text="View" data-cursor="-view">
               <div className='packages'>
                 <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
@@ -196,7 +245,7 @@ export default function Home() {
           </div>
 
 
-          <div className='Packages-section2'>
+          <div className='Packages-section2 package-slider panel2'>
             <Link href="#"><span data-cursor-text="View" data-cursor="-view">
               <div className='packages'>
                 <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
@@ -204,17 +253,36 @@ export default function Home() {
                 <img alt=""/>
               </div>
 
-              <div className='vid-section'>
-                <video className='couples-video' autoPlay muted loop>
-                      <source className="couplesV" src={couples} type="video/mp4" alt="couples massage"/>
-                      Your browser does not support the video tag.
-                </video>
+              <div className='image-section'>
+                  <img className="KoreanImage" src={korean} alt="couples massage"/>
+              </div>
+            </span></Link>
+          </div>
+
+
+          <div className='Packages-section3 package-slider panel3'>
+            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <div className='packages'>
+                <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
+                <h3>Signature Korean Massage Package</h3>
+                <img alt=""/>
+              </div>
+
+              <div className='image-section'>
+                  <img className="detoxImage" src={detox} alt="couples massage"/>
               </div>
             </span></Link>
           </div>
 
     
           <div className='package-extra-image'></div>
+
+          <div className="dots-container hide-cursor">
+              <span onclick="currentSlide(0)" className='dots'></span>
+              <span onClick="currentSlide(1)" className='dots'></span>
+              <span onClick="currentSlide(2)" className='dots'></span>
+            </div>
+
         </div>
 
 

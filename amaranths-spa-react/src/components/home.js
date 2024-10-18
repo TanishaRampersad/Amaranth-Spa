@@ -137,49 +137,125 @@ export default function Home() {
 
 
     // Package slider
+// let slideIndex = 0;
+// const master = gsap.timeline({ repeatDelay: 1, paused: true });
+
+
+// function packageSlider(panel) {
+//   let tl = gsap.timeline(); 
+
+//   let pSlider = document.getElementsByClassName('package-slider');
+//   let packageTitle = document.querySelector(`.${panel} .packages`); // Targeting the class within the panel
+//   let imageSection = document.querySelector(`.${panel} .image-section`);
+
+//   if (slideIndex >= pSlider.length) {
+//     slideIndex = 0;
+//   }
+
+//   // Hide all sliders before showing the current one
+//   for (let i = 0; i < pSlider.length; i++) {
+//     pSlider[i].style.display = "none";
+//   }
+
+//   pSlider[slideIndex].style.display = "block"; 
+
+//   // Animate the text and image sections
+//   // tl.from(packageTitle, {x:600, ease:"none", duration: 1})
+//     tl.to(packageTitle, {opacity: 1, delay: 3})
+//     tl.to(packageTitle, { x: -600, ease: "none", duration: 2}) 
+//     .to(imageSection, { opacity: 0, duration: 0.5 }, "<")
+//     // .set(pSlider[slideIndex], { display: "none" })
+//     .call(() => {
+//       slideIndex = (slideIndex + 1) % pSlider.length; // Update slideIndex for next animation
+//       packageSlider(`panel${slideIndex + 1}`); // Call the next panel
+//     }); // Call the next panel after the current one is hidden
+
+//   return tl; // Return the timeline for this panel
+// }
+
+// // Master timeline to sequence the panels
+// master.add(packageSlider("panel1"))
+//   .add(packageSlider("panel2")) 
+//   .add(packageSlider("panel3"));
+// master.repeat(-1); // Repeat the animation infinitely
+
+// packageSlider();
+
+
+
 let slideIndex = 0;
-const master = gsap.timeline({ repeatDelay: 1, paused: true });
 
+function packageSlider() {
+  // Grabbing all necessary elements
+  let firstP = document.getElementsByClassName('gsap-couple')[0];
+  let secondP = document.getElementsByClassName('gsap-korean')[0];
+  let thirdP  = document.getElementsByClassName('gsap-detox')[0];
 
-function packageSlider(panel) {
-  let tl = gsap.timeline(); 
+  let firstImage = document.getElementsByClassName('couple-image')[0];
+  let secondImage = document.getElementsByClassName('korean-image')[0];
+  let thirdImage = document.getElementsByClassName('detox-image')[0];
 
-  let pSlider = document.getElementsByClassName('package-slider');
-  let packageTitle = document.querySelector(`.${panel} .packages`); // Targeting the class within the panel
-  let imageSection = document.querySelector(`.${panel} .image-section`);
+  let slider = document.getElementsByClassName('package-slider');
+  
+  let tl = gsap.timeline({ repeat: -1, paused: true }); // Repeats forever
 
-  if (slideIndex >= pSlider.length) {
-    slideIndex = 0;
+  // Reset display of all slides
+  for (let i = 0; i < slider.length; i++) {
+    slider[i].style.display = "none";
   }
 
-  // Hide all sliders before showing the current one
-  for (let i = 0; i < pSlider.length; i++) {
-    pSlider[i].style.display = "none";
-  }
+  // Show the first slide at the start
+  slider[slideIndex].style.display = "block";
 
-  pSlider[slideIndex].style.display = "block"; 
+  // Animate the first text moving left and image fading out
+  tl.to(firstP, { x: -600, duration: 1, ease: "none", delay: 5 })
+    .to(firstImage, { opacity: 0 }, "-=0.5") // Fade out the image while text moves
 
-  // Animate the text and image sections
-  // tl.from(packageTitle, {x:600, ease:"none", duration: 1})
-    tl.to(packageTitle, {opacity: 1, delay: 3})
-    tl.to(packageTitle, { x: -600, ease: "none", duration: 2}) 
-    .to(imageSection, { opacity: 0, duration: 0.5 }, "<")
-    // .set(pSlider[slideIndex], { display: "none" })
-    .call(() => {
-      slideIndex = (slideIndex + 1) % pSlider.length; // Update slideIndex for next animation
-      packageSlider(`panel${slideIndex + 1}`); // Call the next panel
-    }); // Call the next panel after the current one is hidden
+    // Animate second text coming from right and its image appearing
+    .to(slider[slideIndex], { display: "none", duration: 0 })
+    .to(slider[(slideIndex + 1) % slider.length], { display: "block", duration: 0 })
+    .fromTo(secondP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 2, ease: "power2.out" }, "<")
+    .to(secondImage, { opacity: 1, duration: 0.5 }, "-=0.5")
+    .to(secondP, { x: -600, duration: 1, ease: "none", delay: 5 })
+    .to(secondImage, { opacity: 0 }, "-=0.5")
+  
+  
+    .to(slider[(slideIndex + 1) % slider.length], { display: "none", duration: 0 })
+    .to(slider[(slideIndex + 2) % slider.length], { display: "block", duration: 0 })
+    .fromTo(thirdP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 2, ease: "power2.out" }, "<")
+    .to(thirdImage, { opacity: 1, duration: 0.5 }, "-=0.5")
+    .to(thirdP, { x: -600, duration: 1, ease: "none", delay: 5 })
+    .to(thirdImage, { opacity: 0 }, "-=0.5")
 
-  return tl; // Return the timeline for this panel
+    ScrollTrigger.create({
+      trigger: slider,
+      start: "top 50%",
+      onEnter: () => tl.play(),
+      // onLeaveBack: () => tl.progess(0)
+    })
+
+    ScrollTrigger.create({
+      trigger: slider,
+      start: "top 100%",
+      onEnter: () => tl.progress(0),
+      // onLeaveBack: () => tl.progess(0)
+    })
+
+    ScrollTrigger.create({
+      trigger: slider,
+      start: "bottom 0%",
+      onEnter: () => tl.progress(0),
+      // toggleActions: "pause none none restart"
+    })
+
+  //tl.play();
+
+  // Update slideIndex for the next loop
+  slideIndex = (slideIndex + 1) % slider.length;
 }
 
-// Master timeline to sequence the panels
-master.add(packageSlider("panel1"))
-  .add(packageSlider("panel2")) 
-  .add(packageSlider("panel3"));
-master.repeat(-1); // Repeat the animation infinitely
-
 packageSlider();
+
 
 
     return () => {
@@ -232,13 +308,13 @@ packageSlider();
 
           <div className='Packages-section1 package-slider panel1'>
             <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages'>
+              <div className='packages gsap-couple'>
                 <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
                 <h3>Couples Package</h3>
                 <img alt=""/>
               </div>
 
-              <div className='image-section'>
+              <div className='image-section couple-image'>
                   <img className="couplesImage" src={couplesMassage} alt="couples massage"/>
               </div>
             </span></Link>
@@ -247,13 +323,13 @@ packageSlider();
 
           <div className='Packages-section2 package-slider panel2'>
             <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages'>
+              <div className='packages gsap-korean'>
                 <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
                 <h3>Signature Korean Massage Package</h3>
                 <img alt=""/>
               </div>
 
-              <div className='image-section'>
+              <div className='image-section korean-image'>
                   <img className="KoreanImage" src={korean} alt="couples massage"/>
               </div>
             </span></Link>
@@ -262,13 +338,13 @@ packageSlider();
 
           <div className='Packages-section3 package-slider panel3'>
             <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages'>
-                <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
-                <h3>Signature Korean Massage Package</h3>
+              <div className='packages gsap-detox'>
+                <p>Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</p>
+                <h3>Detox Package</h3>
                 <img alt=""/>
               </div>
 
-              <div className='image-section'>
+              <div className='image-section detox-image'>
                   <img className="detoxImage" src={detox} alt="couples massage"/>
               </div>
             </span></Link>

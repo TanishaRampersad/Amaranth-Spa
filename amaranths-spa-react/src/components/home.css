@@ -243,23 +243,7 @@
     background-color:  #EAE5DF;
 }
 
-  .Packages-section1{
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-    color: #EAE5DF;
-  }
-
-  .Packages-section2{
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-    color: #EAE5DF;
-  }
-
-  .Packages-section3{
+  .package-slider{
     position: relative;
     width: 100%;
     height: 90vh;
@@ -314,13 +298,17 @@
   .packages{
     position: absolute;
     top: 40%;
-    left: 50%;
+    /* left: 50%; */
     transform: translate(-50%, -50%);
     z-index: 2; /* Ensures text stays above the video */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  .gsap-couple{
+    left: 50%;
   }
 
   .Packages-section h2{

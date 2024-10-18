@@ -337,7 +337,7 @@
     font-size: 4rem;
 }
 
-.package-extra-image {
+.package-extra-image{
     width: 15rem;
     height: 20rem;
     background-color: rgb(195, 182, 166);
@@ -345,6 +345,11 @@
     transform: translate(0, -50%);
     margin: 0 auto;
     z-index: 2; /* Ensures text stays above the video */
+}
+
+.package-extra-image img{
+  width: 15rem;
+  height: 20rem;
 }
 
 .flower-line{

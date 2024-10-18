@@ -13,12 +13,13 @@ import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
 import korean from '../images/korean.jpg';
 import detox from '../images/detox.jpg';
+//import therapist from '../images/black&white.jpg';
 //import BWMassage from '../images/massage-black.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
 import couplesMassage from '../images/couplesMassage.jpg';
 import bannerVideo from '../images/banner-vid.mp4';
 import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
-import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSS
+import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -136,53 +137,7 @@ export default function Home() {
     });
 
 
-    // Package slider
-// let slideIndex = 0;
-// const master = gsap.timeline({ repeatDelay: 1, paused: true });
-
-
-// function packageSlider(panel) {
-//   let tl = gsap.timeline(); 
-
-//   let pSlider = document.getElementsByClassName('package-slider');
-//   let packageTitle = document.querySelector(`.${panel} .packages`); // Targeting the class within the panel
-//   let imageSection = document.querySelector(`.${panel} .image-section`);
-
-//   if (slideIndex >= pSlider.length) {
-//     slideIndex = 0;
-//   }
-
-//   // Hide all sliders before showing the current one
-//   for (let i = 0; i < pSlider.length; i++) {
-//     pSlider[i].style.display = "none";
-//   }
-
-//   pSlider[slideIndex].style.display = "block"; 
-
-//   // Animate the text and image sections
-//   // tl.from(packageTitle, {x:600, ease:"none", duration: 1})
-//     tl.to(packageTitle, {opacity: 1, delay: 3})
-//     tl.to(packageTitle, { x: -600, ease: "none", duration: 2}) 
-//     .to(imageSection, { opacity: 0, duration: 0.5 }, "<")
-//     // .set(pSlider[slideIndex], { display: "none" })
-//     .call(() => {
-//       slideIndex = (slideIndex + 1) % pSlider.length; // Update slideIndex for next animation
-//       packageSlider(`panel${slideIndex + 1}`); // Call the next panel
-//     }); // Call the next panel after the current one is hidden
-
-//   return tl; // Return the timeline for this panel
-// }
-
-// // Master timeline to sequence the panels
-// master.add(packageSlider("panel1"))
-//   .add(packageSlider("panel2")) 
-//   .add(packageSlider("panel3"));
-// master.repeat(-1); // Repeat the animation infinitely
-
-// packageSlider();
-
-
-
+// Package slider
 let slideIndex = 0;
 
 function packageSlider() {
@@ -209,46 +164,48 @@ function packageSlider() {
 
   // Animate the first text moving left and image fading out
   tl.to(firstP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(firstImage, { opacity: 0 }, "-=0.5") // Fade out the image while text moves
+    .to(firstImage, { opacity: 0, duration: 0.1 }, "-=0.5") // Fade out the image while text moves
 
     // Animate second text coming from right and its image appearing
-    .to(slider[slideIndex], { display: "none", duration: 0 })
-    .to(slider[(slideIndex + 1) % slider.length], { display: "block", duration: 0 })
-    .fromTo(secondP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 2, ease: "power2.out" }, "<")
-    .to(secondImage, { opacity: 1, duration: 0.5 }, "-=0.5")
+    .to(slider[slideIndex], { display: "none", duration: 0 }, ">")  //hide current slide
+    .to(slider[(slideIndex + 1) % slider.length], { display: "block", duration: 0 }, "-=0.4") //show next slide
+    .fromTo(secondP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
+    .fromTo(secondImage, {opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" }, "<")
     .to(secondP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(secondImage, { opacity: 0 }, "-=0.5")
+    .to(secondImage, { opacity: 0, duration: 0.01 }, "-=0.5")
   
   
-    .to(slider[(slideIndex + 1) % slider.length], { display: "none", duration: 0 })
-    .to(slider[(slideIndex + 2) % slider.length], { display: "block", duration: 0 })
-    .fromTo(thirdP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 2, ease: "power2.out" }, "<")
-    .to(thirdImage, { opacity: 1, duration: 0.5 }, "-=0.5")
+    .to(slider[(slideIndex + 1) % slider.length], { display: "none", duration: 0 }, ">")
+    .to(slider[(slideIndex + 2) % slider.length], { display: "block", duration: 0 }, "-=0.48")
+    .fromTo(thirdP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
+    .fromTo(thirdImage,{opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" } , "<")
     .to(thirdP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(thirdImage, { opacity: 0 }, "-=0.5")
+    .to(thirdImage, { opacity: 0, duration: 0.1 }, "-=0.5")
 
     ScrollTrigger.create({
       trigger: slider,
       start: "top 50%",
       onEnter: () => tl.play(),
-      // onLeaveBack: () => tl.progess(0)
     })
 
     ScrollTrigger.create({
       trigger: slider,
       start: "top 100%",
       onEnter: () => tl.progress(0),
-      // onLeaveBack: () => tl.progess(0)
+    })
+
+    ScrollTrigger.create({
+      trigger: slider,
+      start: "bottom 50%",
+      onEnter: () => tl.pause(),
+      onLeaveBack: () => tl.play()
     })
 
     ScrollTrigger.create({
       trigger: slider,
       start: "bottom 0%",
       onEnter: () => tl.progress(0),
-      // toggleActions: "pause none none restart"
     })
-
-  //tl.play();
 
   // Update slideIndex for the next loop
   slideIndex = (slideIndex + 1) % slider.length;
@@ -351,7 +308,9 @@ packageSlider();
           </div>
 
     
-          <div className='package-extra-image'></div>
+          {/* <div className='package-extra-image'>
+            <img src={therapist} alt="massage therapist"/>
+          </div> */}
 
           <div className="dots-container hide-cursor">
               <span onclick="currentSlide(0)" className='dots'></span>

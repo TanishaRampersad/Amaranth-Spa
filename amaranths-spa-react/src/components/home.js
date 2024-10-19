@@ -138,80 +138,108 @@ export default function Home() {
 
 
 // Package slider
-let slideIndex = 0;
+// let slideIndex = 0;
+
+// function packageSlider() {
+//   // Grabbing all necessary elements
+//   let firstP = document.getElementsByClassName('gsap-couple')[0];
+//   let secondP = document.getElementsByClassName('gsap-korean')[0];
+//   let thirdP  = document.getElementsByClassName('gsap-detox')[0];
+
+//   let firstImage = document.getElementsByClassName('couple-image')[0];
+//   let secondImage = document.getElementsByClassName('korean-image')[0];
+//   let thirdImage = document.getElementsByClassName('detox-image')[0];
+
+//   let slider = document.getElementsByClassName('package-slider');
+  
+//   let tl = gsap.timeline({ repeat: -1, paused: true }); // Repeats forever
+
+//   // Reset display of all slides
+//   for (let i = 0; i < slider.length; i++) {
+//     slider[i].style.display = "none";
+//   }
+
+//   // Show the first slide at the start
+//   slider[slideIndex].style.display = "block";
+
+//   // Animate the first text moving left and image fading out
+//   tl.to(firstP, { x: -600, duration: 1, ease: "none", delay: 5 })
+//     .to(firstImage, { opacity: 0, duration: 0.1 }, "-=0.5") // Fade out the image while text moves
+
+//     // Animate second text coming from right and its image appearing
+//     .to(slider[slideIndex], { display: "none", duration: 0 }, ">")  //hide current slide
+//     .to(slider[(slideIndex + 1) % slider.length], { display: "block", duration: 0 }, "-=0.4") //show next slide
+//     .fromTo(secondP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
+//     .fromTo(secondImage, {opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" }, "<")
+//     .to(secondP, { x: -600, duration: 1, ease: "none", delay: 5 })
+//     .to(secondImage, { opacity: 0, duration: 0.01 }, "-=0.5")
+  
+  
+//     .to(slider[(slideIndex + 1) % slider.length], { display: "none", duration: 0 }, ">")
+//     .to(slider[(slideIndex + 2) % slider.length], { display: "block", duration: 0 }, "-=0.48")
+//     .fromTo(thirdP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
+//     .fromTo(thirdImage,{opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" } , "<")
+//     .to(thirdP, { x: -600, duration: 1, ease: "none", delay: 5 })
+//     .to(thirdImage, { opacity: 0, duration: 0.1 }, "-=0.5")
+
+//     ScrollTrigger.create({
+//       trigger: slider,
+//       start: "top 50%",
+//       onEnter: () => tl.play(),
+//     })
+
+//     ScrollTrigger.create({
+//       trigger: slider,
+//       start: "top 100%",
+//       onEnter: () => tl.progress(0),
+//     })
+
+//     ScrollTrigger.create({
+//       trigger: slider,
+//       start: "bottom 50%",
+//       onEnter: () => tl.pause(),
+//       onLeaveBack: () => tl.play()
+//     })
+
+//     ScrollTrigger.create({
+//       trigger: slider,
+//       start: "bottom 0%",
+//       onEnter: () => tl.progress(0),
+//     })
+
+//   // Update slideIndex for the next loop
+//   slideIndex = (slideIndex + 1) % slider.length;
+// }
+
+// packageSlider();
+
+//Package Slider Section
 
 function packageSlider() {
-  // Grabbing all necessary elements
-  let firstP = document.getElementsByClassName('gsap-couple')[0];
-  let secondP = document.getElementsByClassName('gsap-korean')[0];
-  let thirdP  = document.getElementsByClassName('gsap-detox')[0];
+  // let next = document.querySelector('.next')
+  let prev = document.querySelector('.prev')
 
-  let firstImage = document.getElementsByClassName('couple-image')[0];
-  let secondImage = document.getElementsByClassName('korean-image')[0];
-  let thirdImage = document.getElementsByClassName('detox-image')[0];
-
-  let slider = document.getElementsByClassName('package-slider');
+  window.onload = () => {
+      let images = document.querySelectorAll('.item');
+      images.forEach((img) => {
+          let image = new Image();
+          image.src = img.style.backgroundImage.slice(5, -2); // Preload the background images
+      });
+  };
   
-  let tl = gsap.timeline({ repeat: -1, paused: true }); // Repeats forever
+  // next.addEventListener("click", ()=> {
+  //     let items = document.querySelectorAll('.item')
+  //     document.querySelector('.slide').appendChild(items[0]);
+  // })
 
-  // Reset display of all slides
-  for (let i = 0; i < slider.length; i++) {
-    slider[i].style.display = "none";
-  }
-
-  // Show the first slide at the start
-  slider[slideIndex].style.display = "block";
-
-  // Animate the first text moving left and image fading out
-  tl.to(firstP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(firstImage, { opacity: 0, duration: 0.1 }, "-=0.5") // Fade out the image while text moves
-
-    // Animate second text coming from right and its image appearing
-    .to(slider[slideIndex], { display: "none", duration: 0 }, ">")  //hide current slide
-    .to(slider[(slideIndex + 1) % slider.length], { display: "block", duration: 0 }, "-=0.4") //show next slide
-    .fromTo(secondP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
-    .fromTo(secondImage, {opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" }, "<")
-    .to(secondP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(secondImage, { opacity: 0, duration: 0.01 }, "-=0.5")
-  
-  
-    .to(slider[(slideIndex + 1) % slider.length], { display: "none", duration: 0 }, ">")
-    .to(slider[(slideIndex + 2) % slider.length], { display: "block", duration: 0 }, "-=0.48")
-    .fromTo(thirdP, { opacity: 0, x: 600 }, { opacity: 1, x: 0, duration: 1, ease: "power2.in" }, "<")
-    .fromTo(thirdImage,{opacity: 0, ease: "power2.in", duration: 0.1}, { opacity: 1, duration: 0.5, ease: "power2.in" } , "<")
-    .to(thirdP, { x: -600, duration: 1, ease: "none", delay: 5 })
-    .to(thirdImage, { opacity: 0, duration: 0.1 }, "-=0.5")
-
-    ScrollTrigger.create({
-      trigger: slider,
-      start: "top 50%",
-      onEnter: () => tl.play(),
-    })
-
-    ScrollTrigger.create({
-      trigger: slider,
-      start: "top 100%",
-      onEnter: () => tl.progress(0),
-    })
-
-    ScrollTrigger.create({
-      trigger: slider,
-      start: "bottom 50%",
-      onEnter: () => tl.pause(),
-      onLeaveBack: () => tl.play()
-    })
-
-    ScrollTrigger.create({
-      trigger: slider,
-      start: "bottom 0%",
-      onEnter: () => tl.progress(0),
-    })
-
-  // Update slideIndex for the next loop
-  slideIndex = (slideIndex + 1) % slider.length;
+  prev.addEventListener("click", ()=> {
+      let items = document.querySelectorAll('.item')
+      document.querySelector('.slide').prepend(items[items.length - 1])
+  })
 }
 
-packageSlider();
+packageSlider()
+
 
 
 
@@ -260,7 +288,7 @@ packageSlider();
         <hr/>
 
 
-        <div className='Packages-section'>
+        {/* <div className='Packages-section'>
           <h2>View Our Packages</h2>
 
           <div className='Packages-section1 package-slider panel1'>
@@ -307,19 +335,58 @@ packageSlider();
             </span></Link>
           </div>
 
-    
-          {/* <div className='package-extra-image'>
-            <img src={therapist} alt="massage therapist"/>
-          </div> */}
-
           <div className="dots-container hide-cursor">
               <span onclick="currentSlide(0)" className='dots'></span>
               <span onClick="currentSlide(1)" className='dots'></span>
               <span onClick="currentSlide(2)" className='dots'></span>
             </div>
 
-        </div>
+        </div> */}
 
+      <div className='p-container'>
+        <div className="container">
+            <div className="slide">
+
+            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <div className="item" style={{ backgroundImage: `url(${couplesMassage})` }}>
+                
+                    <div className="content">
+                        <div className="name">Couples Massage</div>
+                        <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
+                        <button>See More</button>
+                    </div>
+                </div>
+            </span></Link>
+
+              <div className="item" style={{ backgroundImage: `url(${korean})` }}>
+                <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                  <div className="content">
+                      <div className="name">Korean Massage</div>
+                      <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
+                      <button>See More</button>
+                  </div>
+                </span></Link>
+              </div>
+
+              <div className="item" style={{ backgroundImage: `url(${detox})` }}>
+                <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                  <div className="content">
+                      <div className="name">Detox Massage</div>
+                      <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
+                      <button>See More</button>
+                  </div>
+                </span></Link>
+              </div>
+
+            </div>
+
+            <div class="button">
+              <button class="prev"><i class="fa-solid fa-arrow-right"></i></button>
+              {/* <button class="next"><i class="fa-solid fa-arrow-right"></i></button> */}
+            </div>
+
+        </div>
+      </div>
 
         <div className='flower-line'>
           <div className='horizontal-line1'></div>

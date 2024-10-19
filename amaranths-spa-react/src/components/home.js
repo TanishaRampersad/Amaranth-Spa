@@ -238,7 +238,7 @@ function packageSlider() {
   })
 }
 
-packageSlider()
+packageSlider();
 
 
 
@@ -343,55 +343,103 @@ packageSlider()
 
         </div> */}
 
-      <div className='p-container'>
-        <div className="container">
+    <div className='p-div'>
+      <h2>View Our Packages</h2>
+        <div className='p-container'>
+          <div className="container">
             <div className="slide">
 
-            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className="item" style={{ backgroundImage: `url(${couplesMassage})` }}>
-                
+              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
+                  
+                      <div className="content">
+                          <div className="name">Couples Massage</div>
+                          <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
+                          <button>See More</button>
+                      </div>
+                  </div>
+              </span></Link>
+
+                <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
+                  <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                     <div className="content">
-                        <div className="name">Couples Massage</div>
-                        <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
+                        <div className="name">Korean Massage</div>
+                        <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
                         <button>See More</button>
                     </div>
+                  </span></Link>
                 </div>
-            </span></Link>
 
-              <div className="item" style={{ backgroundImage: `url(${korean})` }}>
-                <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-                  <div className="content">
-                      <div className="name">Korean Massage</div>
-                      <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
-                      <button>See More</button>
-                  </div>
-                </span></Link>
-              </div>
-
-              <div className="item" style={{ backgroundImage: `url(${detox})` }}>
-                <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-                  <div className="content">
-                      <div className="name">Detox Massage</div>
-                      <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
-                      <button>See More</button>
-                  </div>
-                </span></Link>
-              </div>
+                <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
+                  <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                    <div className="content">
+                        <div className="name">Detox Massage</div>
+                        <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
+                        <button>See More</button>
+                    </div>
+                  </span></Link>
+                </div>
 
             </div>
 
-            <div class="button">
-              <button class="prev"><i class="fa-solid fa-arrow-right"></i></button>
-              {/* <button class="next"><i class="fa-solid fa-arrow-right"></i></button> */}
-            </div>
+              <div class="button">
+                <button class="prev"><i class="fa-solid fa-arrow-right"></i></button>
+                {/* <button class="next"><i class="fa-solid fa-arrow-right"></i></button> */}
+              </div>
 
+          </div>
         </div>
-      </div>
+    </div>
 
         <div className='flower-line'>
           <div className='horizontal-line1'></div>
           <img src={lotus} alt="lotus"/>
           <div className='horizontal-line2'></div>
+        </div>
+
+
+        <div className='booking-section'>
+          <h1>Make a Booking</h1>
+
+          <div className="form">
+            <form>
+              <label for="userName">Name</label>
+              <input type="text" id="userName" name="user-name"></input>
+              <label for="userEmail">Email</label>
+              <input type="text" id="userEmail" name="user-email"></input>
+              <label for="selection">Select Treatment or Package</label>
+              <select for="selection">
+                <option>Select a service</option>
+                <option>Basic Facial Treatment - 60min</option>
+                <option>Korean Body Scrub - 60min</option>
+                <option>Korean Full Body Care - 120min</option>
+                <option>Amaranth Signature Facial Treatment - 90min</option>
+                <option>Ultrasound Whitening - 90min</option>
+                <option>Aroma Oil Massage - 60min</option>
+                <option>Aroma Oil Massage - 90min </option>
+                <option>Electrophoresis Whitening - 90min</option>
+                <option>Ultrasound Facelifting - 100min</option>
+                <option>Noble Facelifting - 120min</option>
+                <option>Black Facial Therapy - 120min</option>
+                <option>Waterdrop Ultrasound Facelifting - 100min</option>
+                <option>Gold Facial Therapy - 120min</option>
+                <option>HIFU - x min</option>
+                <option>Head & Shoulder Massage - 60min</option>
+                <option>Royal Thai Traditional Massage - 60min</option>
+                <option>Royal Thai Traditional Massage - 90min</option>
+                <option>Swedish Massage - 60min</option>
+                <option>Swedish Massage - 90min</option>
+                <option>Sports Massage - 60min</option>
+                <option>Sports Massage - 90min</option>
+                <option>Couples Massage Package - 2 hours</option>
+                <option>Signature Korean Massage Package - 2 hours</option>
+                <option>Detox Package - 3 hours</option>
+              </select>
+              <label for="date">Select a date</label>
+              <input type="date" id="start-date" name="start-date"></input>
+              <div className='submit'><input type="submit" value="Submit"></input></div>
+            </form>
+          </div>
         </div>
 
 

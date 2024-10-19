@@ -76,9 +76,8 @@ function App() {
           <li>
             <Link className='link' href="/contact">Contact</Link>
           </li>
-          <li>
-            <h4>Amaranth</h4>
-          </li>
+          
+          <h4>Amaranth</h4>
         </ul>
 
         <div className='booking'>

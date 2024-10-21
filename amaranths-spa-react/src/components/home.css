@@ -212,22 +212,43 @@
     padding: 0 0.2rem;
   }
 
+  .overlayImage{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%; /* Start offscreen */
+    z-index: 1;
+  }
 
-  .amaranthSpa{
+
+  .amaranth-image-container{
+    overflow: hidden;
+    border: solid red 2px;
     width: 15rem;
+    height: 15rem;
     position: absolute;
     margin-top: 10rem;
     margin-left: 13rem;
   }
 
-  .candles-spa{
+  .amaranthSpa{
+    width: 100%;
+    height: 100%;
+  }
+
+  .candles-image-container{
     width: 12rem;
     position: absolute;
     margin-top: 38rem;
     margin-left: 68rem;
   }
 
-  .massage2{
+  .candles-spa{
+    width: 100%;
+    height: 100%;
+  }
+
+  .stones-image-container{
     width: 20rem;
     position: absolute;
     margin-top: 35rem;
@@ -235,7 +256,12 @@
     height: 7rem;
   }
 
-  .massage3{
+  .massage2{
+    width: 100%;
+    height: 100%;
+  }
+
+  .relax-image-container{
     width: 19rem;
     position: absolute;
     margin-top: 5rem;
@@ -243,6 +269,11 @@
     height: 26rem;
   }
 
+  .massage3{
+    width: 100%;
+    height: 100%
+  }
+  
 
   /* ----------------------- Packages section --------------------------- */
 

@@ -13,6 +13,10 @@ import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
 import korean from '../images/korean.jpg';
 import detox from '../images/detox.jpg';
+import overlay1 from '../images/overlay1.jpg';
+import overlay2 from '../images/0verlay2.jpg';
+import overlay3 from '../images/overlay3.jpg';
+import overlay4 from '../images/overlay4.jpg';
 //import therapist from '../images/black&white.jpg';
 //import BWMassage from '../images/massage-black.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
@@ -252,6 +256,40 @@ document.addEventListener("DOMContentLoaded", ()=> {
 })
 
 
+// Spa content Image animation
+
+let overlay = document.querySelectorAll('.overlayImage');
+
+
+let tl = gsap.timeline();
+
+overlay.forEach((overlay, index) => {
+  tl.fromTo(overlay, 
+    { y: "-100%" }, // Start from off-screen
+    { y: "0%", duration: 0.8, delay: index * 6 } // Delay for each overlay
+  )
+  .to(overlay, { y: "-100%", duration: 0.8, delay: 0 }); // Move back off-screen
+});
+
+
+tl.play()
+
+
+
+
+let testOverlay = document.querySelector('.test-overlay');
+
+
+let timeline = gsap.timeline();
+
+    timeline.fromTo(testOverlay, 
+      { y: "-100%" }, // Start from off-screen
+      { y: "0%", duration: 0.8, delay: 5 } // Move to visible
+    )
+    .to(overlay, { y: "-100%", duration: 0.8, delay: 5 }); 
+
+
+
 
 
     return () => {
@@ -283,10 +321,25 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 
         <div className='spa-content'>
-          <img className="amaranthSpa" src={amaranth} alt="amaranth"/>
-          <img className="candles-spa" src={candles} alt="candles"/>
-          <img className="massage2" src={massage2} alt="Massage"/>
-          <img className="massage3" src={massage3} alt="Massage"/>
+          <div className='amaranth-image-container'>
+            <img className="amaranthSpa" src={amaranth} alt="amaranth"/>
+            <img className="overlayImage" src={overlay1} alt="massage"/>
+          </div>
+      
+          <div className='candles-image-container'>
+            <img className="candles-spa" src={candles} alt="candles"/>
+            <img className="overlayImage" src={overlay4} alt="massage"/>
+          </div>
+
+          <div className='stones-image-container'>
+            <img className="massage2" src={massage2} alt="Massage"/>
+            <img className="overlayImage" src={overlay2} alt="massage"/>
+           </div>
+
+           <div className='relax-image-container'>
+            <img className="massage3" src={massage3} alt="Massage"/>
+            <img className="overlayImage" src={overlay3} alt="massage"/>
+          </div>
 
           <div className='spa-info'>
             <img src={lotus} alt="lotus"/>
@@ -297,6 +350,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         </div>
 
         <hr/>
+
 
 
         {/* <div className='Packages-section'>

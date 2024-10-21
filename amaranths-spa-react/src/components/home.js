@@ -258,36 +258,18 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 // Spa content Image animation
 
-let overlay = document.querySelectorAll('.overlayImage');
+// let overlay = document.querySelectorAll('.overlayImage1');
+// let imageSpa = document.querySelectorAll('.amaranthSpa');
 
 
-let tl = gsap.timeline();
+// let tl = gsap.timeline({repeat: -1, yoyo: true});
 
-overlay.forEach((overlay, index) => {
-  tl.fromTo(overlay, 
-    { y: "-100%" }, // Start from off-screen
-    { y: "0%", duration: 0.8, delay: index * 6 } // Delay for each overlay
-  )
-  .to(overlay, { y: "-100%", duration: 0.8, delay: 0 }); // Move back off-screen
-});
-
-
-tl.play()
+// tl.to(imageSpa, {y: "-100%", delay: 3 })
+// .fromTo(overlay, { y: "0%"}, { y: "-100%"},"<"); // Move back off-screen
 
 
 
-
-let testOverlay = document.querySelector('.test-overlay');
-
-
-let timeline = gsap.timeline();
-
-    timeline.fromTo(testOverlay, 
-      { y: "-100%" }, // Start from off-screen
-      { y: "0%", duration: 0.8, delay: 5 } // Move to visible
-    )
-    .to(overlay, { y: "-100%", duration: 0.8, delay: 5 }); 
-
+// tl.play()
 
 
 
@@ -322,22 +304,22 @@ let timeline = gsap.timeline();
 
         <div className='spa-content'>
           <div className='amaranth-image-container'>
-            <img className="amaranthSpa" src={amaranth} alt="amaranth"/>
-            <img className="overlayImage" src={overlay1} alt="massage"/>
+            <img className="amaranthSpa imageSpa" src={amaranth} alt="amaranth"/>
+            <img className="overlayImage1" src={overlay1} alt="massage"/>
           </div>
       
           <div className='candles-image-container'>
-            <img className="candles-spa" src={candles} alt="candles"/>
+            <img className="candles-spa imageSpa" src={candles} alt="candles"/>
             <img className="overlayImage" src={overlay4} alt="massage"/>
           </div>
 
           <div className='stones-image-container'>
-            <img className="massage2" src={massage2} alt="Massage"/>
+            <img className="massage2 imageSpa" src={massage2} alt="Massage"/>
             <img className="overlayImage" src={overlay2} alt="massage"/>
            </div>
 
            <div className='relax-image-container'>
-            <img className="massage3" src={massage3} alt="Massage"/>
+            <img className="massage3 imageSpa" src={massage3} alt="Massage"/>
             <img className="overlayImage" src={overlay3} alt="massage"/>
           </div>
 

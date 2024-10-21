@@ -216,14 +216,19 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: -100%; /* Start offscreen */
+    bottom: -100%; /*Start offscreen*/
     z-index: 1;
+  }
+
+  .overlayImage1{
+    width: 100%;
+    height: 100%;
+   
   }
 
 
   .amaranth-image-container{
     overflow: hidden;
-    border: solid red 2px;
     width: 15rem;
     height: 15rem;
     position: absolute;

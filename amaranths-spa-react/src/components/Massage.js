@@ -4,14 +4,14 @@ import React, { useEffect } from 'react';
 //import gsap from 'gsap';
 
 
-export default function Specials() {
+export default function Massage() {
     useEffect(() => {
         
     })
 
     return(
         <>
-        <h1>Specials page</h1>
+        <h1>Massage page</h1>
         </>
     )
 }

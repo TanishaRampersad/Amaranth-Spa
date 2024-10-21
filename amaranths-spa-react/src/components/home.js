@@ -144,7 +144,7 @@ export default function Home() {
     document.addEventListener("DOMContentLoaded", function () {
       new MouseFollower();  // or your specific initialization
     });
-    
+
 
 
 // Package slider
@@ -270,8 +270,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 
 // tl.play()
-
-
+    
 
 
     return () => {
@@ -305,7 +304,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
         <div className='spa-content'>
           <div className='amaranth-image-container'>
             <img className="amaranthSpa imageSpa" src={amaranth} alt="amaranth"/>
-            <img className="overlayImage1" src={overlay1} alt="massage"/>
+            <img className="overlayImage" src={overlay1} alt="massage"/>
           </div>
       
           <div className='candles-image-container'>

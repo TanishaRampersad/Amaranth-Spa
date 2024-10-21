@@ -6,14 +6,14 @@ import star from './images/star.png';
 import copyright from './images/copyright (1).png';
 import flower from './images/Mediamodifier-Design.svg';
 //import candles from './images/candles 2.png';
-import Home from './components/home';
+import Home from './components/Home';
 import { useEffect } from 'react';
 //import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
-// import specials from './components/specials'
-// import Packages from './components/packages';
-// import Massages from './components/massages';
-// import Contact from './components/contact';
+import Specials from './components/Specials'
+import Packages from './components/Packages';
+import Massages from './components/Massage';
+import Contact from './components/Contact';
 
 function App() {
 
@@ -60,21 +60,21 @@ function App() {
           <img className="menu" src={hamburger} alt="hamburger menu"></img>
           <p>|</p>
           <li>
-            <Link className='link'href="/">Home</Link>
+            <Link className='link'to="/">Home</Link>
           </li>
           <li>
-            <Link className='link' href="/specials">Specials</Link>
+            <Link className='link' to="/specials">Specials</Link>
           </li>
           <li>
-            <Link className='link' href="/packages">Packages</Link>
-          </li>
-
-          <li>
-            <Link className='link' href="/massages">Massages</Link>
+            <Link className='link' to="/packages">Packages</Link>
           </li>
 
           <li>
-            <Link className='link' href="/contact">Contact</Link>
+            <Link className='link' to="/massages">Massages</Link>
+          </li>
+
+          <li>
+            <Link className='link' to="/contact">Contact</Link>
           </li>
           
           <h4>Amaranth</h4>
@@ -178,11 +178,11 @@ function App() {
 
 
       <Routes>
-          <Route path='/' /*element={<Home/>}*/ errorElement={<ErrorPage />} /> for each route add the errorElement if the url doesnt work
-          <Route path='#' /*element={<Specials />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Packages />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Massages />}*/ errorElement={<ErrorPage />} />
-          <Route path='#' /*element={<Contact />}*/ errorElement={<ErrorPage />} />
+          <Route path='/' element={<Home/>} errorElement={<ErrorPage />} /> 
+          <Route path='/specials' element={<Specials />} errorElement={<ErrorPage />} />
+          <Route path='/packages' element={<Packages />} errorElement={<ErrorPage />} />
+          <Route path='/massage' element={<Massages />} errorElement={<ErrorPage />} />
+          <Route path='/contact' element={<Contact />} errorElement={<ErrorPage />} />
           <Route path='*' element={<ErrorPage />} /> {/* The '*' path will match any route that hasn’t been explicitly defined, helping you catch 404 errors more gracefully. */}
       </Routes>
 

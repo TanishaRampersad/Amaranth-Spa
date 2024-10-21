@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './components/Errorpage';
-import Home from './components/home';
+import Home from './components/Home';
+import Packages from './components/Packages';
+import Specials from './components/Specials';
+import Massage from './components/Massage';
+import Contact from './components/Contact';
 
 
-const Router = createBrowserRouter([
+const router = createBrowserRouter([
     {
       path: '/',
       element: <App />,
@@ -20,22 +24,22 @@ const Router = createBrowserRouter([
           },
         {
           path: '/specials',
-        //   element: <specials />,
+          element: <Specials />,
           errorElement: <ErrorPage />,
         },
         {
           path: '/packages',
-        //   element: <packages />,
+          element: <Packages />,
           errorElement: <ErrorPage />,
         },
         {
           path: '/massages',
-        //   element: <massages />,
+          element: <Massage />,
           errorElement: <ErrorPage />,
         },
         {
             path: '/contact' ,
-            // element: <contact />,
+            element: <Contact />,
             errorElement: <ErrorPage />,
           },
        
@@ -45,5 +49,5 @@ const Router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <RouterProvider router={Router} />
+    <RouterProvider router={router} />
 );

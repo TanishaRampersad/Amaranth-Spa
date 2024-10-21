@@ -1,0 +1,290 @@
+/* ----------------------- Footer --------------------------- */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Whyte-light';
+    /* background-color: #EAE5DF; */
+    color: #322018;
+    overscroll-behavior: none;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+@font-face {
+    font-family: 'Whyte-regular'; /* Name you want to use for the font */
+    src: url('../fonts/Whyte-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-extralight'; 
+    src: url('../fonts/Whyte-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-extraLightItalic'; 
+    src: url('../fonts/Whyte-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Whyte-italic'; 
+    src: url('../fonts/Whyte-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-light';
+    src: url('../fonts/Whyte-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Bold'; 
+    src:  url('../fonts/WhyteInktrap-Bold\ \(1\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Regular'; /* Name you want to use for the font */
+    src:  url('../fonts/WhyteInktrap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kaftan-regular'; /* Name you want to use for the font */
+    src:  url('../fonts/kaftan-trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    border: 0.8px solid  #c5c0bc;
+    background-color: #EAE5DF;
+ }
+
+ .menu-footer{
+    padding: 2rem;
+    padding-right: 0.3rem;
+    padding-bottom: 4rem;
+    width: 33.3%;
+ }
+
+ .menu-footer p{
+    font-family: 'Whyte-thin';
+    padding-bottom: 2rem;
+ }
+
+
+ .menu-footer ul{
+    list-style-type: none;
+    padding-left: 0;
+ }
+
+ .menu-footer ul li .links{
+    font-family: 'kaftan-regular';
+    font-size: 2rem;
+    text-decoration: none;
+ }
+
+
+ .hours-footer{
+    padding: 2rem 0;
+    padding-bottom: 4rem;
+    /* padding-left: 10rem; */
+    margin-left: 0rem;
+    padding-left: 2rem;
+    border-left: 0.8px solid  #c5c0bc;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .hours-footer p{
+    padding-bottom: 2.5rem;
+    font-family: 'Whyte-thin';
+ }
+
+ .hours-footer Link{
+    padding-bottom: 2rem;
+ }
+
+ .callandbook {
+    font-family: 'Whyte-extralight';
+ }
+
+ .hours-footer ul {
+    list-style-type: none;
+    padding-left: 0;
+ }
+
+ .hours-footer ul li{
+    padding-bottom: 2rem;
+    font-family: 'Whyte-extralight';
+ }
+
+ .hours-footer ul p{
+    font-family: Whyte-light;
+    padding-left: 0;
+ }
+
+
+ .contact-footer{
+    padding: 2rem 0;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 0;
+    border-left: 0.8px solid #c5c0bc;
+    width: 33.3%
+ }
+
+ .contact-footer .spa{
+    padding-bottom: 2rem;
+    font-family: 'Whyte-thin';
+ }
+
+ .contact-footer p{
+    font-family: "Whyte-extralight";
+ }
+
+
+ .second-footer{
+    display: flex;
+    border: 0.8px solid  #c5c0bc;
+    justify-content: space-between;
+    background-color: #EAE5DF;
+ }
+
+ .reviews{
+    display: flex;
+    width: 33.3%;
+    padding: 2rem 0;
+}
+
+ .review-stars{
+    padding-left: 2rem;
+ }
+
+ .reviews img{
+    width: 0.9em;
+
+ }
+
+ .reviews p .link{
+    padding-left: 1rem;
+    margin: 0;
+    font-family: Whyte-thin ;
+    font-size: 0.9em;
+ }
+
+
+
+ .socials{
+    display: flex;
+    align-items: center;
+    width: 33.3%;
+    border-left:  0.8px solid  #c5c0bc;
+ }
+
+ .socials ul{
+    display: flex;
+    list-style-type: none;
+    padding-left: 2rem;
+ }
+
+ .socials ul li .social-link{
+    padding-right: 2rem;
+    font-family: 'Whyte-thin';
+    text-decoration: none;
+    font-size: 0.9em;
+ }
+
+
+
+ .copyright{
+    width: 33.3%;
+    padding: 2rem 0;
+    border-left: 0.8px solid  #c5c0bc;
+ }
+
+ .copyright p{
+    padding-left: 2rem;
+    font-family: "Whyte-thin";
+    font-size: 0.9em;
+ }
+
+ .copyright p img{
+    width: 3.5%;
+    padding-right: 0.3rem;
+ }
+
+ .footer-image{
+    position: relative;
+    width: 100vw;
+ }
+
+
+/* .footer-image::before{
+    width: 100vw;
+    height: 60%;
+    content: "";
+    background-image: url('./images/candles\ 2.png');
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1; /* Place it behind other content 
+} */
+
+
+.footer-image button{
+    position: absolute;
+    z-index: 1;
+}
+
+.booking-treatment{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* padding-top: 10rem; */
+}
+
+.booking-treatment button{
+    display: flex;
+    font-family: 'Whyte-light';
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #2F4730;
+    color: white;
+}
+
+.booking-treatment img{
+    width: 1rem;
+    filter: hue-rotate(180deg);
+}
+
+
+

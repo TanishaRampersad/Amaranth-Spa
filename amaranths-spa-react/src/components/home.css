@@ -364,16 +364,23 @@
 }
 
 
-/* .mf-cursor {
-  background-color: rgba(198, 194, 194, 0.7); 
-  width: 30px;
-  height: 30px;
+/* ----------------------- mf-Cursor --------------------------- */
+
+.mf-cursor {
+  background-color: rgba(0, 0, 0, 0.7); 
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  transition: background-color 0.2s ease; /* Smooth transition 
-} */
+  transition: background-color 0.2s ease; /* Smooth transition */
+  transform: translate(-50%, -50%);
+}
 
+.mf-cursor-text{
+  background-color: rgba(255, 255, 255, 0.9); /* Change background if needed */
+  /* You can add more styling for the expanded state here */
+}
 
 
 /* ------------ Package Test ------------ */
@@ -396,7 +403,7 @@
   width: 100%;
   margin:0;
   background-color: #EAE5DF;
-  height: 70vh;
+  height: 90vh;
   padding-bottom: 5rem;
 }
 
@@ -628,6 +635,12 @@ input:focus{
 
 select:focus{
   outline: none; /* removes blue outline*/
+}
+
+
+
+.mf-cursor {
+  z-index: 9999 !important;  /* Ensures it's on top of other elements */
 }
 
 

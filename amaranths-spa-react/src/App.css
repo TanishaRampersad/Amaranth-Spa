@@ -331,7 +331,7 @@ ul h4{
  }
 
 
-.footer-image::before{
+/* .footer-image::before{
     width: 100vw;
     height: 60%;
     content: "";
@@ -341,8 +341,8 @@ ul h4{
     bottom: 0;
     background-size: contain;
     background-repeat: no-repeat;
-    z-index: -1; /* Place it behind other content */
-}
+    z-index: -1; /* Place it behind other content 
+} */
 
 
 .footer-image button{

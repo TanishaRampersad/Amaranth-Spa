@@ -116,7 +116,8 @@ export default function Home() {
             '-pointer': 'a,button',
             '-hidden': 'iframe',
             '-view': '[data-cursor="-view"]',
-            '-no-cursor': '.hide-cursor'
+            '-no-cursor': '.hide-cursor',
+            '-expand': 'expand'
         },
         visible: true,
         visibleOnState: false,
@@ -135,6 +136,11 @@ export default function Home() {
         hideTimeout: 300,
         hideMediaTimeout: 300
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      new MouseFollower();  // or your specific initialization
+    });
+    
 
 
 // Package slider
@@ -213,6 +219,7 @@ export default function Home() {
 
 // packageSlider();
 
+
 //Package Slider Section
 
 function packageSlider() {
@@ -239,6 +246,10 @@ function packageSlider() {
 }
 
 packageSlider();
+
+document.addEventListener("DOMContentLoaded", ()=> {
+  packageSlider();
+})
 
 
 
@@ -351,7 +362,6 @@ packageSlider();
 
               <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                 <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
-                  
                       <div className="content">
                           <div className="name">Couples Massage</div>
                           <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
@@ -360,30 +370,30 @@ packageSlider();
                   </div>
               </span></Link>
 
+              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                 <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
-                  <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                     <div className="content">
                         <div className="name">Korean Massage</div>
                         <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
                         <button>See More</button>
                     </div>
-                  </span></Link>
                 </div>
+              </span></Link>
 
+              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                 <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
-                  <Link href="#"><span data-cursor-text="View" data-cursor="-view">
                     <div className="content">
                         <div className="name">Detox Massage</div>
                         <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
                         <button>See More</button>
                     </div>
-                  </span></Link>
                 </div>
+              </span></Link>
 
             </div>
 
-              <div class="button">
-                <button class="prev"><i class="fa-solid fa-arrow-right"></i></button>
+              <div className="button">
+                <button className="prev"><i className="fa-solid fa-arrow-right"></i></button>
                 {/* <button class="next"><i class="fa-solid fa-arrow-right"></i></button> */}
               </div>
 
@@ -403,12 +413,12 @@ packageSlider();
 
           <div className="form">
             <form>
-              <label for="userName">Name</label>
+              <label htmlFor="userName">Name</label>
               <input type="text" id="userName" name="user-name"></input>
-              <label for="userEmail">Email</label>
+              <label htmlFor="userEmail">Email</label>
               <input type="text" id="userEmail" name="user-email"></input>
-              <label for="selection">Select Treatment or Package</label>
-              <select for="selection">
+              <label htmlFor="selection">Select Treatment or Package</label>
+              <select htmlFor="selection">
                 <option>Select a service</option>
                 <option>Basic Facial Treatment - 60min</option>
                 <option>Korean Body Scrub - 60min</option>
@@ -435,7 +445,7 @@ packageSlider();
                 <option>Signature Korean Massage Package - 2 hours</option>
                 <option>Detox Package - 3 hours</option>
               </select>
-              <label for="date">Select a date</label>
+              <label htmlFor="date">Select a date</label>
               <input type="date" id="start-date" name="start-date"></input>
               <div className='submit'><input type="submit" value="Submit"></input></div>
             </form>
@@ -445,4 +455,4 @@ packageSlider();
 
       </div>
     );
-  }
+  };

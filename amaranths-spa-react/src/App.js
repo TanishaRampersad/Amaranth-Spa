@@ -153,15 +153,15 @@ function App() {
           </div>
 
 
-          <div class="socials">
+          <div className="socials">
             <ul>
-              <li><Link class="social-link">Instagram</Link></li>
-              <li><Link class="social-link">Tripadvisor</Link></li>
+              <li><Link className="social-link">Instagram</Link></li>
+              <li><Link className="social-link">Tripadvisor</Link></li>
             </ul>
           </div>
 
 
-          <div class="copyright">
+          <div className="copyright">
             <p><img src={copyright} alt="copyright"/>2024 Amaranth</p>
           </div>
 

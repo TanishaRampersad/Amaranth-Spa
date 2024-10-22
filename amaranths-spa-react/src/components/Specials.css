@@ -1,0 +1,22 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: none;
+  }
+
+.specialsBanner{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.specialsImage{
+    width: 100vw;
+}
+
+
+.s-image{
+    width: 100vw;
+    height: 100vh;
+}

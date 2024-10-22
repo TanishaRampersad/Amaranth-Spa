@@ -150,9 +150,14 @@
     z-index: 2; /* Ensure it appears above the video */
   }
 
+
+  /* ----------- Couples package ------------*/
+
   .couples-massage-package{
     background-color: #EAE5DF;
     display: flex;
+    list-style-type: disc;  /* Add bullets */
+    list-style-position: inside;
     flex-direction: column;
     align-items: center;
     color: #322018;
@@ -174,3 +179,385 @@
   .couples-massage-package h3{
     font-family: 'Whyte-light';
   }
+
+  .couples-massage-package .duration{
+    padding-bottom: 2rem;
+  }
+
+  .welcome p{
+    line-height: 1.5rem;
+  }
+
+  .welcome{
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .ritualP{
+    padding-bottom: 1rem;
+  }
+
+  .side-by-side{
+    line-height: 1.3rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+.side-by-side h3{
+    padding-bottom: 0.1rem;
+}
+
+
+.footRitual{
+    padding-bottom: 2rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+
+.footRitual h3{
+    padding-bottom: 0.1rem;
+}
+
+.relaxationTime{
+    padding-bottom: 2rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+
+.relaxationTime h3{
+    padding-bottom: 0.1rem;
+}
+
+.addOns{
+    padding-bottom: 2rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+
+.addOns h3{
+    padding-bottom: 0.1rem;
+}
+
+.gifts{
+    padding-bottom: 2rem;
+    text-align: center;
+    line-height: 1.3rem;
+}
+
+.gifts h3{
+    padding-bottom: 0.1rem;
+}
+
+.cost{
+    font-family: 'Whyte-regular';
+    padding-bottom: 6rem;
+    padding-top: 4rem;
+    font-weight: 600;
+}
+
+
+/* ----------- Korean package ------------*/
+
+.korean-massage-package{
+  background-color: #EAE5DF;
+  display: flex;
+  list-style-type: disc;  /* Add bullets */
+  list-style-position: inside;
+  flex-direction: column;
+  align-items: center;
+  color: #322018;
+  text-align: center; /* This ensures text is centered too */
+  width: 100%; 
+}
+
+.korean-package h2{
+  font-size: 4rem;
+  font-family: 'kaftan-regular';
+  color: #322018;
+  padding-bottom: 3rem;
+}
+
+.k-flower{
+  padding-top: 8rem;
+  width: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.korean-massage-package h3{
+  font-family: 'Whyte-light';
+}
+
+.korean-massage-package .duration{
+  padding-bottom: 2rem;
+}
+
+.k-ritualP{
+  padding-bottom: 1rem;
+}
+
+.K-welcomeRitual{
+  padding-bottom: 2rem;
+}
+
+.K-welcomeRitual h3{
+  padding-bottom: 0.3rem;
+}
+
+.Korean-scrub{
+  line-height: 1.3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.Korean-scrub h3{
+  padding-bottom: 0.1rem;
+}
+
+.KoreanMassage{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.KoreanMassage{
+  padding-bottom: 0.1rem;
+}
+
+.aromatherapy{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.aromatherapy h3{
+  padding-bottom: 0.1rem;
+}
+
+.k-relaxation{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+
+.k-relaxation h3{
+  padding-bottom: 0.1rem;
+}
+
+.k-gifts{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.k-gifts h3{
+  padding-bottom: 0.1rem;
+}
+
+
+/* ----------- Detox package ------------*/
+.detox-massage-package{
+  background-color: #EAE5DF;
+  display: flex;
+  list-style-type: disc;  /* Add bullets */
+  list-style-position: inside;
+  flex-direction: column;
+  align-items: center;
+  color: #322018;
+  text-align: center; /* This ensures text is centered too */
+  width: 100%; 
+}
+
+.detox-package h2{
+  font-size: 4rem;
+  font-family: 'kaftan-regular';
+  color: #322018;
+  padding-bottom: 3rem;
+}
+
+.d-flower{
+  padding-top: 8rem;
+  width: 3.5rem;
+  padding-bottom: 3rem;
+}
+
+.detox-massage-package h3{
+  font-family: 'Whyte-light';
+}
+
+.detox-massage-package .duration{
+  padding-bottom: 2rem;
+}
+
+.detoxRitual p{
+  padding-bottom: 1rem;
+}
+
+.detoxRitual{
+  padding-bottom: 2rem;
+}
+
+.detoxRitual h3{
+  padding-bottom: 0.3rem;
+}
+
+.bodyscrub{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.bodyscrub h3{
+  padding-bottom: 0.1rem;
+}
+
+.detoxWrap{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.detoxWrap h3{
+  padding-bottom: 0.1rem;
+}
+
+.detoxMassage{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.detoxMassage h3{
+  padding-bottom: 0.1rem;
+}
+
+.detoxHydration{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.detoxHydration h3{
+  padding-bottom: 0.1rem;
+}
+
+.detoxPost{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.detoxPost h3{
+  padding-bottom: 0.1rem;
+}
+
+.detoxGifts{
+  line-height: 1.3rem;
+  padding-bottom: 2rem;
+}
+
+.detoxGifts h3{
+  padding-bottom: 0.1rem;
+}
+
+
+/* --------------------- Horizontal line -------------------------*/
+.flower-line{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding-top: 8rem;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.horizontal-line1{
+  width: 47%;
+  height: 0.03rem;
+  background-color: #3d3d3d;
+}
+
+.horizontal-line2{
+  width: 47%;
+  height: 0.03rem;
+  background-color:  #3d3d3d;
+}
+
+.flower-line img{
+  width: 3%;
+  height: 3%;
+}
+
+
+/* --------------------- Booking form --------------------------*/
+.booking-section{
+  background-color: #EAE5DF;
+  width: 100%;
+}
+
+ h1{
+  font-family: 'kaftan-regular', serif;
+  font-size: 3rem;
+  color: #322018;
+  display: flex;
+  padding-left: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.form{
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+}
+
+.form form{
+  display: flex;
+  /* justify-content: space-between; */
+  flex-direction: column;
+  background-color: #d4d4d4;
+ 
+  padding: 2rem 2rem;
+  background-color: #bfbebe8a; 
+  backdrop-filter: blur(8px); /* Adds blur effect for a frosted look */
+}
+
+form label{
+  padding-bottom: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+form input{
+  padding: 0.5rem;
+  border: none;
+}
+
+form select{
+  border: none;
+  padding: 0.5rem;
+}
+
+form .submit{
+  padding-top: 2rem;
+}
+
+form .submit input{
+  cursor: pointer;
+  background-color: #903C02;
+  color: #EAE5DF;
+  padding: 0.6rem 2rem;
+}
+
+input:focus{
+  outline: none; /* removes blue outline*/
+}
+
+select:focus{
+  outline: none; /* removes blue outline*/
+}
+
+
+
+.mf-cursor {
+  z-index: 9999 !important;  /* Ensures it's on top of other elements */
+}
+
+
+
+
+
+
+

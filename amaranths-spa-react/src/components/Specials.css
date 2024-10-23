@@ -1,3 +1,70 @@
+@font-face {
+    font-family: 'Whyte-regular'; /* Name you want to use for the font */
+    src: url('../fonts/Whyte-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-extralight'; 
+    src: url('../fonts/Whyte-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-extraLightItalic'; 
+    src: url('../fonts/Whyte-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Whyte-italic'; 
+    src: url('../fonts/Whyte-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-light';
+    src: url('../fonts/Whyte-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Bold'; 
+    src:  url('../fonts/WhyteInktrap-Bold\ \(1\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Regular'; /* Name you want to use for the font */
+    src:  url('../fonts/WhyteInktrap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kaftan-regular'; /* Name you want to use for the font */
+    src:  url('../fonts/kaftan-trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ----------------------- Main Content --------------------------- */
+
 * {
     margin:0;
     padding: 0;
@@ -59,3 +126,503 @@
     font-weight: 300;
     padding-bottom: 2rem;
 }
+
+
+  /* ------------ Monthly specials ------------ */
+
+  .monthly-specials{
+    background-color: #EAE5DF;
+  }
+
+  .specials-container{
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+
+  .monthly-specials h2{
+    font-size: 2.25rem;
+    font-family: 'kaftan-regular';
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+    color: #322018;
+  }
+
+  .specials-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .winterSpecials{
+    width: 25%;
+    background-color: #2f4730b5;
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect */
+    
+    padding: 2rem;
+    align-items: center;
+    /* line-height: 2rem; */
+    text-align: center;
+  }
+
+  .winterText{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .winterText p{
+    color: white;
+  }
+
+  .winterSpecials .WS{
+    font-family: 'Whyte-light';
+    font-weight: 600;
+    padding-bottom: 2rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .line-height{
+    line-height: 2rem;
+  }
+
+  .winter-valid{
+    font-weight: 600;
+    padding-top: 0.5rem;
+  }
+
+
+  .holiday-pampering{
+    width: 25%;
+    background-color: #2f4730b5;
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect */
+    /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); Optional shadow for depth */
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .holidayText{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .holidayText p{
+    color: white;
+  }
+
+  .holidayText .HP{
+    font-family: 'Whyte-light';
+    font-weight: 600;
+    padding-bottom: 2rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .holiday-valid{
+    font-weight: 600;
+    padding-top: 0.5rem;
+  }
+
+
+  .sweetheart-special{
+    width: 25%;
+    background-color: #2f4730b5;
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect */
+    /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); Optional shadow for depth */
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sweetheartText{
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .sweetheartText p{
+    color: white;
+  }
+
+  .sweetheartText .SS{
+    font-family: 'Whyte-light';
+    font-weight: 600;
+    padding-bottom: 2rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .sweetheart-valid{
+    font-weight: 600;
+    padding-top: 0.5rem;
+  }
+
+  .call{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .call a{
+    padding-left: 0.3rem; 
+    padding-right: 0.3rem; 
+  }
+
+  .Specials-discount-section h2{
+    display: flex;
+    justify-content: center;
+    font-family: 'kaftan-regular';
+    font-size: 2.25rem;
+    color: #322018;
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+  }
+
+  .Specials-discount-section{
+    background-color: #EAE5DF;
+  }
+
+
+
+  .first-time-client{
+    width: 100%;
+    background: linear-gradient(135deg, #f8f3f0, #a8947b);
+  }
+
+  .clientHeading{
+    display: flex;
+    justify-content: center;
+    font-family: 'kaftan-regular';
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    color: #322018;
+  }
+
+  .clientText{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .clientText p{
+    display: flex;
+    justify-content: center;
+    font-family: 'Whyte-extralight';
+    font-size: 1.5rem;
+    color: #322018;
+    padding-bottom: 1rem;
+  }
+
+
+  .loyalty-program{
+    width: 100%;
+    background: linear-gradient(135deg, #f8f3f0, #a8947b);
+  }
+
+
+  .loyltyHeading{
+    display: flex;
+    justify-content: center;
+    font-family: 'kaftan-regular';
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    color: #322018;
+  }
+
+  .loyaltyText{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .loyaltyText p{
+    display: flex;
+    justify-content: center;
+    font-family: 'Whyte-extralight';
+    font-size: 1.5rem;
+    color: #322018;
+    padding-bottom: 1rem;
+  }
+  
+  .birthday-specials{
+    width: 100%;
+    background: linear-gradient(135deg, #f8f3f0, #a8947b);
+  }
+
+  .birthdayHeading{
+    display: flex;
+    justify-content: center;
+    font-family: 'kaftan-regular';
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    color: #322018;
+  }
+
+  .birthdayText{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .birthdayText p{
+    display: flex;
+    justify-content: center;
+    font-family: 'Whyte-extralight';
+    font-size: 1.5rem;
+    color: #322018;
+    padding-bottom: 1rem;
+  }
+
+
+
+  .dot{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #686562;
+    padding-right: 0.5rem;
+  }
+
+  .dots{
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    margin: 0 auto;
+  }
+
+  .slideShow-container{
+    position: relative;
+  }
+
+  .arrows{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  .back,
+  .forward{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 1rem;
+    font-weight: bold;
+  }
+
+ 
+
+  .back{
+    left: 0;
+  }
+
+  .forward{
+    right: 0;
+  }
+
+  .Specials-discount-section p{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  .subscribe{
+    margin-right: 0.3rem;
+  }
+
+
+  /* --------------------- Horizontal line -------------------------*/
+.flower-line{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    justify-content:space-between;
+    align-items: center;
+  }
+  
+  .horizontal-line1{
+    width: 47%;
+    height: 0.03rem;
+    background-color: #3d3d3d;
+  }
+  
+  .horizontal-line2{
+    width: 47%;
+    height: 0.03rem;
+    background-color:  #3d3d3d;
+  }
+  
+  .flower-line img{
+    width: 3%;
+    height: 3%;
+  }
+  
+  /* ------------------------ Package Test ------------------------ */
+.p-div{
+    background-color: #EAE5DF;
+    padding-bottom: 8rem;
+  }
+  
+  .p-div h2{
+    font-size: 2.25rem;
+    font-family: 'kaftan-regular';
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    color: #322018;
+  }
+  
+  .p-container {
+    position: relative; 
+    width: 100%;
+    margin:0;
+    background-color: #EAE5DF;
+    height: 90vh;
+    /* padding-bottom: 5rem; */
+  }
+  
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1.87rem 3.12rem #dbdbdb;
+  }
+  
+  .container .slide .item{
+    width: 12.5rem;
+    height: 18.75rem;
+    position: absolute;
+    top: 70%;
+    transform: translate(0, -50%);
+    border-radius: 1.25rem;
+    box-shadow: 0.05rem 0.05rem 4px #dbdbdbaa;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  
+  .slide .item:nth-child(1){
+      top: 0;
+      left: 0;
+      transform: translate(0, 0);
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+  }
+  
+  .slide .item:nth-child(2){
+      left: 65%;
+  }
+  
+  .slide .item:nth-child(n + 3){
+      left: calc(65% + 260px);
+      /* opacity: 0; */
+  }
+  
+  .item .content{
+    position: absolute;
+    top: 30%;
+    left: 12rem;
+    width: 100%;
+    text-align: left;
+    color: #eee;
+    transform: translate(0 , -50%);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: none;
+  }
+  
+  .slide .item:nth-child(1) .content{
+    display: block;
+  }
+  
+  
+  .content .name{
+    font-size: 4rem;
+    font-family: 'kaftan-regular';
+    font-weight: bold;
+    color: #EAE5DF;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+  }
+  
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    color: #EAE5DF;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+  }
+  
+  .content button{
+    padding: 0.62rem 1.25rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+  }
+  
+  @keyframes animate{
+    from{
+     opacity: 0;
+     transform: translate(0, 6.25rem);
+     filter: blur(2.06rem);
+    }
+  
+    to{
+     opacity: 1;
+     transform: translate(0);
+     filter: blur(0);
+    }
+  }
+  
+  .button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 1.25rem;
+  }
+  
+  .button button{
+   padding: 0.5rem 2rem;
+   border-radius: 0.5rem;
+   border: none;
+   cursor: pointer;
+   margin: 0 0.31rem;
+   /* border: 1px solid #000; */
+   transition: 0.3s;
+   background-color: #f0f0f0;
+   color: iherit;
+   font-size: 1.1rem;
+  }
+  
+  .button button {
+    color: inherit; /* Ensure the button text and icon inherit the same color */
+  }
+  
+  
+  .button button:hover {
+    background-color: #424242;
+    color: #fff; 
+    cursor: pointer;
+  }
+  
+  
+  .button button:hover i {
+    color: #fff; 
+  }
+  
+

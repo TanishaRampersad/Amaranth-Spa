@@ -8,7 +8,10 @@ import gsap from 'gsap';
 import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
 import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import reception from '../images/Amaranth-reception.jpg';
+//import reception from '../images/Amaranth-reception.jpg';
+import nature from '../images/nature.jpg';
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default function Packages() {
@@ -80,7 +83,7 @@ export default function Packages() {
         })
  
  
-    new MouseFollower({
+        const cursor = new MouseFollower({
          el: null,
          container: document.body,
          className: 'mf-cursor',
@@ -125,8 +128,12 @@ export default function Packages() {
      document.addEventListener("DOMContentLoaded", function () {
        new MouseFollower();  // or your specific initialization
      });
- 
-    })
+
+
+      return () => {
+        cursor.destroy(); // Cleanup to prevent memory leaks
+      };
+      })
 
     return(
         <div className='PS'>
@@ -144,7 +151,7 @@ export default function Packages() {
                 </video> */}
 
                 <div className='pv'>
-                    <img className="packV" src={reception} alt="banner"/>
+                    <img className="packV" src={nature} alt="banner"/>
                 </div>
             </div>
 
@@ -332,7 +339,7 @@ export default function Packages() {
                     <p>A small gift such as a detox tea blend or a natural skincare product (e.g., a gentle cleanser or moisturiser) to support ongoing detoxification at home.</p>
                 </div>
 
-                <p className='cost'>Cost: 2 600 Baht </p>
+                <p className='detox-cost'>Cost: 2 600 Baht </p>
             </div>
 
 

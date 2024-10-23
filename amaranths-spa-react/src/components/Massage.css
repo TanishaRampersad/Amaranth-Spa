@@ -1,0 +1,174 @@
+
+
+@font-face {
+    font-family: 'Whyte-regular'; /* Name you want to use for the font */
+    src: url('../fonts/Whyte-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin\ \(1\).ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'Whyte-extraLightItalic'; 
+    src: url('../fonts/Whyte-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Whyte-italic'; 
+    src: url('../fonts/Whyte-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-light';
+    src: url('../fonts/Whyte-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Bold'; 
+    src:  url('../fonts/WhyteInktrap-Bold\ \(1\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Regular'; /* Name you want to use for the font */
+    src:  url('../fonts/WhyteInktrap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kaftan-regular'; /* Name you want to use for the font */
+    src:  url('../fonts/kaftan-trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ----------------------- Main Content --------------------------- */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: none;
+  }
+
+  .massage-banner{
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 5rem;
+    z-index: 1;
+    object-fit: cover;
+    overflow: hidden;
+    /* box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.9); */
+  }
+
+  .massageImage{
+    width: 100%;
+    height: 100%;
+    box-shadow:inset 0 4px 20px 2000px rgba(0, 0, 0, 0.9);
+  }
+
+  .massageText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    z-index: 2; /* Ensures text stays above the video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+ .massageText img{
+    width: 3.5rem;
+    padding-bottom: 2rem;
+ }
+
+ .massageText p{
+    font-family: "Whyte-extralight";
+    color: #EAE5DF;
+    font-weight: 600;
+    padding-bottom: 2rem;
+ }
+
+ .massageText h3{
+    font-size: 5rem;
+    font-family: kaftan-regular;
+    color: #EAE5DF;
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
+
+  .massage-therapist{
+    width: 15rem;
+    height: 20rem;
+    position: absolute;
+    bottom: -12%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2; /* Ensure it appears above the video */
+  }
+
+
+  /* --------- History Section -------------- */
+
+  .history-section{
+    background-color: #EAE5DF;
+    padding-top: 15rem;
+    width: 100%;
+  }
+
+  .historyText h2{
+    font-family: 'kaftan-regular';
+    font-size: 3rem;
+    color: #322018;
+    width: 40%;
+    padding-left: 6rem;
+  }
+
+  .historyText .HT{
+    font-family: 'Whyte-light';
+    color: #322018;
+    width: 45%;
+    padding-right: 7rem;
+    line-height: 10rem;
+  }
+
+  .historyText p{
+    font-size: 1.5rem;
+    line-height: 8rem;
+
+  }
+
+ .historyText{
+    display: flex;
+    justify-content: center;
+    justify-content:space-between;
+  }
+
+ .historyText p{
+line-height: 1rem;
+  }
+ 

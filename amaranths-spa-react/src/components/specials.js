@@ -6,12 +6,16 @@ import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AmaranthLogo from '../images/amaranth 2.png';
 //import spaCandles from '../images/candles-spa.jpg';
-import banner3 from '../images/banner-3.jpg';
+//import banner3 from '../images/banner-3.jpg';
+import './Specials.css';
+import sunset from '../images/sunset2.jpg';
+
+
 
 
 export default function Specials() {
     useEffect(() => {
-        let heading = document.querySelector('.pt h3')
+        let heading = document.querySelector('.specialsText h3')
         let nav = document.querySelector('nav');
         let navText = document.querySelectorAll('nav li');
         let navHeader = document.querySelectorAll('ul h4');
@@ -128,20 +132,16 @@ export default function Specials() {
 
     return(
         <div className='Specials-page'>
+
              <div className="specialsBanner">
                 <div className='specialsText'>
                     <img src={AmaranthLogo} alt="logo"/>
-                    <p>Experience the rejuvenating power of our premium Korean products</p>
-                    <h3>Amaranth Packages</h3>
+                    <p>Immerse yourself in the purity of our Korean massages</p>
+                    <h3>Amaranth Specials and Packages</h3>
                 </div>
 
-                {/* <video className='pv' autoPlay muted loop>
-                    <source className="packV" src={massage} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video> */}
-
                 <div className='specialsImage'>
-                    <img className="s-image" src={banner3} alt="banner"/>
+                    <img className="s-image" src={sunset} alt="banner"/>
                 </div>
             </div>
 

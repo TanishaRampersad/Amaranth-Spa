@@ -134,6 +134,11 @@
 
   /* --------- History Section -------------- */
 
+  .image-section{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .history-section{
     background-color: #EAE5DF;
     padding-top: 15rem;
@@ -149,17 +154,11 @@
   }
 
   .historyText .HT{
-    font-family: 'Whyte-light';
+    /*  font-family: 'Whyte-light';*/
     color: #322018;
     width: 45%;
     padding-right: 7rem;
     line-height: 10rem;
-  }
-
-  .historyText p{
-    font-size: 1.5rem;
-    line-height: 8rem;
-
   }
 
  .historyText{
@@ -169,6 +168,291 @@
   }
 
  .historyText p{
-line-height: 1rem;
+  line-height: 1.8rem;
+  font-size: 1.5rem;
+  font-family: 'Whyte-thin';
+  }
+
+  .HT p{
+    padding-bottom: 1rem;
+  }
+
+ .historyText{
+  padding-bottom: 8rem;
   }
  
+
+  /* ----------- Images -------------- */
+
+  .image-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 75vh;
+    width: 100vw;
+    background-color: #EAE5DF;
+    overflow: hidden;
+  }
+
+.image1{
+  width: 30vw;
+  height: 100%;
+  position: relative;
+}
+
+.background-image1{
+  background-image: url('../images/therapist2.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%; 
+  width: 100%; 
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+
+.image2{
+  width: 30vw;
+  height: 100%;
+  position: relative;
+  /* padding-right: 3rem; */
+}
+
+.background-image2{
+  background-image: url('../images/therapist3.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%; 
+  width: 100%; 
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.image3{
+  width: 30vw;
+  height: 100%;
+  position: relative;
+  /* padding-right: 3rem; */
+}
+
+.background-image3{
+  background-image: url('../images/therapist4.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100%; 
+  width: 100%; 
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ------------- organic well-being ---------------- */
+
+.organic-wellbeing{
+  background-color: #EAE5DF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+
+.organic-wellbeing img{
+  width: 100%;
+  height: 100%;
+
+}
+
+.e-oil{
+  width: 20%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8rem;
+  padding-top: 2rem;
+}
+
+.organic-wellbeing .flower{
+  width: 3.5rem;
+}
+
+.organic-wellbeing h2{
+  font-family: 'kaftan-regular';
+  font-size: 3rem;
+  padding-bottom: 3rem;
+  color: #322018;
+}
+
+.organic-wellbeing p{
+  width: 60%;
+  text-align: center;
+  padding-bottom: 5rem;
+  line-height: 1.2rem;
+  color: #322018;
+}
+
+.organic-wellbeing ul li{
+  display: flex;
+  justify-content: center;
+  line-height: 1.8rem;
+}
+
+
+
+/* -------------- Massage cost section ------------------*/
+
+.massage-cost{
+  background-color: #EAE5DF;
+}
+
+.facial-treatments-section{
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.facial-treatments-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+.subsectionOne{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.subsectionOne h2{
+  font-family: 'kaftan-regular';
+  font-size: 3rem;
+  color: #322018;
+  padding-bottom: 2rem;
+}
+
+.subsectionTwo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.subsectionTwo h2{
+  font-family: 'kaftan-regular';
+  font-size: 3rem;
+  color: #322018;
+  padding-bottom: 2rem;
+}
+
+.subsectionOne .item{
+  padding-bottom: 4rem;
+}
+
+.subsectionTwo .item{
+  padding-bottom: 4rem;
+}
+
+.massage-subsection{
+  width: 75%;
+}
+
+.inline button{
+  border: none;
+  background-color: #EAE5DF;
+  cursor: pointer;
+  width: 15px;
+  padding: 0; /* Reset padding in button */
+  border: none; /* Remove border */
+  background: none; /* Remove button background */
+  margin: 0;
+  padding-top: 1.6rem;
+}
+
+.inline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inline h3{
+  padding-top: 2rem;
+  margin: 0;
+}
+
+/* button {
+ 
+  display: flex;
+  align-items: center; /* Aligns the line vertically in the button 
+} */
+
+.B-line{
+  width: 2rem;
+  height: 0.1rem;
+  background-color: #322018;
+}
+
+.inline h3{
+  font-family: 'Whyte-regular';
+  font-size: 1.25rem;
+}
+
+.massage-subsection p{
+  font-family: 'Whyte-light';
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+
+.m-details{
+  width: 95%;
+  padding-left: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.massage-second{
+  padding-bottom: 3rem;
+}
+
+.massage-p{
+  padding-bottom: 1rem;
+}
+
+.details-p{
+  padding-bottom: 3rem;
+}
+
+.m-details h4{
+  font-weight: 600;
+}
+
+.reservation-section{
+  background-color: #EAE5DF;
+}
+
+.reservation {
+  width: 25%;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+}
+
+.res {
+  display: flex; 
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.res button {
+  width: 45%; 
+  padding: 1rem 0.6rem;
+  border-radius: 20px;
+  background-color: #903C02;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+

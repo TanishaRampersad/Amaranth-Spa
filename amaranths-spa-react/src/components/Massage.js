@@ -137,7 +137,6 @@ export default function Massage() {
                 start: "top top", 
                 end: "bottom 50%", 
                 scrub: true, 
-                markers: true,
                 onLeave: () => gsap.set(".background-image1", { y: "30%" })
             },
             y: "30%", 
@@ -152,7 +151,6 @@ export default function Massage() {
                 start: "top top", 
                 end: "bottom 50%", 
                 scrub: true, 
-                markers: true,
                 onLeave: () => gsap.set(".background-image2", { y: "30%" })
             },
             y: "30%", 
@@ -167,7 +165,6 @@ export default function Massage() {
                 start: "top top", 
                 end: "bottom 50%", 
                 scrub: true, 
-                markers: true,
                 onLeave: () => gsap.set(".background-image3", { y: "30%" })
             },
             y: "30%", 

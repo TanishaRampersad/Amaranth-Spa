@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Whyte-regular'; /* Name you want to use for the font */
+    src: url('../fonts/Whyte-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin\ \(1\).ttf') format('truetype');
+    
+}
+
+@font-face {
+    font-family: 'Whyte-extraLightItalic'; 
+    src: url('../fonts/Whyte-ExtraLightItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Whyte-italic'; 
+    src: url('../fonts/Whyte-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-light';
+    src: url('../fonts/Whyte-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-thin'; 
+    src: url('../fonts/Whyte-Thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Bold'; 
+    src:  url('../fonts/WhyteInktrap-Bold\ \(1\).ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whyte-Inktrap-Regular'; /* Name you want to use for the font */
+    src:  url('../fonts/WhyteInktrap-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kaftan-regular'; /* Name you want to use for the font */
+    src:  url('../fonts/kaftan-trial.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ----------------------- Main Content --------------------------- */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: none;
+}
+
+.contact-section{
+    background-color: #EAE5DF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 2rem; 
+    overflow: hidden;
+}
+
+.C h1{
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.CP{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.C{
+    padding-left: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.C button{
+    padding: 0.8rem 1rem;
+    color: white;
+    background-color: #903C02;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.C p{
+    line-height: 1.3rem;
+}
+
+.open{
+    padding-bottom: 4rem;
+}
+
+.C-details{
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+    width: 45%;
+}
+
+.C-details p{
+    line-height: 2rem;
+}
+
+.secOne{
+    width: 50%;
+    padding-top: 5rem;
+}
+
+.cPic img{
+    width: 50%;
+    height: 100%;
+    display: flex;;
+    justify-content: flex-end;
+}
+
+.cPic{
+    width: 50%;
+    height: 80%;
+    padding-top: 9rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+

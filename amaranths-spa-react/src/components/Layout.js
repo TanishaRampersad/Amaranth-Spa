@@ -4,10 +4,11 @@ import Navbar from './Navbar';
 import Footer from './Footer'; 
 import './Layout.css';
 import { useEffect } from 'react';
-import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
-import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
+import MouseFollower from "mouse-follower";
+import 'mouse-follower/dist/mouse-follower.min.css';
+
 
 
 export default function Layout() {
@@ -78,7 +79,6 @@ export default function Layout() {
      },
     })
 
-
     const cursor = new MouseFollower({
       el: null,
       container: document.body,
@@ -98,10 +98,7 @@ export default function Layout() {
       mediaState: '-media',
       stateDetection: {
           '-pointer': 'a,button',
-          '-hidden': 'iframe',
-          '-view': '[data-cursor="-view"]',
-          // '-no-cursor': '.hide-cursor',
-          // '-expand': 'expand'
+          '-hidden': 'iframe'
       },
       visible: true,
       visibleOnState: false,
@@ -109,7 +106,7 @@ export default function Layout() {
       ease: 'expo.out',
       overwrite: true,
       skewing: 0,
-      skewingText: 0,
+      skewingText: 2,
       skewingIcon: 2,
       skewingMedia: 2,
       skewingDelta: 0.001,
@@ -120,6 +117,7 @@ export default function Layout() {
       hideTimeout: 300,
       hideMediaTimeout: 300
   });
+    
 
   document.addEventListener("DOMContentLoaded", function () {
     new MouseFollower();  // or your specific initialization

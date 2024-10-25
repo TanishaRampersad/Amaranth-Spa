@@ -24,13 +24,13 @@ import couplesMassage from '../images/couplesMassage.jpg';
 import bannerVideo from '../images/banner-vid.mp4';
 
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 
 
 export default function Home() {
     useEffect(() => {
-     
 
 
 // Package slider
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
           <div className="container">
             <div className="slide">
 
-              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <Link href="#"><span data-cursor-text="View">
                 <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                       <div className="content">
                           <div className="name">Couples Massage</div>
@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
                   </div>
               </span></Link>
 
-              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <Link href="#"><span data-cursor-text="View">
                 <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
                         <div className="name">Korean Massage</div>
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
                 </div>
               </span></Link>
 
-              <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+              <Link href="#"><span data-cursor-text="View">
                 <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
                         <div className="name">Detox Massage</div>

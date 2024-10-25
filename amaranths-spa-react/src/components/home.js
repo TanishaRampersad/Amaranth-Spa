@@ -32,6 +32,71 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
     useEffect(() => {
 
+    let heading = document.querySelector('.banner-text h3')
+    let nav = document.querySelector('nav');
+    let navText = document.querySelectorAll('nav li');
+    let navHeader = document.querySelectorAll('ul h4');
+    let navP = document.querySelector('ul p')
+    let menu = document.querySelector('.menu');
+    let navButton = document.querySelector('.shrink-button');
+
+    let navigation = gsap.to(nav, {
+        backgroundColor: "#EAE5DF",
+        borderBottom: "0.1px solid #55361d97",
+        color: "#322018",
+        paused: true,
+        ease: "none"
+    })
+
+    let nText = gsap.to(navText, {
+        color: "#322018",
+        paused: true,
+        ease: "none"
+    })
+
+    let navH = gsap.to(navHeader, {
+        color: "#322018",
+        paused: true
+    })
+
+    let nP = gsap.to(navP, {
+        color: "#322018",
+        paused: true
+    })
+
+    let M = gsap.to(menu, {
+        filter: "invert(0)",
+        paused: true
+    })
+
+    let nButton = gsap.to(navButton, {
+        backgroundColor: "#2F4730",
+        color: "#FFFFFF",
+        paused: true
+    })
+
+
+    ScrollTrigger.create({
+        trigger: heading,
+        start: "top top%",
+        ease: "none",
+        onEnter: ()=> {
+        navigation.play();
+        nText.play();
+        navH.play();
+        nP.play();
+        M.play()
+        nButton.play();
+        },
+        onLeaveBack: () => {
+        navigation.reverse();
+        nText.reverse();
+        navH.reverse();
+        nP.reverse();
+        M.reverse();
+        nButton.reverse();
+        },
+    })
 
 // Package slider
 // let slideIndex = 0;

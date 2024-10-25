@@ -655,31 +655,6 @@ select:focus{
 }
 
 
-/* 
-.mf-cursor {
-  z-index: 9999;  /* Ensures it's on top of other elements 
-} */
-
-
-
-/* 
-.mf-cursor {
-  background-color: rgba(0, 0, 0, 0.7); 
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transition: background-color 0.2s ease; /* Smooth transition 
-  transform: translate(-50%, -50%);
-}
-
-.mf-cursor-text{
-  background-color: rgba(255, 255, 255, 0.9); 
-  transition: background-color 0.2s ease;
-} */
-
-
 
 
 

@@ -71,7 +71,7 @@ export default function Layout() {
 
   }, [pathname])
 
-  
+
   return (
     <div className='layout'>
       <header>

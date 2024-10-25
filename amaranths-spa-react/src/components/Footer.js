@@ -7,15 +7,15 @@ import star from '../images/star.png';
 export default function Footer() {
     return(
         <footer>
-            <div className='contact'>
+        <div className='contact'>
 
             <div className='menu-footer'>
                 <p>Menu</p>
                 <ul>
-                <li><Link className='links'>Home</Link></li>
-                <li><Link className='links'>Specials</Link></li>
-                <li><Link className='links'>Massage</Link></li>
-                <li><Link className='links'>Contact</Link></li>
+                <li><Link className='links-footer'>Home</Link></li>
+                <li><Link className='links-footer'>Specials</Link></li>
+                <li><Link className='links-footer'>Massage</Link></li>
+                <li><Link className='links-footer'>Contact</Link></li>
                 </ul>
             </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
             </div>
 
 
-            </div>
+        </div>
 
 
 

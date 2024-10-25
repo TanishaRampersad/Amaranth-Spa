@@ -55,7 +55,7 @@ export default function Contact() {
 
     ScrollTrigger.create({
         trigger: heading,
-        start: "top top%",
+        start: "top top",
         ease: "none",
         onEnter: ()=> {
         navigation.play();

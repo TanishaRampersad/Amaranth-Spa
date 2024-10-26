@@ -217,12 +217,12 @@ export default function Massage() {
                     </video> */}
 
                     <div className='massage-banner-image'>
-                        <img className="massageImage" src={trees} alt="banner"/>
+                        <img className="massageImage" src={trees} loading="lazy" alt="banner"/>
                     </div>
             </div>
 
             <div className='massage-second-image'>
-                <img className="massage-therapist" src={blackAndWhite} alt="Massage therapist"/>
+                <img className="massage-therapist" src={blackAndWhite} loading="lazy" alt="Massage therapist"/>
             </div>
 
 
@@ -259,11 +259,11 @@ export default function Massage() {
 
             <div className='organic-wellbeing'>
                 
-                    <img className="flower" src={lotus} alt="logo"/>
+                    <img className="flower" src={lotus} loading="lazy" alt="logo"/>
                     <h2>Organic well-being</h2>
                     <p>Experience the essence of Korean quality and beauty at our spa. Our treatments are inspired by traditional Korean practices, use high-quality, natural ingredients to rejuvenate your skin and soothe your soul. Discover the renowned effectiveness and luxury of Korean skincare and massage techniques.</p>
                     <div className='e-oil'>
-                        <img src={oil} alt="essential oil"/>
+                        <img src={oil} loading="lazy"  alt="essential oil"/>
                     </div>
                     <h2 className='incl'>Included in every appointment</h2>
                     <ul>
@@ -555,3 +555,7 @@ export default function Massage() {
         </div>
     )
 }
+
+window.onload = function(event){
+    Massage();
+  };

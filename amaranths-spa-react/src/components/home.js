@@ -222,7 +222,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 // tl.play()
     
-    
 }, []);
 
 
@@ -231,12 +230,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
         <div className="home-banner">
             <div className='banner-text'>
-                <img src={AmaranthLogo} alt="logo"/>
+                <img src={AmaranthLogo} loading="lazy" alt="logo"/>
                 <p>Amaranth Spa and Massage - Thailand</p>
                 <h3>Premium Korean Spa</h3>
 
                 <div className='vertical-line'></div>
-                <button className='specials-button'><img src={flower} alt=""/>Explore our Specials<img src={flower} alt=""/></button>
+                <button className='specials-button'><img src={flower} loading="lazy" alt=""/>Explore our Specials<img src={flower} alt=""/></button>
             </div>
 
             <video className='banner-video' autoPlay muted loop>
@@ -249,30 +248,30 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
         <div className='spa-content'>
           <div className='amaranth-image-container'>
-            <img className="amaranthSpa imageSpa" src={amaranth} alt="amaranth"/>
+            <img className="amaranthSpa imageSpa" src={amaranth} loading="lazy" alt="amaranth"/>
             <img className="overlayImage" src={overlay1} alt="massage"/>
           </div>
       
           <div className='candles-image-container'>
-            <img className="candles-spa imageSpa" src={candles} alt="candles"/>
+            <img className="candles-spa imageSpa" src={candles} loading="lazy" alt="candles"/>
             <img className="overlayImage" src={overlay4} alt="massage"/>
           </div>
 
           <div className='stones-image-container'>
-            <img className="massage2 imageSpa" src={massage2} alt="Massage"/>
-            <img className="overlayImage" src={overlay2} alt="massage"/>
+            <img className="massage2 imageSpa" src={massage2} loading="lazy" alt="Massage"/>
+            <img className="overlayImage" src={overlay2} loading="lazy" alt="massage"/>
            </div>
 
            <div className='relax-image-container'>
-            <img className="massage3 imageSpa" src={massage3} alt="Massage"/>
-            <img className="overlayImage" src={overlay3} alt="massage"/>
+            <img className="massage3 imageSpa" src={massage3} loading="lazy" alt="Massage"/>
+            <img className="overlayImage" src={overlay3} loading="lazy" alt="massage"/>
           </div>
 
           <div className='spa-info'>
             <img src={lotus} alt="lotus"/>
             <h3>Enjoy lavish tranquility</h3>
             <p>Situated close to the airport. Here you will find the best Korean Massages right in the heart of Thailand. Welcome to Amaranth.</p>
-            <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
+            <button className='spa-button'><img src={flower} loading="lazy" alt=""/>Experience our Spa<img src={flower} alt=""/></button>
           </div>
         </div>
 
@@ -384,7 +383,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
         <div className='flower-line'>
           <div className='horizontal-line1'></div>
-          <img src={lotus} alt="lotus"/>
+          <img src={lotus}  loading="lazy" alt="lotus"/>
           <div className='horizontal-line2'></div>
         </div>
 
@@ -436,4 +435,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
       </div>
     );
+  };
+
+  window.onload = function(event){
+    Home();
   };

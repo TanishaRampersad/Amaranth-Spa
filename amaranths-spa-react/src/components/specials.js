@@ -139,18 +139,19 @@ export default function Specials() {
  
     })
 
+   
     return(
         <div className='Specials-page'>
 
              <div className="specialsBanner">
                 <div className='specialsText'>
-                    <img src={AmaranthLogo} alt="logo"/>
+                    <img src={AmaranthLogo} loading="lazy" alt="logo"/>
                     <p>Immerse yourself in the purity of our Korean massages</p>
                     <h3>Amaranth Specials and Packages</h3>
                 </div>
 
                 <div className='specialsImage'>
-                    <img className="s-image" src={sunset} alt="banner"/>
+                    <img className="s-image" src={sunset} loading="lazy" alt="banner"/>
                 </div>
             </div>
 
@@ -244,7 +245,7 @@ export default function Specials() {
 
             <div className='flower-line'>
                 <div className='horizontal-line1'></div>
-                <img src={lotus} alt="lotus"/>
+                <img src={lotus} loading="lazy" alt="lotus"/>
                 <div className='horizontal-line2'></div>
             </div>
             
@@ -300,3 +301,7 @@ export default function Specials() {
         </div>
     )
 }
+
+window.onload = function(event){
+    Specials();
+  };

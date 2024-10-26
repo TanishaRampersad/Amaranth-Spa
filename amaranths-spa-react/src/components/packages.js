@@ -87,7 +87,7 @@ export default function Packages() {
         
             <div className="pb">
                 <div className='pt'>
-                    <img src={AmaranthLogo} alt="logo"/>
+                    <img src={AmaranthLogo} loading="lazy" alt="logo"/>
                     <p>Experience the rejuvenating power of our premium Korean products</p>
                     <h3>Amaranth Packages</h3>
                 </div>
@@ -98,17 +98,17 @@ export default function Packages() {
                 </video> */}
 
                 <div className='pv'>
-                    <img className="packV" src={nature} alt="banner"/>
+                    <img className="packV" src={nature} loading="lazy" alt="banner"/>
                 </div>
             </div>
 
             <div className='image'>
-                <img className="therapist" src={black} alt="Massage therapist"/>
+                <img className="therapist" src={black} loading="lazy" alt="Massage therapist"/>
             </div>
 
 
             <div className='couples-massage-package'>
-                <img className="flower" src={lotus} alt="logo"/>
+                <img className="flower" src={lotus} loading="lazy" alt="logo"/>
                 <h2>Couples Massage Package</h2>
                 <br/>
 
@@ -171,7 +171,7 @@ export default function Packages() {
 
             <div className='korean-massage-package'>
                 <div className='korean-package'>
-                    <img className="k-flower" src={lotus} alt="logo"/>
+                    <img className="k-flower"  loading="lazy" src={lotus} alt="logo"/>
                     <h2>Signature Korean Massage Package</h2>
                     <br/>
                 </div>
@@ -232,7 +232,7 @@ export default function Packages() {
 
             <div className='detox-massage-package'>
                 <div className='detox-package'>
-                    <img className="d-flower" src={lotus} alt="logo"/>
+                    <img className="d-flower" src={lotus} loading="lazy" alt="logo"/>
                     <h2>Detox Package</h2>
                     <br/>
                 </div>
@@ -345,3 +345,7 @@ export default function Packages() {
         </div>
     )
 }
+
+window.onload = function(event){
+    Packages();
+  };

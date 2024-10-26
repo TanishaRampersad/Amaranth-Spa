@@ -195,10 +195,45 @@ export default function Massage() {
         // });
 
 
+        function toggleAnimation() {
+            let plus = document.querySelectorAll('.plus-icon');
+            let Hline = document.querySelectorAll('.h-line');
+            let details = document.querySelectorAll('.m-details');
+
+            plus.forEach((icon, index) => {
+                details.forEach((detail, index) => {
+                    icon.addEventListener('click', () => {
+                        let animation  = gsap.to(Hline[index], {
+                            rotate: '-90',
+                            duration: 1,
+                            ease: 'power2.out',
+                            transformOrigin: "-50% 50%"
+                            // onToggle:(self)=>{
+                            //     self.animation.reversed(!self.isActive)
+                            //   }
+                        });
+    
+                        details[index].computedStyleMap.display = 'block'
+    
+                                // Attach the click event to toggle the animation state
+                        plus[index].addEventListener('click', () => {
+                            animation.reversed(!animation.reversed()); // Toggle animation direction
+                            animation.play(); // Play in whichever direction it’s toggled to
+                        });
+                    });
+                })
+                
+            });
+        }
+
+        toggleAnimation();
+
+
 
         // return () => {
         //     cursor.destroy(); // Cleanup to prevent memory leaks
         //   }; 
+
     })
 
     return(
@@ -290,7 +325,15 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Basic Facial Treatment - ฿1,000</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='lines'>
+                                    {/* <button><div className='B-line'></div></button> */}
+                                    <button class="plus-icon">
+                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                                            <line class="v-line" x1="12" y1="4" x2="12" y2="20" stroke="#322018" stroke-width="2"/>
+                                            <line class="h-line" x1="4" y1="12" x2="20" y2="12" stroke="#322018" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>A relaxing facial massage that will moisturize and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>

@@ -381,6 +381,9 @@
 .inline h3{
   padding-top: 2rem;
   margin: 0;
+  font-family: 'Whyte-light';
+  font-weight: 300;
+  padding-bottom: 1rem;
 }
 
 /* button {
@@ -389,11 +392,46 @@
   align-items: center; /* Aligns the line vertically in the button 
 } */
 
-.B-line{
+/* .B-line{
   width: 2rem;
   height: 0.1rem;
   background-color: #322018;
+  z-index: 2;
+} */
+
+
+/* .show .v-line{
+  /* -webkit-transform: rotate(90deg); 
+  transform: rotate(90deg);
+  transition: transform 0.3s ease; /* Smooth rotation 
+} */
+
+
+
+.plus-icon {
+  padding: 0; /* Avoid excess padding */
+  margin: 0; /* Avoid any unintended margin */
 }
+
+.lines{
+  padding: 0; /* Avoid excess padding */
+  margin: 0; /* Avoid any unintended margin */
+}
+
+
+
+
+/* .secondB-line{
+  width: 0.1rem;
+  height: 0.8rem;
+  background-color: #322018;
+  z-index: 1;
+} */
+
+.inline button{
+  padding-bottom: 0.8rem;
+}
+
 
 .inline h3{
   font-family: 'Whyte-regular';
@@ -411,6 +449,7 @@
   padding-left: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  display: none;
 }
 
 .massage-second{

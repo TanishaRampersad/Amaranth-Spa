@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import hamburger from '../images/hamburger.png';
 import { useEffect } from 'react'; 
+//import star from '../images/star.png';
 //import gsap from 'gsap';
 
 export default function Navbar() {
@@ -55,42 +56,53 @@ export default function Navbar() {
     //     });
     //   })
 
+    let hamburger = document.querySelector(".menu");
+    let navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active")
+        navMenu.classList.toggle("active")
+    });
+
   })
 
 
     return(
+      <>
         <nav>
           <div>
             <ul>
-              <img className="menu" src={hamburger} alt="hamburger menu"></img>
-              <p>|</p>
-              <li>
+              {/* <div className='hamburger-menu'> */}
+                <img className="menu" src={hamburger} alt="hamburger menu"></img>
+                <p>|</p>
+              {/* </div> */}
+              <li className='nav-item'>
                 <Link className='link'to="/">Home</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
-              <li>
+              <li className='nav-item'>
                 <Link className='link' to="/specials">Specials</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
-              <li>
+              <li className='nav-item'>
                 <Link className='link' to="/packages">Packages</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
 
-              <li>
+              <li className='nav-item'>
                 <Link className='link' to="/massages">Massages</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
 
-              <li>
+              <li className='nav-item'>
                 <Link className='link' to="/contact">Contact</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
@@ -106,5 +118,39 @@ export default function Navbar() {
         </div>
 
       </nav>
+
+      {/* <div className='menu-slide'>
+        <h3>Menu</h3>
+
+        <ul>
+          <li>Home</li>
+          <li>Specials</li>
+          <li>Packages</li>
+          <li>Massages</li>
+          <li>Contact</li>
+        </ul>
+
+        <hr/>
+
+        <div>
+          <div className='reviews'>
+              <div className='review-stars'>
+                  <img src={star} alt="stars"></img>
+                  <img src={star} alt="stars"></img>
+                  <img src={star} alt="stars"></img>
+                  <img src={star} alt="stars"></img>
+                  <img src={star} alt="stars"></img>
+              </div>
+
+              <p><Link className='link'><strong>5.0/</strong>555 reviews</Link></p>
+          </div>
+
+          <div className='whatsapp'>
+            <p>Whatsapp</p>
+          </div>
+        </div>
+
+      </div> */}
+      </>
     )
 }

@@ -130,6 +130,7 @@
 
   /* ------------ Monthly specials ------------ */
 
+
   .monthly-specials{
     background-color: #EAE5DF;
   }
@@ -199,7 +200,7 @@
   .holiday-pampering{
     width: 25%;
     background-color: #2f4730b5;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px;
     backdrop-filter: blur(10px); /* Blur effect */
     /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); Optional shadow for depth */
     padding: 2rem;
@@ -236,8 +237,8 @@
   .sweetheart-special{
     width: 25%;
     background-color: #2f4730b5;
-    border-radius: 15px; /* Rounded corners */
-    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners 
+    backdrop-filter: blur(10px); /* Blur effect 
     /* box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3); Optional shadow for depth */
     padding: 2rem;
     align-items: center;
@@ -281,6 +282,10 @@
     padding-right: 0.3rem; 
   }
 
+
+
+  /* -------------- Specials section 2 ----------------*/
+
   .Specials-discount-section h2{
     display: flex;
     justify-content: center;
@@ -291,16 +296,26 @@
     padding-bottom: 3rem;
   }
 
+
+  .mySlides {
+    display: inline-flex;
+    white-space: nowrap;
+    overflow-x: hidden;
+    flex-shrink: 0;
+    height: 70vh;
+}
+
+.mySlides > div {
+    min-width: 100vw; 
+    flex-shrink: 0;
+}
+
+
   .Specials-discount-section{
     background-color: #EAE5DF;
+    overflow-x:hidden;
   }
 
-
-
-  .first-time-client{
-    width: 100%;
-    background: linear-gradient(135deg, #f8f3f0, #a8947b);
-  }
 
   .clientHeading{
     display: flex;
@@ -309,11 +324,13 @@
     font-size: 3rem;
     padding-bottom: 4rem;
     color: #322018;
+    width: 100%;
   }
 
   .clientText{
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background: linear-gradient(135deg,  #d0e5d0b5,  #5c6d5cb5);
   }
 
   .clientText p{
@@ -344,6 +361,7 @@
   .loyaltyText{
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background-color: rgb(191, 157, 224);
   }
 
   .loyaltyText p{
@@ -372,6 +390,7 @@
   .birthdayText{
     padding-top: 5rem;
     padding-bottom: 5rem;
+    background-color: rgb(232, 161, 228);
   }
 
   .birthdayText p{
@@ -381,23 +400,6 @@
     font-size: 1.5rem;
     color: #322018;
     padding-bottom: 1rem;
-  }
-
-
-
-  .dot{
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    background-color: #686562;
-    padding-right: 0.5rem;
-  }
-
-  .dots{
-    display: flex;
-    justify-content: center;
-    padding-top: 4rem;
-    margin: 0 auto;
   }
 
   .slideShow-container{
@@ -410,6 +412,7 @@
     padding-top: 3rem;
   }
 
+
   .back,
   .forward{
     cursor: pointer;
@@ -419,7 +422,6 @@
     padding: 1rem;
     font-weight: bold;
   }
-
  
 
   .back{
@@ -438,7 +440,7 @@
 
   .subscribe{
     margin-right: 0.3rem;
-  }
+  } 
 
 
   /* --------------------- Horizontal line -------------------------*/

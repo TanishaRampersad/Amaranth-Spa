@@ -11,7 +11,8 @@ import couplesMassage from '../images/couplesMassage.jpg';
 import korean from '../images/korean.jpg';
 import detox from '../images/detox.jpg';
 import lotus from '../images/lotus (1).png';
-
+//import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 
 
@@ -118,24 +119,31 @@ export default function Specials() {
 
 
 
-     //SlideShow
-     function slideShow() {
-        let slideIndex = 0;
+    const slides = document.querySelector(".mySlides");
 
-        const showSlides = (n) => {
+    function getScrollAmount() {
+        let slideWidth = slides.scrollWidth;
+        return -(slideWidth - window.innerWidth); //if the windowsinnerwidth is smaller, then were subtracting less on the racesWidth. Which means the racesWidth will have a bigger number 
+    }
 
-        const slides = document.getElementsByClassName('mySlides');
+    const tween = gsap.fromTo(slides, { x: 0 }, { 
+        x: getScrollAmount,
+        duration: 3,
+        ease: "none",
+    });
 
-        for(let i = 0; i < slides.length; i++){
-            slides[i].style.display = "none";
-        }
 
-        slides[n].style.display = "block";
-        }
+    ScrollTrigger.create({
+        trigger:".Specials-discount-section",
+        start:"2% top",
+        end: () => `+=${getScrollAmount() * -1}`,
+        pin:true,
+        animation:tween,
+        scrub:1, //1-second delay.
+        invalidateOnRefresh:true,
+        markers:true
+    })
 
-        showSlides(slideIndex)
-     }
-     slideShow();
  
     })
 
@@ -202,41 +210,33 @@ export default function Specials() {
 
             <div className='Specials-discount-section'>
                 <h2>Our Special Discounts</h2>
-                <div className='discount slideShow-container'>
-                    <div className='first-time-client mySlides'>
+
+
+                <div className='slideShow-container'>
+                    <div className='mySlides'>
                         <div className='clientText'>
                             <h3 className='clientHeading'>First Time Client Discount</h3>
                             <p>Offer: 20% off the first service.</p>
                             <p>Valid: Ongoing for new customers.</p>
                         </div>
                        
-                    </div>
-
-                    <div className='loyalty-program mySlides'>
+                   
                         <div className='loyaltyText'>
                             <h3 className='loyltyHeading'>Loyalty Program</h3>
                             <p>Offer: Receive a free 30-minute massage or facial after 5 paid visits.</p>
                         </div>
-                    </div>
-
-                    <div className='birthday-specials mySlides'>
+                    
+                    
                         <div className='birthdayText'>
                             <h3 className='birthdayHeading'>Birthday Specials</h3>
                             <p>Offer: 20% off any treatment during your birthday month.</p>
                         </div>
                     </div>
 
-                    <div className='arrows'>
+                    {/* <div className='arrows'>
                         <Link className='back'><i class="fa-solid fa-circle-arrow-left"  style={{ fontSize: '2rem' }}></i></Link>
                     
                         <Link className='forward'><i class="fa-solid fa-circle-arrow-right"  style={{ fontSize: '2rem' }}></i></Link>
-                    </div>
-                   
-
-                    {/* <div className='dots'>
-                        <div className='dot'></div>
-                        <div className='dot'></div>
-                        <div className='dot'></div>
                     </div> */}
                 </div>
 
@@ -297,6 +297,7 @@ export default function Specials() {
                     </div>
                 </div>
             </div>
+
 
         </div>
     )

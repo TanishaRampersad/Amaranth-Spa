@@ -78,9 +78,41 @@ export default function Packages() {
         M.reverse();
         nButton.reverse();
         },
+    });
+
+
+    // Form update after user interaction
+    let submit = document.querySelector('.submit');
+    let input = document.querySelectorAll('form input');
+    let select = document.getElementById("mySelect");
+
+    submit.addEventListener('click', () => {
+
+    submit.textContent = 'Sent !';
+    submit.style.backgroundColor = " #767675";
+    submit.style.padding = '0.6rem 2rem';
+    submit.style.color = 'white';
+    submit.style.width = '7.3rem';
+    submit.style.marginTop = '2rem';
+
+
+    input.forEach(input => {
+        input.value = "";
+    });
+
+    select.selectedIndex = 0; // Reset to the first option
+    
+    setTimeout(function() {
+
+        // Change button text back to "Send" after processing completes
+        submit.textContent = "Submit";
+        submit.style.backgroundColor = "#903C02";
+    }, 3000); // Adjusted the delay 
+    
     })
+
  
-      })
+}, [])
 
     return(
         <div className='PS'>
@@ -307,7 +339,7 @@ export default function Packages() {
               <label htmlFor="userEmail">Email</label>
               <input type="text" id="userEmail" name="user-email"></input>
               <label htmlFor="selection">Select Treatment or Package</label>
-              <select htmlFor="selection">
+              <select id="mySelect" htmlFor="selection">
                 <option>Select a service</option>
                 <option>Basic Facial Treatment - 60min</option>
                 <option>Korean Body Scrub - 60min</option>
@@ -346,6 +378,6 @@ export default function Packages() {
     )
 }
 
-window.onload = function(event){
-    Packages();
-  };
+// window.onload = function(event){
+//     Packages();
+//   };

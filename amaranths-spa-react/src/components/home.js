@@ -207,6 +207,38 @@ document.addEventListener("DOMContentLoaded", ()=> {
 })
 
 
+
+// Form update after user interaction
+let submit = document.querySelector('.submit');
+let input = document.querySelectorAll('form input');
+let select = document.getElementById("mySelect");
+
+submit.addEventListener('click', () => {
+
+  submit.textContent = 'Sent !';
+  submit.style.backgroundColor = " #767675";
+  submit.style.padding = '0.6rem 2rem';
+  submit.style.color = 'white';
+  submit.style.width = '7.3rem';
+  submit.style.marginTop = '2rem';
+
+
+  input.forEach(input => {
+    input.value = "";
+  });
+
+  select.selectedIndex = 0; // Reset to the first option
+  
+  setTimeout(function() {
+
+    // Change button text back to "Send" after processing completes
+    submit.textContent = "Submit";
+    submit.style.backgroundColor = "#903C02";
+  }, 3000); // Adjusted the delay 
+  
+})
+
+
 // Spa content Image animation
 
 // let overlay = document.querySelectorAll('.overlayImage1');
@@ -271,7 +303,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
             <img src={lotus} alt="lotus"/>
             <h3>Enjoy lavish tranquility</h3>
             <p>Situated close to the airport. Here you will find the best Korean Massages right in the heart of Thailand. Welcome to Amaranth.</p>
-            <button className='spa-button'><img src={flower} loading="lazy" alt=""/>Experience our Spa<img src={flower} alt=""/></button>
+            <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
           </div>
         </div>
 
@@ -398,7 +430,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
               <label htmlFor="userEmail">Email</label>
               <input type="text" id="userEmail" name="user-email"></input>
               <label htmlFor="selection">Select Treatment or Package</label>
-              <select htmlFor="selection">
+              <select id="mySelect" htmlFor="selection">
                 <option>Select a service</option>
                 <option>Basic Facial Treatment - 60min</option>
                 <option>Korean Body Scrub - 60min</option>

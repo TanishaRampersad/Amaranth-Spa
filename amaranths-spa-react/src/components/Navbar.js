@@ -77,7 +77,7 @@ export default function Navbar() {
     })
 
 
-   
+   // Hover dot effect on the navigation section
     let navText = document.querySelectorAll('#navigationLink');
     let dots = document.querySelectorAll('.dot');
 
@@ -101,11 +101,11 @@ export default function Navbar() {
     return(
       <>
         <nav>
-          <div>
+          <div className='navFirst'>
             <ul>
               {/* <div className='hamburger-menu'> */}
                 <img className="menu" src={hamburger} alt="hamburger menu"></img>
-                <p>|</p>
+                <p className='vLine'>|</p>
               {/* </div> */}
               <li className='nav-item'>
                 <Link id="navigationLink" className='link'to="/">Home</Link>
@@ -139,51 +139,21 @@ export default function Navbar() {
                       <div className='dot'></div>
                   </div>
               </li>
-              
-              <h4>Amaranth</h4>
             </ul>
           </div>
 
-        <div className='booking'>
-          <Link smooth to="/#form">
-            <button className='shrink-button'>Book your stay</button>
-          </Link>
-        </div>
+          <div className='navEnd'>
+            <h4>Amaranth</h4>
+
+            <div className='booking'>
+              <Link smooth to="/#form">
+                <button className='shrink-button'>Book your stay</button>
+              </Link>
+            </div>
+
+          </div>
 
       </nav>
-
-      {/* <div className='menu-slide'>
-        <h3>Menu</h3>
-
-        <ul>
-          <li>Home</li>
-          <li>Specials</li>
-          <li>Packages</li>
-          <li>Massages</li>
-          <li>Contact</li>
-        </ul>
-
-        <hr/>
-
-        <div>
-          <div className='reviews'>
-              <div className='review-stars'>
-                  <img src={star} alt="stars"></img>
-                  <img src={star} alt="stars"></img>
-                  <img src={star} alt="stars"></img>
-                  <img src={star} alt="stars"></img>
-                  <img src={star} alt="stars"></img>
-              </div>
-
-              <p><Link className='link'><strong>5.0/</strong>555 reviews</Link></p>
-          </div>
-
-          <div className='whatsapp'>
-            <p>Whatsapp</p>
-          </div>
-        </div>
-
-      </div> */}
       </>
     )
 }

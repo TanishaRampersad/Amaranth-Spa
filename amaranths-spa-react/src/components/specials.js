@@ -26,6 +26,7 @@ export default function Specials() {
     let navP = document.querySelector('ul p')
     let menu = document.querySelector('.menu');
     let navButton = document.querySelector('.shrink-button');
+    let dots = document.querySelectorAll('.dot');
 
     let navigation = gsap.to(nav, {
         backgroundColor: "#EAE5DF",
@@ -62,6 +63,11 @@ export default function Specials() {
         paused: true
     })
 
+    let dot = gsap.to(dots, {
+        backgroundColor: "#322018",
+        paused: true
+    })
+
 
     ScrollTrigger.create({
         trigger: heading,
@@ -74,6 +80,7 @@ export default function Specials() {
         nP.play();
         M.play()
         nButton.play();
+        dot.play();
         },
         onLeaveBack: () => {
         navigation.reverse();
@@ -82,6 +89,7 @@ export default function Specials() {
         nP.reverse();
         M.reverse();
         nButton.reverse();
+        dot.reverse();
         },
     })
 

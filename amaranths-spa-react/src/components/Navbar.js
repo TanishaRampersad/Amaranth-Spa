@@ -76,7 +76,26 @@ export default function Navbar() {
       })
     })
 
-  })
+
+   
+    let navText = document.querySelectorAll('#navigationLink');
+    let dots = document.querySelectorAll('.dot');
+
+    navText.forEach((nav, index) => {
+      const dot = dots[index];
+  
+      nav.addEventListener('mouseenter', () => {
+        dot.classList.add('dot--visible');
+      });
+  
+      nav.addEventListener('mouseleave', () => {
+        dot.classList.remove('dot--visible');
+      });
+    });
+
+
+
+  });
 
 
     return(
@@ -91,33 +110,33 @@ export default function Navbar() {
               <li className='nav-item'>
                 <Link id="navigationLink" className='link'to="/">Home</Link>
                   <div className='d-padding'>
-                    <div className='d'></div>
+                      <div className='dot'></div>
                   </div>
               </li>
               <li className='nav-item'>
                 <Link id="navigationLink" className='link' to="/specials">Specials</Link>
                   <div className='d-padding'>
-                    <div className='d'></div>
+                    <div className='dot'></div>
                   </div>
               </li>
               <li className='nav-item'>
                 <Link id="navigationLink" className='link' to="/packages">Packages</Link>
                   <div className='d-padding'>
-                    <div className='d'></div>
+                      <div className='dot'></div>
                   </div>
               </li>
 
               <li className='nav-item'>
                 <Link id="navigationLink" className='link' to="/massages">Massages</Link>
                   <div className='d-padding'>
-                    <div className='d'></div>
+                        <div className='dot'></div>
                   </div>
               </li>
 
               <li className='nav-item'>
                 <Link id="navigationLink" className='link' to="/contact">Contact</Link>
                   <div className='d-padding'>
-                    <div className='d'></div>
+                      <div className='dot'></div>
                   </div>
               </li>
               

@@ -113,6 +113,36 @@ nav{
      color:#f6f6f6;
      padding-top: 1rem;
  }
+
+ .dot{
+    height: 4px;
+    width: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    visibility: hidden;
+ }
+
+ /* .dot:hover{
+    visibility: visible;
+ } */
+
+ 
+
+ .dot--visible {
+    visibility: visible;
+    position: relative;
+    /* position: absolute; */
+}
+
+.d-padding{
+    padding-top: 0.5rem;
+ }
+
+/* .navigationLink{
+    padding-bottom: 0.4rem;
+} */
+
+
  
  ul p{
      padding-right: 2em;
@@ -175,12 +205,9 @@ nav{
     display: none;
  }
 
- .d-padding{
-    padding-top: 0.5rem;
- }
-
  ul li{
     display: flex;
     flex-direction: column;
     align-items: center;
  }
+

@@ -79,7 +79,7 @@
 
 /* ----------------------- Navbar --------------------------- */
 
-nav{
+/* nav{
    position: fixed;
    top: 0;
    width: 100%; 
@@ -88,16 +88,16 @@ nav{
    display: flex;
    align-items: center;
    border-bottom: 0.1px solid #dfdfdf97; 
-   backdrop-filter: blur(8px); /* Adds blur effect for a frosted look */
+   backdrop-filter: blur(8px); /* Adds blur effect for a frosted look 
    z-index: 10; /* Higher than the video so it appears on top */
-   /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); Subtle shadow */
+   /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); Subtle shadow 
 }
 
 .menu{
     width: 1.2%;
     height: 1.2%;
-    /* margin-right: 1rem; */
-    filter: invert(1); /* Invert(1) it will change its image from black to white */
+    /* margin-right: 1rem; 
+    filter: invert(1); /* Invert(1) it will change its image from black to white 
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
@@ -133,14 +133,14 @@ ul h4{
     color:#f6f6f6;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
+} 
 
 .booking button{
     padding: 0.7rem 1rem;
     border-radius: 1em;
     border: none;
     background-color: rgba(235, 235, 235, 0.266);
-    backdrop-filter: blur(1em); /* blurs content behind buttom */
+    backdrop-filter: blur(1em); /* blurs content behind buttom 
     font-size: 0.8rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -163,9 +163,9 @@ ul h4{
 
 .link{
     text-decoration: none;
-    color: inherit; /* Inherits the color from its parent */
+    color: inherit; /* Inherits the color from its parent 
 }
-
+*/
 
 
 /* ----------------------- Footer --------------------------- */

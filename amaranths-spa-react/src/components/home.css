@@ -143,6 +143,19 @@
     background-color: #903C02;
     color: white;
     display: flex;
+    cursor: pointer;
+  }
+
+  .link{
+    text-decoration: none;
+  }
+
+  .see-more{
+    text-decoration: none;
+  }
+
+  .massages-link{
+    text-decoration: none;
   }
  
  

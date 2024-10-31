@@ -3,7 +3,7 @@ import AmaranthLogo from '../images/amaranth 2.png';
 //import couples from '../images/3780085-hd_1920_1080_25fps.mp4';
 import flower from '../images/Mediamodifier-Design.svg';
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
 import lotus from '../images/lotus (1).png';
@@ -22,6 +22,7 @@ import overlay4 from '../images/overlay4.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
 import couplesMassage from '../images/couplesMassage.jpg';
 import bannerVideo from '../images/banner-vid.mp4';
+import { HashLink as Link} from 'react-router-hash-link';
 
 
 
@@ -239,6 +240,13 @@ submit.addEventListener('click', () => {
 })
 
 
+let spaButton = document.querySelector('.massages-link');
+
+spaButton.addEventListener('click', () => {
+  gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: true } });
+})
+
+
 // Spa content Image animation
 
 // let overlay = document.querySelectorAll('.overlayImage1');
@@ -267,7 +275,9 @@ submit.addEventListener('click', () => {
                 <h3>Premium Korean Spa</h3>
 
                 <div className='vertical-line'></div>
-                <button className='specials-button'><img src={flower} loading="lazy" alt=""/>Explore our Specials<img src={flower} alt=""/></button>
+                <Link className="link" to="/specials">
+                  <button className='specials-button'><img src={flower} loading="lazy" alt=""/>Explore our Specials<img src={flower} alt=""/></button>
+                </Link>
             </div>
 
             <video className='banner-video' autoPlay muted loop>
@@ -303,7 +313,10 @@ submit.addEventListener('click', () => {
             <img src={lotus} alt="lotus"/>
             <h3>Enjoy lavish tranquility</h3>
             <p>Situated close to the airport. Here you will find the best Korean Massages right in the heart of Thailand. Welcome to Amaranth.</p>
-            <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
+
+            <Link className="massages-link" smooth to="/massages#top">
+              <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
+            </Link>
           </div>
         </div>
 
@@ -372,35 +385,41 @@ submit.addEventListener('click', () => {
           <div className="container">
             <div className="slide">
 
-              <Link href="#"><span data-cursor-text="View">
+              {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                       <div className="content">
                           <div className="name">Couples Massage</div>
                           <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
-                          <button>See More</button>
+                          <Link className="see-more" smooth to="/packages#top">
+                            <button>See More</button>
+                          </Link>
                       </div>
                   </div>
-              </span></Link>
+              {/* </span></Link> */}
 
-              <Link href="#"><span data-cursor-text="View">
+              {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
                         <div className="name">Korean Massage</div>
                         <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
-                        <button>See More</button>
+                        <Link className="see-more" smooth to="/packages#top">
+                          <button>See More</button>
+                        </Link>
                     </div>
                 </div>
-              </span></Link>
+              {/* </span></Link> */}
 
-              <Link href="#"><span data-cursor-text="View">
+              {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
                         <div className="name">Detox Massage</div>
                         <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
-                        <button>See More</button>
+                        <Link className="see-more" smooth to="/packages#top">
+                          <button>See More</button>
+                        </Link>
                     </div>
                 </div>
-              </span></Link>
+              {/* </span></Link> */}
 
             </div>
 
@@ -423,7 +442,7 @@ submit.addEventListener('click', () => {
         <div className='booking-section'>
           <h1>Make a Booking</h1>
 
-          <div className="form">
+          <div className="form" id="form">
             <form>
               <label htmlFor="userName">Name</label>
               <input type="text" id="userName" name="user-name"></input>

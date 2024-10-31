@@ -1,10 +1,11 @@
 import './Navbar.css';
 import React from 'react'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import hamburger from '../images/hamburger.png';
 import { useEffect } from 'react'; 
+import { HashLink as Link} from 'react-router-hash-link';
 //import star from '../images/star.png';
-//import gsap from 'gsap';
+import gsap from 'gsap';
 
 export default function Navbar() {
 
@@ -64,6 +65,17 @@ export default function Navbar() {
         navMenu.classList.toggle("active")
     });
 
+
+
+
+    let navLink = document.querySelectorAll('#navigationLink');
+
+    navLink.forEach (link => {
+      link.addEventListener('click', () => {
+        gsap.to(window, { duration: 1, scrollTo: { y: 0, autoKill: true } });
+      })
+    })
+
   })
 
 
@@ -77,33 +89,33 @@ export default function Navbar() {
                 <p>|</p>
               {/* </div> */}
               <li className='nav-item'>
-                <Link className='link'to="/">Home</Link>
+                <Link id="navigationLink" className='link'to="/">Home</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
               <li className='nav-item'>
-                <Link className='link' to="/specials">Specials</Link>
+                <Link id="navigationLink" className='link' to="/specials">Specials</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
               <li className='nav-item'>
-                <Link className='link' to="/packages">Packages</Link>
-                  <div className='d-padding'>
-                    <div className='d'></div>
-                  </div>
-              </li>
-
-              <li className='nav-item'>
-                <Link className='link' to="/massages">Massages</Link>
+                <Link id="navigationLink" className='link' to="/packages">Packages</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
               </li>
 
               <li className='nav-item'>
-                <Link className='link' to="/contact">Contact</Link>
+                <Link id="navigationLink" className='link' to="/massages">Massages</Link>
+                  <div className='d-padding'>
+                    <div className='d'></div>
+                  </div>
+              </li>
+
+              <li className='nav-item'>
+                <Link id="navigationLink" className='link' to="/contact">Contact</Link>
                   <div className='d-padding'>
                     <div className='d'></div>
                   </div>
@@ -114,7 +126,9 @@ export default function Navbar() {
           </div>
 
         <div className='booking'>
-          <button className='shrink-button'>Book your stay</button>
+          <Link smooth to="/#form">
+            <button className='shrink-button'>Book your stay</button>
+          </Link>
         </div>
 
       </nav>

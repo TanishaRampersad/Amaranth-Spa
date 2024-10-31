@@ -484,8 +484,9 @@
   width: 100%; 
 }
 
-.res button {
-  width: 45%; 
+.reservationLink{
+  width: 10rem; 
+  justify-content: space-between;
   padding: 1rem 0.6rem;
   border-radius: 20px;
   background-color: #903C02;

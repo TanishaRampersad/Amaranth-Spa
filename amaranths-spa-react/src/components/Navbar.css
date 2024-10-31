@@ -146,6 +146,10 @@ nav{
  .booking .shrink-button {
     backdrop-filter: blur(20px); 
  }
+
+ .shrink-button:hover{
+    background-color: #474747;
+ }
  
   .booking{
      padding-right: 2rem;

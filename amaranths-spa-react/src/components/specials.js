@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AmaranthLogo from '../images/amaranth 2.png';
@@ -12,6 +11,7 @@ import korean from '../images/korean.jpg';
 import detox from '../images/detox.jpg';
 import lotus from '../images/lotus (1).png';
 //import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { HashLink as Link} from 'react-router-hash-link';
 import '@splidejs/splide/dist/css/splide.min.css';
 
 
@@ -203,7 +203,7 @@ export default function Specials() {
 
                 </div>
 
-                <p className='call'>Call our <Link className='no-cursor'>number</Link> to book our monthly specials</p>
+                <p className='call'>Call our <a className='no-cursor' href="tel:+66819810932">number</a> to book our monthly specials</p>
             </div>
 
             <hr/>
@@ -240,7 +240,7 @@ export default function Specials() {
                     </div> */}
                 </div>
 
-                <p><Link className='subscribe'>Subscribe</Link> to our email to get Special Discounts</p>
+                {/* <p><Link className='subscribe'>Subscribe</Link> to our email to get Special Discounts</p> */}
             </div>
 
             <div className='flower-line'>
@@ -257,35 +257,41 @@ export default function Specials() {
                     <div className="container">
                         <div className="slide">
 
-                        <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                        {/* <Link href="#"><span data-cursor-text="View" data-cursor="-view"> */}
                             <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                                 <div className="content">
                                     <div className="name">Couples Massage</div>
                                     <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
-                                    <button>See More</button>
+                                    <Link className="see-more" smooth to="/packages#top">
+                                        <button>See More</button>
+                                    </Link>
                                 </div>
                             </div>
-                        </span></Link>
+                        {/* </span></Link> */}
 
-                        <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                        {/* <Link href="#"><span data-cursor-text="View" data-cursor="-view"> */}
                             <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                                 <div className="content">
                                     <div className="name">Korean Massage</div>
                                     <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
-                                    <button>See More</button>
+                                    <Link className="see-more" smooth to="/packages#top">
+                                        <button>See More</button>
+                                    </Link>
                                 </div>
                             </div>
-                        </span></Link>
+                        {/* </span></Link> */}
 
-                        <Link href="#"><span data-cursor-text="View" data-cursor="-view">
+                        {/* <Link href="#"><span data-cursor-text="View" data-cursor="-view"> */}
                             <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                                 <div className="content">
                                     <div className="name">Detox Massage</div>
                                     <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
-                                    <button>See More</button>
+                                    <Link className="see-more" smooth to="/packages#top">
+                                        <button>See More</button>
+                                    </Link>
                                 </div>
                             </div>
-                        </span></Link>
+                        {/* </span></Link> */}
 
                         </div>
 

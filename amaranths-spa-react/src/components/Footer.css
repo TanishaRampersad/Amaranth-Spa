@@ -147,6 +147,18 @@ footer {
     font-family: 'Whyte-extralight';
  }
 
+ .hours-footer ul{
+   padding-left: 0;
+   margin-left: 0;
+   width: 100% !important;
+ }
+
+ .hoursList{
+   padding-right: 15rem;
+   width: 100%;
+   margin-left: 0;
+ }
+
  /* .hours-footer ul {
     list-style-type: none;
  } */

@@ -8,6 +8,7 @@ import './Massage.css';
 //import { Link } from 'react-router-dom';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
+import { HashLink as Link} from 'react-router-hash-link';
 // import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
 // import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
 
@@ -131,58 +132,45 @@ export default function Massage() {
         gsap.registerPlugin(ScrollTrigger);
 
         // Parallax effect for image-section
-        gsap.to(".background-image1", {
-            scrollTrigger: {
-                trigger: ".image-section",
-                start: "top top", 
-                end: "bottom 50%", 
-                scrub: true, 
-                onLeave: () => gsap.set(".background-image1", { y: "30%" })
-            },
-            y: "30%", 
-            ease: "none", 
-
-        });
-
-          // Parallax effect for image-section
-          gsap.to(".background-image2", {
-            scrollTrigger: {
-                trigger: ".image-section",
-                start: "top top", 
-                end: "bottom 50%", 
-                scrub: true, 
-                onLeave: () => gsap.set(".background-image2", { y: "30%" })
-            },
-            y: "30%", 
-            ease: "none", 
-            scrub: true,
-        });
-
-        // Parallax effect for image-section
-        gsap.to(".background-image3", {
-            scrollTrigger: {
-                trigger: ".image-section",
-                start: "top top", 
-                end: "bottom 50%", 
-                scrub: true, 
-                onLeave: () => gsap.set(".background-image3", { y: "30%" })
-            },
-            y: "30%", 
-            ease: "none", 
-            scrub: true,
-        });
-
-          // Set up the parallax effect
-        //   gsap.to(".background-image1", {
+        // gsap.to(".background-image1", {
         //     scrollTrigger: {
         //         trigger: ".image-section",
-        //         start: "bottom 60%", // Start when the top of the image section hits the top of the viewport
-        //         end: "top bottom", // End when the bottom of the image section hits the top of the viewport
-        //         scrub: true, // Smoothly scrubs the animation to the scroll position
+        //         start: "top top", 
+        //         end: "bottom 50%", 
+        //         scrub: true, 
+        //         onLeave: () => gsap.set(".background-image1", { y: "30%" })
         //     },
-        //     y: "-30%", // Move the image upwards by 50% of its height
-        //     ease: "none", // No easing for a linear effect
-        //     scrub: true
+        //     y: "30%", 
+        //     ease: "none", 
+
+        // });
+
+          // Parallax effect for image-section
+        //   gsap.to(".background-image2", {
+        //     scrollTrigger: {
+        //         trigger: ".image-section",
+        //         start: "top top", 
+        //         end: "bottom 50%", 
+        //         scrub: true, 
+        //         onLeave: () => gsap.set(".background-image2", { y: "30%" })
+        //     },
+        //     y: "30%", 
+        //     ease: "none", 
+        //     scrub: true,
+        // });
+
+        // Parallax effect for image-section
+        // gsap.to(".background-image3", {
+        //     scrollTrigger: {
+        //         trigger: ".image-section",
+        //         start: "top top", 
+        //         end: "bottom 50%", 
+        //         scrub: true, 
+        //         onLeave: () => gsap.set(".background-image3", { y: "30%" })
+        //     },
+        //     y: "30%", 
+        //     ease: "none", 
+        //     scrub: true,
         // });
 
        
@@ -228,6 +216,8 @@ export default function Massage() {
 
         toggleAnimation();
 
+        // window.scrollTo(0, 0);
+
 
 
         // return () => {
@@ -238,6 +228,8 @@ export default function Massage() {
 
     return(
         <div className='massage-page'>
+
+            <div id="top"></div>
 
             <div className="massage-banner">
                     <div className='massageText'>
@@ -589,8 +581,13 @@ export default function Massage() {
             <div className='reservation-section'>
                 <div className='reservation'>
                     <div className='res'>
-                        <button>Make a reservation</button>
-                        <button>Call and book</button>
+                        <Link to='https://web.whatsapp.com/'>
+                            <button className='reservationLink'>Make a reservation</button>
+                        </Link>
+
+                        <a href="tel:+66819810932">
+                            <button className='reservationLink'>Call and book</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -599,6 +596,6 @@ export default function Massage() {
     )
 }
 
-window.onload = function(event){
-    Massage();
-  };
+// window.onload = function(event){
+//     Massage();
+//   };

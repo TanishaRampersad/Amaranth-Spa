@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Contact.css';
 import pic from '../images/contact-pic.jpg';
-//import { Link } from 'react-router-dom';
+import { HashLink as Link} from 'react-router-hash-link';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
 
@@ -86,7 +86,9 @@ export default function Contact() {
                     <p className='CP'>Feel free to reach out to us for any questions or appointments. We are here to assist you with scheduling your next spa session.</p>
                     <p className='open'>We are open everyday: 10:00am - 21:00pm</p>
 
-                    <button>Chat on Whatsapp</button>
+                    <Link to='https://web.whatsapp.com/'>
+                        <button>Chat on Whatsapp</button>
+                    </Link>
                 </div>
 
                 <div className='C-details'>

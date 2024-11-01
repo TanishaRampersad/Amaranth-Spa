@@ -14,13 +14,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Packages() {
     useEffect(() => {
-    let heading = document.querySelector('.pt h3')
+    let heading = document.querySelector('.banner-text h3')
     let nav = document.querySelector('nav');
-    let navText = document.querySelectorAll('nav li');
-    let navHeader = document.querySelectorAll('ul h4');
+    let navText = document.querySelectorAll('#navigationLink');
+    let navHeader = document.querySelectorAll('.navEnd h4');
     let navP = document.querySelector('ul p')
     let menu = document.querySelector('.menu');
     let navButton = document.querySelector('.shrink-button');
+    let dots = document.querySelectorAll('.dot');
 
     let navigation = gsap.to(nav, {
         backgroundColor: "#EAE5DF",
@@ -58,6 +59,12 @@ export default function Packages() {
     })
 
 
+    let dot = gsap.to(dots, {
+        backgroundColor: "#322018",
+        paused: true
+    })
+
+
     ScrollTrigger.create({
         trigger: heading,
         start: "top top%",
@@ -69,6 +76,7 @@ export default function Packages() {
         nP.play();
         M.play()
         nButton.play();
+        dot.play();
         },
         onLeaveBack: () => {
         navigation.reverse();
@@ -77,6 +85,7 @@ export default function Packages() {
         nP.reverse();
         M.reverse();
         nButton.reverse();
+        dot.reverse();
         },
     });
 

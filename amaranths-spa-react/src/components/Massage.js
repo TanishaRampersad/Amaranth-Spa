@@ -16,13 +16,14 @@ import { HashLink as Link} from 'react-router-hash-link';
 export default function Massage() {
     useEffect(() => {
 
-        let heading = document.querySelector('.massageText h3')
-        let nav = document.querySelector('nav');
-        let navText = document.querySelectorAll('nav li');
-        let navHeader = document.querySelectorAll('ul h4');
-        let navP = document.querySelector('ul p')
-        let menu = document.querySelector('.menu');
-        let navButton = document.querySelector('.shrink-button');
+    let heading = document.querySelector('.banner-text h3')
+    let nav = document.querySelector('nav');
+    let navText = document.querySelectorAll('#navigationLink');
+    let navHeader = document.querySelectorAll('.navEnd h4');
+    let navP = document.querySelector('ul p')
+    let menu = document.querySelector('.menu');
+    let navButton = document.querySelector('.shrink-button');
+    let dots = document.querySelectorAll('.dot');
     
         let navigation = gsap.to(nav, {
             backgroundColor: "#EAE5DF",
@@ -58,8 +59,13 @@ export default function Massage() {
             color: "#FFFFFF",
             paused: true
         })
-    
-    
+
+        let dot = gsap.to(dots, {
+            backgroundColor: "#322018",
+            paused: true
+        })
+        
+        
         ScrollTrigger.create({
             trigger: heading,
             start: "top top%",
@@ -71,6 +77,7 @@ export default function Massage() {
             nP.play();
             M.play()
             nButton.play();
+            dot.play();
             },
             onLeaveBack: () => {
             navigation.reverse();
@@ -79,6 +86,7 @@ export default function Massage() {
             nP.reverse();
             M.reverse();
             nButton.reverse();
+            dot.reverse();
             },
         })
 

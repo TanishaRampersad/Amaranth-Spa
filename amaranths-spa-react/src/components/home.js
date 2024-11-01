@@ -35,8 +35,8 @@ export default function Home() {
 
     let heading = document.querySelector('.banner-text h3')
     let nav = document.querySelector('nav');
-    let navText = document.querySelectorAll('nav li');
-    let navHeader = document.querySelectorAll('ul h4');
+    let navText = document.querySelectorAll('#navigationLink');
+    let navHeader = document.querySelectorAll('.navEnd h4');
     let navP = document.querySelector('ul p')
     let menu = document.querySelector('.menu');
     let navButton = document.querySelector('.shrink-button');

@@ -163,7 +163,7 @@ nav{
         position: fixed;
         top: 0;
         width: 100vw; 
-        padding: 1.5rem 0;
+        padding: 0.5rem 0;
         /* padding: 1rem 0; */
         background-color: rgba(179, 177, 177, 0.314); 
         display: flex;
@@ -173,29 +173,31 @@ nav{
         z-index: 10; /* Higher than the video so it appears on top */
     }
 
-    /* #navigationLink{
-        padding-bottom: 1rem;
-    } */
-
-     /* nav ul li {
-        text-decoration: none;
-        padding-right: 1.3rem;
-        font-size: 0.9rem;
-        color:#f6f6f6;
-        padding-top: 1rem;
-    } */
-
-    .navFirst ul li{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    #navigationLink{
+        color: white;
     }
 
-    nav ul{
+    .navFirst{
+        width: 45%;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .navFirst ul{
         display: flex;
-        list-style-type: none;
-        padding-left: 1.5rem;
+        align-items: baseline;
+        /* gap: 2rem; */
+    }
+
+    .navFirst ul li{
+        margin-right: 2rem;
+        /* margin-bottom: 1rem; */
+    }
+
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .dot{
@@ -214,17 +216,13 @@ nav{
 
     #nav-item{
         justify-content: space-between;
+        /* display: flex;
+        flex-direction: column; */
     }
-/* 
-    ul li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-     } */
 
-    /* .d-padding{
+    .d-padding{
         padding-top: 0.8rem;
-    } */
+    }
 
     .navEnd h4{
         font-family: 'Whyte-Inktrap-Bold';
@@ -235,21 +233,18 @@ nav{
 
     .navEnd{
         display: flex;
-        align-items: center;
-        border: 2px solid yellow;
+        align-items:center;
+
         width: 56%;
         justify-content: space-between;
         margin: 0 auto;
+        /* padding-bottom: 0.8rem; */
     }
 
-    .navFirst{
-        border: 2px solid red;
-        width: 44%;
-        /* display: flex;
-        justify-content: space-between; */
-        padding-left: 0;
-        margin-left: 0;
+    .navEnd h4{
+        padding-bottom: 0.7rem;
     }
+
 
     .booking button{
         /* padding: 0.7rem 1rem; */
@@ -263,19 +258,19 @@ nav{
         color: white;
         width: 7.5rem;
     }
-    
-    .booking .shrink-button {
-       backdrop-filter: blur(20px); 
+
+    .booking button:hover{
+        background-color: #474747;
     }
-   
-    .shrink-button:hover{
-       background-color: #474747;
-       align-items: center;
+    
+   .shrink-button {
+       backdrop-filter: blur(20px);
+       padding: 0.6rem 0.2rem;
     }
     
      .booking{
         padding-right: 2rem;
-        /* padding-bottom: 1rem; */
+        padding-bottom: 0.3rem;
         align-items: center;
     }
     

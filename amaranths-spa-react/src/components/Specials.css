@@ -323,14 +323,16 @@
     font-family: 'kaftan-regular';
     font-size: 3rem;
     padding-bottom: 4rem;
-    color: #322018;
+    color: #ffffff;
     width: 100%;
   }
 
   .clientText{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background: linear-gradient(135deg,  #d0e5d0b5,  #5c6d5cb5);
+    background-image: url('../images/essential\ oil.jpg');
+    background-size: cover;
+    height: 100%;
   }
 
   .clientText p{
@@ -338,7 +340,7 @@
     justify-content: center;
     font-family: 'Whyte-extralight';
     font-size: 1.5rem;
-    color: #322018;
+    color: #ffffff;
     padding-bottom: 1rem;
   }
 
@@ -355,13 +357,15 @@
     font-family: 'kaftan-regular';
     font-size: 3rem;
     padding-bottom: 4rem;
-    color: #322018;
+    color: #1b1b1b;
   }
 
   .loyaltyText{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: rgb(191, 157, 224);
+    background-image: url('../images/pouring\ oil.jpg');
+    background-size: cover;
+    height: 100%;
   }
 
   .loyaltyText p{
@@ -369,7 +373,7 @@
     justify-content: center;
     font-family: 'Whyte-extralight';
     font-size: 1.5rem;
-    color: #322018;
+    color: #000000;
     padding-bottom: 1rem;
   }
   
@@ -384,13 +388,15 @@
     font-family: 'kaftan-regular';
     font-size: 3rem;
     padding-bottom: 4rem;
-    color: #322018;
+    color: #ffffff;
   }
 
   .birthdayText{
     padding-top: 5rem;
     padding-bottom: 5rem;
-    background-color: rgb(232, 161, 228);
+    background-image: url('../images/candleVibe.jpg');
+    background-size: cover;
+    height: 100%;
   }
 
   .birthdayText p{
@@ -398,7 +404,7 @@
     justify-content: center;
     font-family: 'Whyte-extralight';
     font-size: 1.5rem;
-    color: #322018;
+    color: #ffffff;
     padding-bottom: 1rem;
   }
 

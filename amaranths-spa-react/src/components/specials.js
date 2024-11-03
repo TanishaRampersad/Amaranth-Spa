@@ -126,7 +126,8 @@ export default function Specials() {
     })
 
 
-
+    
+    //Horizontal scroll
     const slides = document.querySelector(".mySlides");
 
     function getScrollAmount() {

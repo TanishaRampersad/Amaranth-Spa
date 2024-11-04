@@ -269,6 +269,8 @@ spaButton.addEventListener('click', () => {
 
 
 // tl.play()
+
+window.scrollTo(0, 0); // Scrolls to the top on load
     
 }, []);
 

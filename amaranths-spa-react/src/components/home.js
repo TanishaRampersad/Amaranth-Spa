@@ -496,6 +496,6 @@ spaButton.addEventListener('click', () => {
     );
   };
 
-  window.onload = function(event){
-    Home();
-  };
+  // window.onload = function(event){
+  //   Home();
+  // };

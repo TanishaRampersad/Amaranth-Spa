@@ -449,9 +449,6 @@
   padding-left: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: none; /* Initially hidden */
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.5s; 
 }
 
 .massage-second{

@@ -23,10 +23,10 @@ export default function Footer() {
             <div className='menu-footer'>
                 <p>Menu</p>
                 <ul>
-                <li><Link id="nLink" smooth to="/" className='links-footer'>Home</Link></li>
-                <li><Link id="nLink" smooth to="/specials" className='links-footer'>Specials</Link></li>
-                <li><Link id="nLink" smooth to="/massages" className='links-footer'>Massage</Link></li>
-                <li><Link id="nLink" smooth to="/contact" className='links-footer'>Contact</Link></li>
+                <li><Link id="nLink" smooth="true" to="/" className='links-footer'>Home</Link></li>
+                <li><Link id="nLink" smooth="true" to="/specials" className='links-footer'>Specials</Link></li>
+                <li><Link id="nLink" smooth="true" to="/massages" className='links-footer'>Massage</Link></li>
+                <li><Link id="nLink" smooth="true" to="/contact" className='links-footer'>Contact</Link></li>
                 </ul>
             </div>
 

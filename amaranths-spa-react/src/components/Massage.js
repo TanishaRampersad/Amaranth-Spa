@@ -14,7 +14,16 @@ import { HashLink as Link} from 'react-router-hash-link';
 
 
 export default function Massage() {
-    const [show, setShow]=useState(true)
+
+   // Initialize state to track visibility of each massage section
+   const [showDetails, setShowDetails] = useState(Array(20).fill(false)); // Adjust the number to match your sections
+
+   // Toggle visibility of massage details based on the section index
+   const toggleDetails = (index) => {
+       setShowDetails(prevState =>
+           prevState.map((item, i) => (i === index ? !item : item))
+       );
+   };
 
     useEffect(() => {
 
@@ -301,20 +310,20 @@ export default function Massage() {
 
             <div className='image-section'>
                 <div className='image1'>
-                    <div class="background-image1">
-                        <div class="overlay"></div>
+                    <div className="background-image1">
+                        <div className="overlay"></div>
                     </div>
                 </div>
 
                 <div className='image2'>
-                    <div class="background-image2">
-                        <div class="overlay"></div>
+                    <div className="background-image2">
+                        <div className="overlay"></div>
                     </div>
                 </div>
 
                 <div className='image3'>
-                    <div class="background-image3">
-                        <div class="overlay"></div>
+                    <div className="background-image3">
+                        <div className="overlay"></div>
                     </div>
                 </div>
             </div>
@@ -352,8 +361,8 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Basic Facial Treatment - ฿1,000</h3>
-                                <div className='plus'>
-                                    <button onClick={()=>setShow(!show)} ><div className='H-line'></div></button>
+                                <div /*onClick={()=>setShow(!show)}*/ onClick={() => toggleDetails(0)} className='plus'>
+                                    <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                                 {/* <div className='lines'>
@@ -366,12 +375,13 @@ export default function Massage() {
                                     </button>
                                 </div> */}
                             </div>
-                            <div className='m-details'>
-                                {show? (
-                                <p className='details-p'>A relaxing facial massage that will moisturize and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
-                                ) : null}
-                                <h4>60 Minutes</h4>
-                            </div>
+
+                            {showDetails[0] && (
+                                <div className='m-details'>
+                                    <p className='details-p'>A relaxing facial massage that will moisturize and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
+                                    <h4>60 Minutes</h4>
+                                </div>
+                            )}
                             <hr className='hr'/>
                         </div>
 
@@ -379,139 +389,158 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Amaranth Signature Facial Treatment - ฿1,300</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(1)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[1] && (
                             <div className='m-details'>
                                 <p className='massage-p'>A relaxing facial massage that will moisturise and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
                                 <p className='massage-second'>Combined with a Full Body Massage to relax your day and relieve muscle tension.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Whitening - ฿1,300</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(2)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+
+                            {showDetails[2] && (
                             <div className='m-details'>
                                 <p className='massage-p'>Treat yourself with healthier and brighter skin. We reduce freckles, Discoloration’s, Dark Circles, Dark Spots, Acne, and Large Pores on your face. </p>
                                 <p className='massage-second'>Our treatment includes the use of an Ultrasound Machine and Vitamin A & C serums. Reward yourself and book now.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Electrophoresis Whitening - ฿1,800</h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(3)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[3] && (
                             <div className='m-details'>
                                 <p className='massage-p'>Our exclusive whitening treatment using an electrophoresis machine will reduce freckles, discolorations, dark circles, dark spots, acne and large pores on your face.</p>
                                 <p className='massage-second'>This Treatment boosts your face to look brighter, and stimulates the deeper layer of skin to produce more collagen. </p>
                                 <h4>90 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Facelifting - ฿1,800</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(4)}  className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[4] && (
                             <div className='m-details'>
                                 <p className='details-p'>Treat yourself with this quick and easy facelift. Japanese collagen gel and the use of ultrasound technology will gently enhance your face to emphasise your beauty. This treatment will lift hanging cheeks and reduce wrinkles.</p>
                                 <h4>100 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Noble Facelifting - ฿2,500</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(5)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[5] && (
                             <div className='m-details'>
                                 <p className='massage-p'>Feel and look younger with our House Specialty treatment for those who desire luxury and beauty.</p>
                                 <p className='massage-second'>This treatment includes seaweed handling, ultrasonic face lifting, collagen pearl masks, moisturising serums and more.</p>
                                 <h4>120 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Black Facial Therapy - ฿3,000</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(6)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[6] && (
                             <div className='m-details'>
                                 <p className='details-p'>A deep cleanse of your face, getting rid of all impurities from inside your pores. The Black Facial Therapy facial treatment will leave you feeling fresh and moisturised. Using Korean serums and masks, your face will look and feel younger. </p>
                                 <h4>120 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Gold Facial Therapy - ฿5,000</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(7)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[7] && (
                             <div className='m-details'>
                                 <p  className='details-p'>Embrace the opulence of our Gold Facial Therapy, a luxurious treatment utilising precious gold to revitalise your complexion and bestow an unparalleled, youthful glow.</p>
                                 <h4>120 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>HIFU - ฿5,000</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(8)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[8] && (
                             <div className='m-details'>
                                 <p className='details-p'>Experience the power of HIFU, a non-invasive treatment employing focused ultrasound energy to tighten and lift skin, revealing a more youthful, contoured appearance.</p>
                                 <h4>x Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Head & Shoulder Massage - ฿750</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(9)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[9] && (
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy our fantastic new head & shoulder massage. Unwind with our focused massage, targeting tension in the neck, shoulders, and scalp for quick, effective stress relief.</p>
                                 <h4>60 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
                     </div>
@@ -525,75 +554,85 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Body Scrub - ฿1,200</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(10)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[10] && (
                             <div className='m-details'>
                                 <p className='details-p'>Breathtaking Relaxation taken to a new level. Come enjoy a Sauna, Jacuzzi, Korean traditional body scrub, and yoghurt massage. This body scrub will leave your skin feeling brand new. </p>
                                 <h4>60 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Full Body Care - ฿2,000</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(11)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[11] && (
                             <div className='m-details'>
                                 <p className='details-p'>Experience our Korean Full Body Care Massage, featuring an aroma oil massage and traditional Korean body scrub. Relax as skilled masseuse’s dissolve tension and deliver unparalleled warmth, relaxation, and beauty</p>
                                 <h4>120 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿800</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(12)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[12] && (
                             <div className='m-details'>
                                 <p className='details-p'>Savor the relaxing Aroma Oil Massage, where fragrant oils  harmonize to release tension and rejuvenate your senses.</p>
                                 <h4>60 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿1,200</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(13)}  className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[13] && (
                             <div className='m-details'>
                                 <p className='details-p'>Savor the relaxing Aroma Oil Massage, where fragrant oils  harmonize to release tension and rejuvenate your senses.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿800</h3>
-                                <div className='plus'>
+                                <div onClick={() => toggleDetails(14)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[14] && (
                             <div className='m-details'>
                                 <p className='details-p'>Immerse in the ancient art of Thai massage. This therapeutic full-body treatment combines gentle stretching and rhythmic pressure to enhance flexibility, relieve muscle tension, and promote deep relaxation.</p>
                                 <h4>60 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
@@ -601,75 +640,85 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿1,200</h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(15)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[15] && (
                             <div className='m-details'>
                                 <p className='details-p'>Immerse in the ancient art of Thai massage. This therapeutic full-body treatment combines gentle stretching and rhythmic pressure to enhance flexibility, relieve muscle tension, and promote deep relaxation.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,200</h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(16)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[16] && (
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a deep tissue Massage with aroma oils. Flowing strokes and targeted kneading ease muscle tension, promoting ultimate relaxation and well-being.</p>
                                 <h4>60 Minutes</h4>
                             </div>
+                             )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,600 </h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(17)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[17] && (
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a deep tissue Massage with aroma oils. Flowing strokes and targeted kneading ease muscle tension, promoting ultimate relaxation and well-being.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,200</h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(18)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[18] && (
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a strong deep tissue massage using aroma oils to alleviate muscle pains, cramps, and soreness.</p>
                                 <h4>60 Minutes</h4>
                             </div>
+                              )}
                             <hr className='hr'/>
                         </div>
 
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,600 </h3>
-                                <div className='plus'>
+                                <div  onClick={() => toggleDetails(19)} className='plus'>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                             </div>
+                            {showDetails[19] && (
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a strong deep tissue massage using aroma oils to alleviate muscle pains, cramps, and soreness.</p>
                                 <h4>90 Minutes</h4>
                             </div>
+                               )}
                             <hr className='hr'/>
                         </div>
                     </div>

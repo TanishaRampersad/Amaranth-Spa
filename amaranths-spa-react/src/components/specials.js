@@ -318,6 +318,6 @@ export default function Specials() {
     )
 }
 
-window.onload = function(event){
-    Specials();
-  };
+// window.onload = function(event){
+//     Specials();
+//   };

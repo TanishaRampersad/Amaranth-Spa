@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AmaranthLogo from '../images/amaranth 2.png'
 import trees from '../images/trees.jpg';
 import blackAndWhite from '../images/blackandwhite.jpg';
@@ -14,6 +14,8 @@ import { HashLink as Link} from 'react-router-hash-link';
 
 
 export default function Massage() {
+    const [show, setShow]=useState(true)
+
     useEffect(() => {
 
     let heading = document.querySelector('.banner-text h3')
@@ -225,29 +227,29 @@ export default function Massage() {
         toggleAnimation();
 
 
-        let plusIcon = document.querySelectorAll('.plus');
+        // let plusIcon = document.querySelectorAll('.plus');
 
-        plusIcon.forEach((plus) => {
-            plus.addEventListener('click', () => {
-                // Rotate the vertical line
-                let vLines = plus.querySelectorAll('.V-line'); // Select only the V-lines inside the clicked plus icon
-                vLines.forEach((vLine) => {
-                    gsap.to(vLine, { rotate: '-90deg', duration: 0.5 });
-                });
+        // plusIcon.forEach((plus) => {
+        //     plus.addEventListener('click', () => {
+        //         // Rotate the vertical line
+        //         let vLines = plus.querySelectorAll('.V-line'); // Select only the V-lines inside the clicked plus icon
+        //         vLines.forEach((vLine) => {
+        //             gsap.to(vLine, { rotate: '-90deg', duration: 0.5 });
+        //         });
         
-                // Show the details
+        //         // Show the details
                 
-                let massageDetails = plus.querySelectorAll('.m-details'); // Assuming .m-details is inside each .plus
-                massageDetails.forEach((detail) => {
-                    // First, set display to block without animating
-                    //gsap.set(detail, { display: 'none', opacity: 0, autoAlpha: 0 });
+        //         let massageDetails = plus.querySelectorAll('.m-details'); // Assuming .m-details is inside each .plus
+        //         massageDetails.forEach((detail) => {
+        //             // First, set display to block without animating
+        //             //gsap.set(detail, { display: 'none', opacity: 0, autoAlpha: 0 });
 
-                    gsap.to(detail, {display:'block'})
-                });
-            });
+        //             gsap.to(detail, {display:'block'})
+        //         });
+        //     });
 
 
-        });
+        // });
 
         // window.scrollTo(0, 0);
 
@@ -351,7 +353,7 @@ export default function Massage() {
                             <div className='inline'>
                                 <h3>Basic Facial Treatment - ฿1,000</h3>
                                 <div className='plus'>
-                                    <button><div className='H-line'></div></button>
+                                    <button onClick={()=>setShow(!show)} ><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
                                 {/* <div className='lines'>
@@ -365,7 +367,9 @@ export default function Massage() {
                                 </div> */}
                             </div>
                             <div className='m-details'>
+                                {show? (
                                 <p className='details-p'>A relaxing facial massage that will moisturize and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
+                                ) : null}
                                 <h4>60 Minutes</h4>
                             </div>
                             <hr className='hr'/>

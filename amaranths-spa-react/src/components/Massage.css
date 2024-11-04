@@ -449,7 +449,9 @@
   padding-left: 5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  display: none;
+  display: none; /* Initially hidden */
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.5s; 
 }
 
 .massage-second{
@@ -496,3 +498,33 @@
 }
 
 
+.plus {
+  position: relative;
+  width: 1rem; /* Set a size for the container */
+  height: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  margin-top: 0.8rem;
+}
+
+.H-line, .V-line {
+  position: absolute;
+  background-color: black;
+}
+
+.H-line {
+  width: 1rem;
+  height: 0.1rem;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* Center horizontally */
+}
+
+.V-line {
+  width: 0.1rem;
+  height: 1rem;
+  top: 0;
+  left: 50%;
+  /* transform: translateX(-50%); Center vertically */
+}

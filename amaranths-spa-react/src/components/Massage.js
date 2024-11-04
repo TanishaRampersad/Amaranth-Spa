@@ -224,6 +224,31 @@ export default function Massage() {
 
         toggleAnimation();
 
+
+        let plusIcon = document.querySelectorAll('.plus');
+
+        plusIcon.forEach((plus) => {
+            plus.addEventListener('click', () => {
+                // Rotate the vertical line
+                let vLines = plus.querySelectorAll('.V-line'); // Select only the V-lines inside the clicked plus icon
+                vLines.forEach((vLine) => {
+                    gsap.to(vLine, { rotate: '-90deg', duration: 0.5 });
+                });
+        
+                // Show the details
+                
+                let massageDetails = plus.querySelectorAll('.m-details'); // Assuming .m-details is inside each .plus
+                massageDetails.forEach((detail) => {
+                    // First, set display to block without animating
+                    //gsap.set(detail, { display: 'none', opacity: 0, autoAlpha: 0 });
+
+                    gsap.to(detail, {display:'block'})
+                });
+            });
+
+
+        });
+
         // window.scrollTo(0, 0);
 
 
@@ -325,15 +350,19 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Basic Facial Treatment - ฿1,000</h3>
-                                <div className='lines'>
-                                    {/* <button><div className='B-line'></div></button> */}
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
+                                {/* <div className='lines'>
+                                    {/* <button><div className='B-line'></div></button> 
                                     <button class="plus-icon">
                                         <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                                             <line class="v-line" x1="12" y1="4" x2="12" y2="20" stroke="#322018" stroke-width="2"/>
                                             <line class="h-line" x1="4" y1="12" x2="20" y2="12" stroke="#322018" stroke-width="2"/>
                                         </svg>
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>A relaxing facial massage that will moisturize and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
@@ -346,7 +375,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Amaranth Signature Facial Treatment - ฿1,300</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='massage-p'>A relaxing facial massage that will moisturise and rejuvenate your skin using natural ingredients like seaweed, egg yolks, honey, grains, and Korean herbs. Combined with cleansing your pores and removing your blackheads.</p>
@@ -359,7 +391,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Whitening - ฿1,300</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='massage-p'>Treat yourself with healthier and brighter skin. We reduce freckles, Discoloration’s, Dark Circles, Dark Spots, Acne, and Large Pores on your face. </p>
@@ -372,7 +407,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Electrophoresis Whitening - ฿1,800</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='massage-p'>Our exclusive whitening treatment using an electrophoresis machine will reduce freckles, discolorations, dark circles, dark spots, acne and large pores on your face.</p>
@@ -385,7 +423,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Facelifting - ฿1,800</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Treat yourself with this quick and easy facelift. Japanese collagen gel and the use of ultrasound technology will gently enhance your face to emphasise your beauty. This treatment will lift hanging cheeks and reduce wrinkles.</p>
@@ -397,7 +438,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Noble Facelifting - ฿2,500</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='massage-p'>Feel and look younger with our House Specialty treatment for those who desire luxury and beauty.</p>
@@ -410,7 +454,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Black Facial Therapy - ฿3,000</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>A deep cleanse of your face, getting rid of all impurities from inside your pores. The Black Facial Therapy facial treatment will leave you feeling fresh and moisturised. Using Korean serums and masks, your face will look and feel younger. </p>
@@ -422,7 +469,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Gold Facial Therapy - ฿5,000</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p  className='details-p'>Embrace the opulence of our Gold Facial Therapy, a luxurious treatment utilising precious gold to revitalise your complexion and bestow an unparalleled, youthful glow.</p>
@@ -434,7 +484,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>HIFU - ฿5,000</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Experience the power of HIFU, a non-invasive treatment employing focused ultrasound energy to tighten and lift skin, revealing a more youthful, contoured appearance.</p>
@@ -446,7 +499,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Head & Shoulder Massage - ฿750</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy our fantastic new head & shoulder massage. Unwind with our focused massage, targeting tension in the neck, shoulders, and scalp for quick, effective stress relief.</p>
@@ -465,7 +521,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Body Scrub - ฿1,200</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Breathtaking Relaxation taken to a new level. Come enjoy a Sauna, Jacuzzi, Korean traditional body scrub, and yoghurt massage. This body scrub will leave your skin feeling brand new. </p>
@@ -477,7 +536,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Full Body Care - ฿2,000</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Experience our Korean Full Body Care Massage, featuring an aroma oil massage and traditional Korean body scrub. Relax as skilled masseuse’s dissolve tension and deliver unparalleled warmth, relaxation, and beauty</p>
@@ -489,7 +551,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿800</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Savor the relaxing Aroma Oil Massage, where fragrant oils  harmonize to release tension and rejuvenate your senses.</p>
@@ -501,7 +566,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿1,200</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Savor the relaxing Aroma Oil Massage, where fragrant oils  harmonize to release tension and rejuvenate your senses.</p>
@@ -513,7 +581,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿800</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Immerse in the ancient art of Thai massage. This therapeutic full-body treatment combines gentle stretching and rhythmic pressure to enhance flexibility, relieve muscle tension, and promote deep relaxation.</p>
@@ -526,7 +597,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿1,200</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Immerse in the ancient art of Thai massage. This therapeutic full-body treatment combines gentle stretching and rhythmic pressure to enhance flexibility, relieve muscle tension, and promote deep relaxation.</p>
@@ -538,7 +612,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,200</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a deep tissue Massage with aroma oils. Flowing strokes and targeted kneading ease muscle tension, promoting ultimate relaxation and well-being.</p>
@@ -550,7 +627,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,600 </h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a deep tissue Massage with aroma oils. Flowing strokes and targeted kneading ease muscle tension, promoting ultimate relaxation and well-being.</p>
@@ -562,7 +642,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,200</h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a strong deep tissue massage using aroma oils to alleviate muscle pains, cramps, and soreness.</p>
@@ -574,7 +657,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,600 </h3>
-                                <button><div className='B-line'></div></button>
+                                <div className='plus'>
+                                    <button><div className='H-line'></div></button>
+                                    <button><div className='V-line'></div></button>
+                                </div>
                             </div>
                             <div className='m-details'>
                                 <p className='details-p'>Enjoy a strong deep tissue massage using aroma oils to alleviate muscle pains, cramps, and soreness.</p>

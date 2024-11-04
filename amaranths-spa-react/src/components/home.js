@@ -13,10 +13,10 @@ import massage2 from '../images/massage 2.jpeg';
 import massage3 from '../images/massage 3.jpg';
 import korean from '../images/korean.jpg';
 import detox from '../images/detox.jpg';
-import overlay1 from '../images/overlay1.jpg';
-import overlay2 from '../images/0verlay2.jpg';
-import overlay3 from '../images/overlay3.jpg';
-import overlay4 from '../images/overlay4.jpg';
+//import overlay1 from '../images/overlay1.jpg';
+//import overlay2 from '../images/0verlay2.jpg';
+//import overlay3 from '../images/overlay3.jpg';
+//import overlay4 from '../images/overlay4.jpg';
 //import therapist from '../images/black&white.jpg';
 //import BWMassage from '../images/massage-black.jpg';
 //import massageVid from '../images/6186694-uhd_2160_3840_25fps.mp4';
@@ -299,22 +299,22 @@ spaButton.addEventListener('click', () => {
         <div className='spa-content'>
           <div className='amaranth-image-container'>
             <img className="amaranthSpa imageSpa" src={amaranth} loading="lazy" alt="amaranth"/>
-            <img className="overlayImage" src={overlay1} alt="massage"/>
+            {/* <img className="overlayImage" src={overlay1} alt="massage"/> */}
           </div>
       
           <div className='candles-image-container'>
             <img className="candles-spa imageSpa" src={candles} loading="lazy" alt="candles"/>
-            <img className="overlayImage" src={overlay4} alt="massage"/>
+            {/* <img className="overlayImage" src={overlay4} alt="massage"/> */}
           </div>
 
           <div className='stones-image-container'>
             <img className="massage2 imageSpa" src={massage2} loading="lazy" alt="Massage"/>
-            <img className="overlayImage" src={overlay2} loading="lazy" alt="massage"/>
+            {/* <img className="overlayImage" src={overlay2} loading="lazy" alt="massage"/> */}
            </div>
 
            <div className='relax-image-container'>
             <img className="massage3 imageSpa" src={massage3} loading="lazy" alt="Massage"/>
-            <img className="overlayImage" src={overlay3} loading="lazy" alt="massage"/>
+            {/* <img className="overlayImage" src={overlay3} loading="lazy" alt="massage"/> */}
           </div>
 
           <div className='spa-info'>

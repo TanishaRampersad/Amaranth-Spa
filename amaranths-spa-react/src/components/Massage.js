@@ -5,12 +5,13 @@ import blackAndWhite from '../images/blackandwhite.jpg';
 import lotus from '../images/lotus (1).png';
 import oil from '../images/oil.jpg';
 import './Massage.css';
-//import { Link } from 'react-router-dom';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from 'gsap';
 import { HashLink as Link} from 'react-router-hash-link';
 // import MouseFollower from "mouse-follower"; // Import the Mouse Follower library
 // import 'mouse-follower/dist/mouse-follower.min.css'; // Import its CSc
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 export default function Massage() {
@@ -18,12 +19,17 @@ export default function Massage() {
    // Initialize state to track visibility of each massage section
    const [showDetails, setShowDetails] = useState(Array(20).fill(false)); // Adjust the number to match your sections
 
-   // Toggle visibility of massage details based on the section index
+   
    const toggleDetails = (index) => {
-       setShowDetails(prevState =>
-           prevState.map((item, i) => (i === index ? !item : item))
-       );
-   };
+    setShowDetails(prevState =>
+        prevState.map((item, i) => (i === index ? !item : item))
+    );
+    
+    // Animate the vertical line rotation using GSAP
+    const vLines = document.querySelectorAll(`.plus[data-index="${index}"] .V-line`);
+    gsap.to(vLines, { rotate: showDetails[index] ? '0deg' : '-90deg', duration: 0.5 });
+
+}
 
     useEffect(() => {
 
@@ -148,117 +154,40 @@ export default function Massage() {
         // });
 
 
-        gsap.registerPlugin(ScrollTrigger);
 
-        // Parallax effect for image-section
-        // gsap.to(".background-image1", {
-        //     scrollTrigger: {
-        //         trigger: ".image-section",
-        //         start: "top top", 
-        //         end: "bottom 50%", 
-        //         scrub: true, 
-        //         onLeave: () => gsap.set(".background-image1", { y: "30%" })
-        //     },
-        //     y: "30%", 
-        //     ease: "none", 
+        // function toggleAnimation() {
+        //     let plus = document.querySelectorAll('.plus-icon');
+        //     let Hline = document.querySelectorAll('.h-line');
+        //     let details = document.querySelectorAll('.m-details');
 
-        // });
-
-          // Parallax effect for image-section
-        //   gsap.to(".background-image2", {
-        //     scrollTrigger: {
-        //         trigger: ".image-section",
-        //         start: "top top", 
-        //         end: "bottom 50%", 
-        //         scrub: true, 
-        //         onLeave: () => gsap.set(".background-image2", { y: "30%" })
-        //     },
-        //     y: "30%", 
-        //     ease: "none", 
-        //     scrub: true,
-        // });
-
-        // Parallax effect for image-section
-        // gsap.to(".background-image3", {
-        //     scrollTrigger: {
-        //         trigger: ".image-section",
-        //         start: "top top", 
-        //         end: "bottom 50%", 
-        //         scrub: true, 
-        //         onLeave: () => gsap.set(".background-image3", { y: "30%" })
-        //     },
-        //     y: "30%", 
-        //     ease: "none", 
-        //     scrub: true,
-        // });
-
-       
-
-        // window.addEventListener('scroll', function() {
-        //   const background = document.querySelector('.background-image1');
-        //   let scrollPosition = window.pageYOffset; // Get scroll position
-        //   let offset = Math.min(scrollPosition * 0.25, 100); // Adjust the parallax speed and cap the movement
-        //   background.style.backgroundPositionY = `calc(100% - ${offset}px)`; // Moves the image up slightly from the bottom
-        // });
-
-
-        function toggleAnimation() {
-            let plus = document.querySelectorAll('.plus-icon');
-            let Hline = document.querySelectorAll('.h-line');
-            let details = document.querySelectorAll('.m-details');
-
-            plus.forEach((icon, index) => {
-                details.forEach((detail, index) => {
-                    icon.addEventListener('click', () => {
-                        let animation  = gsap.to(Hline[index], {
-                            rotate: '-90',
-                            duration: 1,
-                            ease: 'power2.out',
-                            transformOrigin: "-50% 50%"
-                            // onToggle:(self)=>{
-                            //     self.animation.reversed(!self.isActive)
-                            //   }
-                        });
+        //     plus.forEach((icon, index) => {
+        //         details.forEach((detail, index) => {
+        //             icon.addEventListener('click', () => {
+        //                 let animation  = gsap.to(Hline[index], {
+        //                     rotate: '-90',
+        //                     duration: 1,
+        //                     ease: 'power2.out',
+        //                     transformOrigin: "-50% 50%"
+        //                     // onToggle:(self)=>{
+        //                     //     self.animation.reversed(!self.isActive)
+        //                     //   }
+        //                 });
     
-                        details[index].computedStyleMap.display = 'block'
+        //                 details[index].computedStyleMap.display = 'block'
     
-                                // Attach the click event to toggle the animation state
-                        plus[index].addEventListener('click', () => {
-                            animation.reversed(!animation.reversed()); // Toggle animation direction
-                            animation.play(); // Play in whichever direction it’s toggled to
-                        });
-                    });
-                })
+        //                         // Attach the click event to toggle the animation state
+        //                 plus[index].addEventListener('click', () => {
+        //                     animation.reversed(!animation.reversed()); // Toggle animation direction
+        //                     animation.play(); // Play in whichever direction it’s toggled to
+        //                 });
+        //             });
+        //         })
                 
-            });
-        }
-
-        toggleAnimation();
-
-
-        // let plusIcon = document.querySelectorAll('.plus');
-
-        // plusIcon.forEach((plus) => {
-        //     plus.addEventListener('click', () => {
-        //         // Rotate the vertical line
-        //         let vLines = plus.querySelectorAll('.V-line'); // Select only the V-lines inside the clicked plus icon
-        //         vLines.forEach((vLine) => {
-        //             gsap.to(vLine, { rotate: '-90deg', duration: 0.5 });
-        //         });
-        
-        //         // Show the details
-                
-        //         let massageDetails = plus.querySelectorAll('.m-details'); // Assuming .m-details is inside each .plus
-        //         massageDetails.forEach((detail) => {
-        //             // First, set display to block without animating
-        //             //gsap.set(detail, { display: 'none', opacity: 0, autoAlpha: 0 });
-
-        //             gsap.to(detail, {display:'block'})
-        //         });
         //     });
+        // }
 
+        // toggleAnimation();
 
-        // });
 
         // window.scrollTo(0, 0);
 
@@ -361,19 +290,10 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Basic Facial Treatment - ฿1,000</h3>
-                                <div /*onClick={()=>setShow(!show)}*/ onClick={() => toggleDetails(0)} className='plus'>
+                                <div onClick={() => toggleDetails(0)} className='plus' data-index={0}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
-                                {/* <div className='lines'>
-                                    {/* <button><div className='B-line'></div></button> 
-                                    <button class="plus-icon">
-                                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-                                            <line class="v-line" x1="12" y1="4" x2="12" y2="20" stroke="#322018" stroke-width="2"/>
-                                            <line class="h-line" x1="4" y1="12" x2="20" y2="12" stroke="#322018" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div> */}
                             </div>
 
                             {showDetails[0] && (
@@ -389,7 +309,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Amaranth Signature Facial Treatment - ฿1,300</h3>
-                                <div onClick={() => toggleDetails(1)} className='plus'>
+                                <div onClick={() => toggleDetails(1)} className='plus' data-index={1}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -407,7 +327,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Whitening - ฿1,300</h3>
-                                <div onClick={() => toggleDetails(2)} className='plus'>
+                                <div onClick={() => toggleDetails(2)} className='plus' data-index={2}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -426,7 +346,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Electrophoresis Whitening - ฿1,800</h3>
-                                <div  onClick={() => toggleDetails(3)} className='plus'>
+                                <div  onClick={() => toggleDetails(3)} className='plus' data-index={3}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -444,7 +364,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Ultrasound Facelifting - ฿1,800</h3>
-                                <div onClick={() => toggleDetails(4)}  className='plus'>
+                                <div onClick={() => toggleDetails(4)}  className='plus' data-index={4}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -461,7 +381,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Noble Facelifting - ฿2,500</h3>
-                                <div onClick={() => toggleDetails(5)} className='plus'>
+                                <div onClick={() => toggleDetails(5)} className='plus' data-index={5}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -479,7 +399,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Black Facial Therapy - ฿3,000</h3>
-                                <div onClick={() => toggleDetails(6)} className='plus'>
+                                <div onClick={() => toggleDetails(6)} className='plus' data-index={6}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -496,7 +416,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Gold Facial Therapy - ฿5,000</h3>
-                                <div onClick={() => toggleDetails(7)} className='plus'>
+                                <div onClick={() => toggleDetails(7)} className='plus' data-index={7}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -513,7 +433,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>HIFU - ฿5,000</h3>
-                                <div onClick={() => toggleDetails(8)} className='plus'>
+                                <div onClick={() => toggleDetails(8)} className='plus' data-index={8}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -530,7 +450,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Head & Shoulder Massage - ฿750</h3>
-                                <div onClick={() => toggleDetails(9)} className='plus'>
+                                <div onClick={() => toggleDetails(9)} className='plus' data-index={9}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -554,7 +474,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Body Scrub - ฿1,200</h3>
-                                <div onClick={() => toggleDetails(10)} className='plus'>
+                                <div onClick={() => toggleDetails(10)} className='plus' data-index={10}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -571,7 +491,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Korean Full Body Care - ฿2,000</h3>
-                                <div onClick={() => toggleDetails(11)} className='plus'>
+                                <div onClick={() => toggleDetails(11)} className='plus' data-index={11}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -588,7 +508,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿800</h3>
-                                <div onClick={() => toggleDetails(12)} className='plus'>
+                                <div onClick={() => toggleDetails(12)} className='plus' data-index={12}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -605,7 +525,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Aroma Oil Massage - ฿1,200</h3>
-                                <div onClick={() => toggleDetails(13)}  className='plus'>
+                                <div onClick={() => toggleDetails(13)}  className='plus' data-index={13}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -622,7 +542,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿800</h3>
-                                <div onClick={() => toggleDetails(14)} className='plus'>
+                                <div onClick={() => toggleDetails(14)} className='plus' data-index={14}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -640,7 +560,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Royal Thai Traditional Massage - ฿1,200</h3>
-                                <div  onClick={() => toggleDetails(15)} className='plus'>
+                                <div  onClick={() => toggleDetails(15)} className='plus' data-index={15}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -657,7 +577,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,200</h3>
-                                <div  onClick={() => toggleDetails(16)} className='plus'>
+                                <div  onClick={() => toggleDetails(16)} className='plus' data-index={16}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -674,7 +594,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Swedish Massage - ฿1,600 </h3>
-                                <div  onClick={() => toggleDetails(17)} className='plus'>
+                                <div  onClick={() => toggleDetails(17)} className='plus' data-index={17}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -691,7 +611,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,200</h3>
-                                <div  onClick={() => toggleDetails(18)} className='plus'>
+                                <div  onClick={() => toggleDetails(18)} className='plus' data-index={18}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>
@@ -708,7 +628,7 @@ export default function Massage() {
                         <div className='massage-subsection'>
                             <div className='inline'>
                                 <h3>Sports Massage - ฿1,600 </h3>
-                                <div  onClick={() => toggleDetails(19)} className='plus'>
+                                <div  onClick={() => toggleDetails(19)} className='plus' data-index={19}>
                                     <button><div className='H-line'></div></button>
                                     <button><div className='V-line'></div></button>
                                 </div>

@@ -76,14 +76,14 @@ export default function Footer() {
                     <img src={star} alt="stars"></img>
                 </div>
 
-                <p><Link to='https://www.tripadvisor.com/Attraction_Review-g293916-d24795837-Reviews-Amaranth_Spa_Massage-Bangkok.html' className='link'><strong>5.0/</strong>555 reviews</Link></p>
+                <p><Link to='https://www.tripadvisor.com/Attraction_Review-g293916-d24795837-Reviews-Amaranth_Spa_Massage-Bangkok.html' target="_blank" className='link'><strong>5.0/</strong>555 reviews</Link></p>
             </div>
 
 
             <div className="socials">
                 <ul>
-                <li><Link to='https://www.instagram.com/explore/locations/202070843164623/amaranth-spa-massage/' className="social-link">Instagram</Link></li>
-                <li><Link to='https://www.tripadvisor.com/Attraction_Review-g293916-d24795837-Reviews-Amaranth_Spa_Massage-Bangkok.html' className="social-link">Tripadvisor</Link></li>
+                <li><Link to='https://www.instagram.com/explore/locations/202070843164623/amaranth-spa-massage/' target="_blank" className="social-link">Instagram</Link></li>
+                <li><Link to='https://www.tripadvisor.com/Attraction_Review-g293916-d24795837-Reviews-Amaranth_Spa_Massage-Bangkok.html' target="_blank" className="social-link">Tripadvisor</Link></li>
                 </ul>
             </div>
 

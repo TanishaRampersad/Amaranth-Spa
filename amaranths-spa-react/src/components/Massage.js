@@ -648,7 +648,7 @@ export default function Massage() {
             <div className='reservation-section'>
                 <div className='reservation'>
                     <div className='res'>
-                        <Link to='https://web.whatsapp.com/'>
+                        <Link to='https://web.whatsapp.com/' target="_blank">
                             <button className='reservationLink'>Make a reservation</button>
                         </Link>
 

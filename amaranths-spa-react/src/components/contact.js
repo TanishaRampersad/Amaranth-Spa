@@ -93,7 +93,7 @@ export default function Contact() {
                     <p className='CP'>Feel free to reach out to us for any questions or appointments. We are here to assist you with scheduling your next spa session.</p>
                     <p className='open'>We are open everyday: 10:00am - 21:00pm</p>
 
-                    <Link to='https://web.whatsapp.com/'>
+                    <Link to='https://web.whatsapp.com/' target="_blank">
                         <button>Chat on Whatsapp</button>
                     </Link>
                 </div>
@@ -101,7 +101,7 @@ export default function Contact() {
                 <div className='C-details'>
                     <p><strong>Phone Number:</strong> +66818230296</p>
                     <p><strong>Line & Kakao ID:</strong> josylee</p>
-                    <p><strong>Email:</strong> josie835@gmail.com</p>
+                    <p><strong>Email:</strong> Josie@gmail.com</p>
                 </div>
             </div>
 

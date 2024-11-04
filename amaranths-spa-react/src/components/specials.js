@@ -150,7 +150,6 @@ export default function Specials() {
         animation:tween,
         scrub:1, //1-second delay.
         invalidateOnRefresh:true,
-        markers:true
     })
 
  

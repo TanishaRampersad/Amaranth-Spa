@@ -476,7 +476,7 @@
     height: 3%;
   }
   
-  /* ------------------------ Package Test ------------------------ */
+  /* ------------------------ Package Test ------------------------
 .p-div{
     background-color: #EAE5DF;
     padding-bottom: 8rem;
@@ -498,7 +498,7 @@
     margin:0;
     background-color: #EAE5DF;
     height: 90vh;
-    /* padding-bottom: 5rem; */
+    /* padding-bottom: 5rem; 
   }
   
   .container {
@@ -537,7 +537,7 @@
   
   .slide .item:nth-child(n + 3){
       left: calc(65% + 260px);
-      /* opacity: 0; */
+      /* opacity: 0; 
   }
   
   .item .content{
@@ -610,7 +610,7 @@
    border: none;
    cursor: pointer;
    margin: 0 0.31rem;
-   /* border: 1px solid #000; */
+   /* border: 1px solid #000; 
    transition: 0.3s;
    background-color: #f0f0f0;
    color: iherit;
@@ -618,7 +618,7 @@
   }
   
   .button button {
-    color: inherit; /* Ensure the button text and icon inherit the same color */
+    color: inherit; /* Ensure the button text and icon inherit the same color 
   }
   
   
@@ -633,4 +633,4 @@
     color: #fff; 
   }
   
-
+ */

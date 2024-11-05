@@ -280,7 +280,7 @@ window.scrollTo(0, 0); // Scrolls to the top on load
 
         <div className="home-banner">
             <div className='banner-text'>
-                <img src={AmaranthLogo} loading="lazy" alt="logo"/>
+                <img src={AmaranthLogo} alt="logo"/>
                 <p>Amaranth Spa and Massage - Thailand</p>
                 <h3>Premium Korean Spa</h3>
 
@@ -290,34 +290,29 @@ window.scrollTo(0, 0); // Scrolls to the top on load
                 </Link>
             </div>
 
-            <video className='banner-video' autoPlay muted loop>
-                <source className="bannerV" src={bannerVideo} type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+            <div class="video-banner">
+              <video className='banner-video' autoPlay muted loop>
+                  <source className="bannerV" src={bannerVideo} type="video/mp4" />
+                  Your browser does not support the video tag.
+              </video>
+            </div>
 
         </div>
 
 
         <div className='spa-content'>
-          <div className='amaranth-image-container'>
-            <img className="amaranthSpa imageSpa" src={amaranth} loading="lazy" alt="amaranth"/>
-            {/* <img className="overlayImage" src={overlay1} alt="massage"/> */}
-          </div>
-      
-          <div className='candles-image-container'>
-            <img className="candles-spa imageSpa" src={candles} loading="lazy" alt="candles"/>
-            {/* <img className="overlayImage" src={overlay4} alt="massage"/> */}
+
+          <div className='firstHalf'>
+            <div className='amaranth-image-container'>
+              <img className="amaranthSpa imageSpa" src={amaranth} loading="lazy" alt="amaranth"/>
+            </div>
+        
+            <div className='candles-image-container'>
+              <img className="candles-spa imageSpa" src={candles} loading="lazy" alt="candles"/>
+            </div>
           </div>
 
-          <div className='stones-image-container'>
-            <img className="massage2 imageSpa" src={massage2} loading="lazy" alt="Massage"/>
-            {/* <img className="overlayImage" src={overlay2} loading="lazy" alt="massage"/> */}
-           </div>
-
-           <div className='relax-image-container'>
-            <img className="massage3 imageSpa" src={massage3} loading="lazy" alt="Massage"/>
-            {/* <img className="overlayImage" src={overlay3} loading="lazy" alt="massage"/> */}
-          </div>
+          
 
           <div className='spa-info'>
             <img src={lotus} alt="lotus"/>
@@ -328,66 +323,22 @@ window.scrollTo(0, 0); // Scrolls to the top on load
               <button className='spa-button'><img src={flower} alt=""/>Experience our Spa<img src={flower} alt=""/></button>
             </Link>
           </div>
+
+
+
+          <div className='secondHalf'>
+            <div className='stones-image-container'>
+              <img className="massage2 imageSpa" src={massage2} loading="lazy" alt="Massage"/>
+            </div>
+
+            <div className='relax-image-container'>
+              <img className="massage3 imageSpa" src={massage3} loading="lazy" alt="Massage"/>
+            </div>
+          </div>
         </div>
 
         <hr/>
 
-
-
-        {/* <div className='Packages-section'>
-          <h2>View Our Packages</h2>
-
-          <div className='Packages-section1 package-slider panel1'>
-            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages gsap-couple'>
-                <p>Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</p>
-                <h3>Couples Package</h3>
-                <img alt=""/>
-              </div>
-
-              <div className='image-section couple-image'>
-                  <img className="couplesImage" src={couplesMassage} alt="couples massage"/>
-              </div>
-            </span></Link>
-          </div>
-
-
-          <div className='Packages-section2 package-slider panel2'>
-            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages gsap-korean'>
-                <p>Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</p>
-                <h3>Signature Korean Massage Package</h3>
-                <img alt=""/>
-              </div>
-
-              <div className='image-section korean-image'>
-                  <img className="KoreanImage" src={korean} alt="couples massage"/>
-              </div>
-            </span></Link>
-          </div>
-
-
-          <div className='Packages-section3 package-slider panel3'>
-            <Link href="#"><span data-cursor-text="View" data-cursor="-view">
-              <div className='packages gsap-detox'>
-                <p>Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</p>
-                <h3>Detox Package</h3>
-                <img alt=""/>
-              </div>
-
-              <div className='image-section detox-image'>
-                  <img className="detoxImage" src={detox} alt="couples massage"/>
-              </div>
-            </span></Link>
-          </div>
-
-          <div className="dots-container hide-cursor">
-              <span onclick="currentSlide(0)" className='dots'></span>
-              <span onClick="currentSlide(1)" className='dots'></span>
-              <span onClick="currentSlide(2)" className='dots'></span>
-            </div>
-
-        </div> */}
 
     <div className='p-div'>
       <h2>View Our Packages</h2>
@@ -396,10 +347,10 @@ window.scrollTo(0, 0); // Scrolls to the top on load
             <div className="slide">
 
               {/* <Link href="#"><span data-cursor-text="View"> */}
-                <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
+                <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center', position: 'absolute' }}>
                       <div className="content">
                           <div className="name">Couples Massage</div>
-                          <div className="des">Welcome ritual, side-by-side massage and foot ritual and post massage relaxation</div>
+                          <div className="des">Welcome ritual, side-by-side massage, foot ritual and post massage relaxation</div>
                           <Link className="see-more" smooth to="/packages#top">
                             <button>See More</button>
                           </Link>

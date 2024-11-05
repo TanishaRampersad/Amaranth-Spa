@@ -78,6 +78,14 @@
     height: 100vh;
     overflow: hidden;
  }
+
+
+ .video-banner {
+  position: relative; /* Make it relative for absolute positioning of the video */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide overflow to ensure nothing goes outside the container */
+}
  
  .banner-video{
     position: absolute;
@@ -125,6 +133,7 @@
     color: #EAE5DF;
     font-weight: 300;
     padding-bottom: 2rem;
+    text-align: center;
   }
  
   .vertical-line{
@@ -165,9 +174,12 @@
   }
 
 
+/* ---------------- Spa content ---------------*/
 
   .spa-content{
     background-color: #EAE5DF;
+    width: 100vw;
+    position: relative;
   }
 
   .spa-info{
@@ -225,28 +237,16 @@
     padding: 0 0.2rem;
   }
 
-  .overlayImage{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: -100%; /*Start offscreen*/
-    z-index: 1;
-  }
-
-  /* .overlayImage1{
-    width: 100%;
-    height: 100%;
-   
-  } */
-
 
   .amaranth-image-container{
     overflow: hidden;
+    min-width: 5rem;
+    min-height: 5rem;
     width: 15rem;
     height: 15rem;
     position: absolute;
-    margin-top: 10rem;
-    margin-left: 13rem;
+    top: 15%;
+    left: 15%;
   }
 
   .amaranthSpa{
@@ -257,8 +257,9 @@
   .candles-image-container{
     width: 12rem;
     position: absolute;
-    margin-top: 38rem;
-    margin-left: 68rem;
+    display: flex;
+    top: 12%;
+    right: 17%;
   }
 
   .candles-spa{
@@ -269,8 +270,8 @@
   .stones-image-container{
     width: 20rem;
     position: absolute;
-    margin-top: 35rem;
-    margin-left: 5rem;
+    bottom: 25%;
+    left: 7%;
     height: 7rem;
     overflow: hidden;
   }
@@ -283,10 +284,10 @@
   .relax-image-container{
     width: 19rem;
     position: absolute;
-    margin-top: 5rem;
-    margin-left: 64rem;
     height: 26rem;
     overflow: hidden;
+    bottom: 10%;
+    right: 6%;
   }
 
   .massage3{
@@ -320,7 +321,7 @@
 
 .p-container {
   position: relative; 
-  width: 100%;
+  width: 100vw;
   margin:0;
   background-color: #EAE5DF;
   height: 90vh;
@@ -329,14 +330,14 @@
 
 .container {
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   box-shadow: 0 1.87rem 3.12rem #dbdbdb;
 }
 
 .container .slide .item{
-  width: 12.5rem;
-  height: 18.75rem;
+  width: 15%;
+  height: 45%;
   position: absolute;
   top: 70%;
   transform: translate(0, -50%);
@@ -353,7 +354,7 @@
     left: 0;
     transform: translate(0, 0);
     border-radius: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
 }
 
@@ -556,6 +557,372 @@ input:focus{
 select:focus{
   outline: none; /* removes blue outline*/
 }
+
+
+
+
+/* ---------  Media Query -------------*/
+
+/* phones */
+@media (min-width: 0px) and (max-width: 600px) {
+
+  .banner-text img{
+    width: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .banner-text p{
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .banner-text h3{
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .vertical-line{
+    height: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-banner .specials-button{
+    padding: 0.7rem 0.5rem;
+  }
+
+  .specials-button img{
+    width: 1.3rem;
+    padding: 0 0.2rem;
+  }
+ 
+
+  .p-div h2{
+    font-size: 0.8rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .content .name{
+    font-size: 1rem;
+  }
+  
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+  }
+  
+  .content button{
+    padding: 0.62rem 1.25rem;
+  
+  }
+
+
+
+  .firstHalf{
+    display: none;
+  }
+
+  .secondHalf{
+    display: none;
+  }
+
+
+  .spa-info{
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .spa-info img{
+    width: 2.3rem;
+  }
+
+  .spa-info h3{
+    font-size: 1.4rem;
+    min-width: 30%;
+    width: 40%;
+    padding-top: 2rem;
+  }
+
+  .spa-info p{
+    width: 70%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    line-height: 1.4rem;
+  }
+
+  .spa-info button{
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .spa-button img{
+    width: 1.2rem;
+    padding: 0 0.2rem;
+  }
+
+
+  .p-div h2{
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .p-container {
+    padding-bottom: 0.5rem;
+  }
+
+  .slide .item:nth-child(1){
+    width: 100vw;
+    height: 100%;
+}
+
+
+  .slide .item:nth-child(2){
+    /* top: 40%; */
+    left: 55%;
+    width: 20%;
+    height: 30%;
+}
+
+.slide .item:nth-child(n + 3){
+  left: calc(63% + 54px);
+  width: 20%;
+  height: 30%;
+  /* top: 40%; */
+}
+
+.item .content{
+  top: 30%;
+  left: 5%;
+}
+
+.content .name{
+  font-size: 1.5rem;
+}
+
+.content .des{
+  margin-top: 0.62rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.content button{
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+}
+
+.button button{
+  padding: 0.2rem 1rem;
+  margin: 0 0.31rem; 
+  font-size: 0.5rem;
+ }
+
+
+ .p-container {
+  height: 50vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+}
+
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+
+}
+
+
+
+
+/* Laptops and above */
+@media (min-width: 769px) {
+  .banner-text h3{
+    font-size: 3.5rem;
+  }
+
+  .banner-text p{
+    font-size: 0.9rem;
+  }
+
+
+  .banner-text img{
+    width: 3rem;
+  }
+
+  .vertical-line{
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-banner .specials-button{
+    padding: 0.7rem 0.5rem;
+  }
+
+  .specials-button img{
+    width: 1.3rem;
+    padding: 0 0.2rem;
+  }
+
+  .item .content{
+    top: 30%;
+    left: 12rem;
+  }
+
+  .p-div h2{
+    font-size: 1.9rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .p-container {
+    padding-bottom: 1rem;
+  }
+
+
+  .slide .item:nth-child(2){
+    left: 60%;
+    width: 20%;
+    height: 40%;
+}
+
+.slide .item:nth-child(n + 3){
+    left: calc(65% + 145px);
+    width: 20%;
+    height: 40%;
+    /* opacity: 0; */
+}
+
+.item .content{
+  top: 30%;
+  left: 5%;
+}
+
+
+.content .name{
+  font-size: 3rem;
+}
+
+.content .des{
+  margin-top: 0.62rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.content button{
+  padding: 0.62rem 1.25rem;
+
+}
+
+
+  /* .flower-line{
+    padding-top: 4rem;
+  } */
+
+  
+
+
+
+  .amaranth-image-container{
+    min-width: 5rem;
+    min-height: 5rem;
+    width: 14rem;
+    height: 14rem;
+  }
+
+  .candles-image-container{
+    width: 12rem;
+  }
+
+  .stones-image-container{
+    width: 15rem;
+    height: 7rem;
+  }
+
+
+  .relax-image-container{
+    width: 19rem;
+    height: 24rem;
+  }
+
+
+  .amaranth-image-container{
+    min-width: 5rem;
+    min-height: 5rem;
+    width: 10rem;
+    height: 10rem;
+    left: 14%;
+    top: 15%;
+  }
+
+  .candles-image-container{
+    width: 12rem;
+    right: 9%;
+    top: 13%;
+  }
+
+  .stones-image-container{
+    width: 15rem;
+    height: 7rem;
+    left: 5%;
+    bottom: 25%;
+  }
+
+
+  .relax-image-container{
+    width: 15rem;
+    height: 18rem;
+    right: 3%;
+    bottom: 20%;
+  }
+
+
+  .spa-info{
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+  }
+
+  .spa-info img{
+    width: 2.3rem;
+  }
+
+  .spa-info h3{
+    font-size: 2.5rem;
+    width: 18%;
+    padding-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .spa-info p{
+    width: 25%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    line-height: 1.4rem;
+  }
+
+  .spa-info button{
+    padding: 1rem 0.8rem;
+  }
+
+ .spa-button{
+    padding: 0;
+    margin: 0;   
+  }
+
+  .spa-button img{
+    width: 1.5rem;
+    padding: 0 0.2rem;
+  }
+}
+
 
 
 

@@ -75,7 +75,7 @@
 
 .pb {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     /* overflow: hidden; */
     background-color: #EAE5DF;
@@ -481,6 +481,12 @@
   height: 3%;
 }
 
+.cost{
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+}
+
 
 /* --------------------- Booking form --------------------------*/
 /* .booking-section{
@@ -566,6 +572,226 @@ select:focus{
 /* phones */
 @media (min-width: 0px) and (max-width: 600px) {
 
+.pb {
+  width: 100vw;
+  height: 80vh;
+}
+
+  .pv{
+    width: 100vw;
+    height: 80vh;
+ }
+
+ .packV{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .pt{
+  top: 50%;
+  left: 50%;
+  width: 100%;
+}
+
+
+.pt img{
+  width: 3rem;
+  padding-bottom: 2rem;
+}
+
+.pt p{
+  padding-bottom: 2rem;
+  text-align: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.pt h3{
+  font-size: 2rem;
+  font-family: kaftan-regular;
+  color: #EAE5DF;
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+
+.therapist{
+  width: 8rem;
+  height: 11rem;
+  bottom: -2%; 
+  left: 50%; 
+}
+
+/* ----------- Couples package ------------*/
+.flower{
+  padding-top: 8rem;
+  width: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.couples-massage-package h2{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.welcome h3{
+  font-size: 0.9rem;
+}
+
+.welcome p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.side-by-side h3{
+  font-size: 0.9rem;
+}
+
+.side-by-side p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.side-by-side ul li{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.footRitual h3{
+  font-size: 0.9rem;
+}
+
+.footRitual p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.relaxationTime h3{ 
+  font-size: 0.9rem;
+}
+
+.relaxationTime p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.addOns h3{
+  font-size: 0.9rem;
+}
+
+.addOns p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.gifts h3{
+  font-size: 0.9rem;
+}
+
+
+.gifts p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+/* ----------- Korean package ------------*/
+
+.korean-package h2{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
+.k-flower{
+  padding-top: 4rem;
+  width: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+
+.korean-massage-package p,
+.korean-massage-package h3
+{
+line-height: 1.3rem;
+}
+
+.K-welcomeRitual h3,
+.Korean-scrub h3,
+.KoreanMassage h3,
+.aromatherapy h3,
+.k-relaxation h3,
+.k-gifts h3,
+.korean-massage-package h3{
+  font-size: 0.9rem;
+}
+
+.K-welcomeRitual p,
+.Korean-scrub p,
+.KoreanMassage p,
+.aromatherapy p,
+.k-relaxation p,
+.k-gifts p,
+.korean-massage-package p,
+.KoreanMassage ul li{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.korean-massage-package .cost{
+  padding-bottom: 2rem;
+}
+
+
+/* Detox package */
+.d-flower{
+  padding-top: 4rem;
+  width: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.detox-package h2{
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.detox-massage-package p,
+.detox-massage-package h3{
+line-height: 1.3rem;
+}
+
+.detox-massage-package h3,
+.detoxRitual h3,
+.bodyscrub h3,
+.detoxWrap h3,
+.detoxMassage h3,
+.detoxHydration h3,
+.detoxPost h3,
+.detoxGifts h3{
+  font-size: 0.9rem;
+}
+
+.detox-massage-package p,
+.detoxRitual p,
+.bodyscrub p,
+.detoxWrap p,
+.detoxMassage p,
+.detoxHydration p,
+.detoxPost p,
+.detoxGifts p{
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+}
+
+.flower-line{
+  padding-top: 4rem;
+}
+
+.booking-section h1{
+  font-size: 2rem;
+}
+
+
 
 }
 
@@ -573,7 +799,192 @@ select:focus{
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 768px) {
+  .pb {
+    width: 100vw;
+    height: 100vh;
+  }
   
+    .pv{
+      width: 100vw;
+      height: 100vh;
+   }
+  
+   .packV{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   .pt{
+    top: 55%;
+    left: 50%;
+    width: 100%;
+  }
+  
+  
+  .pt img{
+    width: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .pt p{
+    padding-bottom: 2.5rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .pt h3{
+    font-size: 2.7rem;
+    font-family: kaftan-regular;
+    color: #EAE5DF;
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
+
+  .therapist{
+    width: 10rem;
+    height: 14rem;
+    bottom: -2%; 
+    left: 50%; 
+  }
+
+  /* ----------- Couples package ------------*/
+.flower{
+  padding-top: 8rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+.couples-massage-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.welcome h3,
+.side-by-side h3,
+.footRitual h3,
+.relaxationTime h3,
+.addOns h3,
+.gifts h3{
+  font-size: 1rem;
+}
+.welcome p,
+.side-by-side p,
+.footRitual p,
+.relaxationTime p,
+.addOns p,
+.gifts p{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.cost{
+  font-size: 1rem;
+}
+
+
+/* ----------- Korean package ------------*/
+
+.korean-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.k-flower{
+  padding-top: 4rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+
+.korean-massage-package p,
+.korean-massage-package h3
+{
+line-height: 1.3rem;
+}
+
+.K-welcomeRitual h3,
+.Korean-scrub h3,
+.KoreanMassage h3,
+.aromatherapy h3,
+.k-relaxation h3,
+.k-gifts h3,
+.korean-massage-package h3{
+  font-size: 1rem;
+}
+
+.K-welcomeRitual p,
+.Korean-scrub p,
+.KoreanMassage p,
+.aromatherapy p,
+.k-relaxation p,
+.k-gifts p,
+.korean-massage-package p,
+.KoreanMassage ul li{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.korean-massage-package .cost{
+  padding-bottom: 2rem;
+}
+
+
+
+/*-------- Detox package --------*/
+.d-flower{
+  padding-top: 4rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+.detox-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.detox-massage-package p,
+.detox-massage-package h3{
+line-height: 1.3rem;
+}
+
+.detox-massage-package h3,
+.detoxRitual h3,
+.bodyscrub h3,
+.detoxWrap h3,
+.detoxMassage h3,
+.detoxHydration h3,
+.detoxPost h3,
+.detoxGifts h3{
+  font-size: 1rem;
+}
+
+.detox-massage-package p,
+.detoxRitual p,
+.bodyscrub p,
+.detoxWrap p,
+.detoxMassage p,
+.detoxHydration p,
+.detoxPost p,
+.detoxGifts p{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.flower-line{
+  padding-top: 4rem;
+}
+
+.booking-section h1{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: 2.5rem;
+  text-align: center;
+}  
  
 }
 
@@ -581,8 +992,191 @@ select:focus{
 
 
 @media (min-width: 769px) and (max-width:1160px) {
+  .pb {
+    width: 100vw;
+    height: 100vh;
+  }
   
+    .pv{
+      width: 100vw;
+      height: 100vh;
+   }
+  
+   .packV{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
 
+   .pt{
+    top: 55%;
+    left: 50%;
+    width: 100%;
+  }
+  
+  
+  .pt img{
+    width: 4rem;
+    padding-bottom: 2rem;
+  }
+  
+  .pt p{
+    padding-bottom: 2.5rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+
+  .pt h3{
+    font-size: 3rem;
+    font-family: kaftan-regular;
+    color: #EAE5DF;
+    font-weight: 300;
+    padding-bottom: 2rem;
+  }
+
+  .therapist{
+    width: 11rem;
+    height: 15rem;
+    bottom: -5%; 
+    left: 50%; 
+  }
+
+  /* ----------- Couples package ------------*/
+.flower{
+  padding-top: 8rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+.couples-massage-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.welcome h3,
+.side-by-side h3,
+.footRitual h3,
+.relaxationTime h3,
+.addOns h3,
+.gifts h3{
+  font-size: 1rem;
+}
+.welcome p,
+.side-by-side p,
+.footRitual p,
+.relaxationTime p,
+.addOns p,
+.gifts p{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.cost{
+  font-size: 1rem;
+}
+
+/* ----------- Korean package ------------*/
+
+.korean-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.k-flower{
+  padding-top: 4rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+
+.korean-massage-package p,
+.korean-massage-package h3
+{
+line-height: 1.3rem;
+}
+
+.K-welcomeRitual h3,
+.Korean-scrub h3,
+.KoreanMassage h3,
+.aromatherapy h3,
+.k-relaxation h3,
+.k-gifts h3,
+.korean-massage-package h3{
+  font-size: 1rem;
+}
+
+.K-welcomeRitual p,
+.Korean-scrub p,
+.KoreanMassage p,
+.aromatherapy p,
+.k-relaxation p,
+.k-gifts p,
+.korean-massage-package p,
+.KoreanMassage ul li{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.korean-massage-package .cost{
+  padding-bottom: 2rem;
+}
+
+
+
+/*-------- Detox package --------*/
+.d-flower{
+  padding-top: 4rem;
+  width: 2.8rem;
+  padding-bottom: 3rem;
+}
+
+.detox-package h2{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.detox-massage-package p,
+.detox-massage-package h3{
+line-height: 1.3rem;
+}
+
+.detox-massage-package h3,
+.detoxRitual h3,
+.bodyscrub h3,
+.detoxWrap h3,
+.detoxMassage h3,
+.detoxHydration h3,
+.detoxPost h3,
+.detoxGifts h3{
+  font-size: 1rem;
+}
+
+.detox-massage-package p,
+.detoxRitual p,
+.bodyscrub p,
+.detoxWrap p,
+.detoxMassage p,
+.detoxHydration p,
+.detoxPost p,
+.detoxGifts p{
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.flower-line{
+  padding-top: 4rem;
+}
+
+.booking-section h1{
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  padding-left: 2.5rem;
+  text-align: center;
+}
 
 }
 

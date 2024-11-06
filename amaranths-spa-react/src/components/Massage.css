@@ -526,3 +526,122 @@
   left: 50%;
   /* transform: translateX(-50%); Center vertically */
 }
+
+
+
+
+
+
+
+
+/*----------------- Media Query ----------------------*/
+
+/* phones */
+@media (min-width: 0px) and (max-width: 600px) {
+  .massageText{
+    top: 40%;
+    left: 50%;
+  }
+
+  .massage-banner{
+    width: 100vw;
+    height: 70vh;
+    padding-bottom: 5rem;
+  }
+
+  /* .massage-banner-image{
+    width: 100vw;
+    height: 100vh;
+  } */
+
+  .massageImage{
+    width: 100vw;
+    height: 70vh;
+  }
+
+  .massageText img{
+    width: 2.5rem;
+    padding-bottom: 2rem;
+ }
+
+ .massageText p{
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+ }
+
+ .massageText h3{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+
+  .massage-therapist{
+    width: 8rem;
+    height: 12rem;
+    bottom: 15%; 
+    left: 50%; 
+  }
+
+  /* --------- History Section -------------- */
+
+  .history-section{
+    padding-top: 12rem;
+    width: 100%;
+  }
+
+  .historyText h2{
+    font-size: 1.2rem;
+    width: 90%;
+    padding: 0 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .historyText .HT{
+    width: 90%;
+    padding:0 0.3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  .historyText p{
+    line-height: 0.9rem;
+    font-size: 0.8rem;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: center;
+    }
+  
+    .HT p{
+      padding-bottom: 1rem;
+    }
+  
+   .historyText{
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+   
+
+
+  
+
+
+  }
+  
+  
+  
+  /* Tablets */
+  @media (min-width: 601px) and (max-width: 768px) {
+    
+  }  
+  
+  
+  
+  /* Laptops and higher */
+  @media (min-width: 769px) and (max-width:1160px) {
+    
+  
+  }

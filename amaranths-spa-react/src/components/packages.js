@@ -327,7 +327,7 @@ export default function Packages() {
                     <p>A small gift such as a detox tea blend or a natural skincare product (e.g., a gentle cleanser or moisturiser) to support ongoing detoxification at home.</p>
                 </div>
 
-                <p className='detox-cost'>Cost: 2 600 Baht </p>
+                <p className='cost'>Cost: 2 600 Baht </p>
             </div>
 
 

@@ -151,7 +151,10 @@ export default function Specials() {
         scrub:1, //1-second delay.
         invalidateOnRefresh:true,
         onEnter: () => {
-            document.querySelector(".Specials-discount-section").parentNode.style.backgroundColor = "#EAE5DF";
+            const section = document.querySelector(".Specials-discount-section");
+            if (section) {
+                section.parentNode.style.backgroundColor = "#EAE5DF";
+            }
         },
     })
 

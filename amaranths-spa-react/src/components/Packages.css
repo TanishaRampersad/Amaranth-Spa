@@ -561,5 +561,31 @@ select:focus{
 
 
 
+/*----------------- Media Query ----------------------*/
+
+/* phones */
+@media (min-width: 0px) and (max-width: 600px) {
+
+
+}
+
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+  
+ 
+}
+
+
+
+
+@media (min-width: 769px) and (max-width:1160px) {
+  
+
+
+}
+
+
 
 

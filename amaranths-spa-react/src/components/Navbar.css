@@ -374,9 +374,8 @@ nav{
 
 
 
-
- @media (min-width: 801px ) and (max-width: 1110px) {
+ @media (min-width: 801px) and (max-width:1125px) {
     .navFirst ul li{
-        font-size: 0.3rem;
+        font-size: 0.1rem;
     }
  }

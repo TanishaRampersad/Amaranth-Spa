@@ -483,7 +483,7 @@
 
 
 /* --------------------- Booking form --------------------------*/
-.booking-section{
+/* .booking-section{
   background-color: #EAE5DF;
   width: 100%;
 }
@@ -508,13 +508,13 @@
 
 .form form{
   display: flex;
-  /* justify-content: space-between; */
+  /* justify-content: space-between; 
   flex-direction: column;
   background-color: #d4d4d4;
  
   padding: 2rem 2rem;
   background-color: #bfbebe8a; 
-  backdrop-filter: blur(8px); /* Adds blur effect for a frosted look */
+  backdrop-filter: blur(8px); /* Adds blur effect for a frosted look 
 }
 
 form label{
@@ -544,11 +544,11 @@ form .submit input{
 }
 
 input:focus{
-  outline: none; /* removes blue outline*/
+  outline: none; /* removes blue outline
 }
 
 select:focus{
-  outline: none; /* removes blue outline*/
+  outline: none; /* removes blue outline
 }
 
 
@@ -556,7 +556,7 @@ select:focus{
   font-family: 'Whyte-regular';
   padding-top: 4rem;
   font-weight: 600;
-}
+} */
 
 
 

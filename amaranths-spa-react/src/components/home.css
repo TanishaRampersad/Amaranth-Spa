@@ -410,6 +410,11 @@
   animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
+.content button:hover{
+  background-color:  #903C02;
+  color: white;
+}
+
 @keyframes animate{
   from{
    opacity: 0;
@@ -495,12 +500,12 @@
   width: 100%;
 }
 
- h1{
+.booking-section h1{
   font-family: 'kaftan-regular', serif;
   font-size: 3rem;
   color: #322018;
   display: flex;
-  padding-left: 8rem;
+  padding-left: 6.6rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -510,7 +515,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  /* padding-bottom: 8rem; */
+  padding-bottom: 8rem;
 }
 
 .form form{
@@ -518,7 +523,6 @@
   /* justify-content: space-between; */
   flex-direction: column;
   background-color: #d4d4d4;
- 
   padding: 2rem 2rem;
   background-color: #bfbebe8a; 
   backdrop-filter: blur(8px); /* Adds blur effect for a frosted look */
@@ -563,6 +567,30 @@ select:focus{
 
 /* ---------  Media Query -------------*/
 
+@media (min-width: 320px) and (max-width: 470px) {
+  .slide .item:nth-child(2){
+    /* top: 40%; */
+    left: 63%;
+    width: 18%;
+    max-width: 16%;
+    height: 35%;
+    max-height: 35%;
+}
+
+  .slide .item:nth-child(n + 3){
+    left: calc(63% + 50px);
+    width: 18%;
+    max-width: 16%;
+    height: 35%;
+    max-height: 35%;
+    /* top: 40%; */
+  }
+}
+
+
+
+
+
 /* phones */
 @media (min-width: 0px) and (max-width: 600px) {
 
@@ -594,29 +622,11 @@ select:focus{
     width: 1.3rem;
     padding: 0 0.2rem;
   }
- 
 
-  .p-div h2{
+  .specials-button{
     font-size: 0.8rem;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
   }
-
-  .content .name{
-    font-size: 1rem;
-  }
-  
-  .content .des{
-    margin-top: 0.62rem;
-    margin-bottom: 1.25rem;
-    font-size: 1.1rem;
-  }
-  
-  .content button{
-    padding: 0.62rem 1.25rem;
-  
-  }
-
+ 
 
 
   .firstHalf{
@@ -680,54 +690,111 @@ select:focus{
 
   .slide .item:nth-child(2){
     /* top: 40%; */
-    left: 55%;
-    width: 20%;
-    height: 30%;
+    left: 63%;
+    min-width: 15%;
+    max-width: 16%;
+    height: 35%;
+    max-height: 35%;
 }
 
-.slide .item:nth-child(n + 3){
-  left: calc(63% + 54px);
-  width: 20%;
-  height: 30%;
-  /* top: 40%; */
-}
+  .slide .item:nth-child(n + 3){
+    left: calc(63% + 100px);
+    min-width: 15%;
+    max-width: 16%;
+    height: 35%;
+    max-height: 35%;
+    /* top: 40%; */
+  }
 
-.item .content{
-  top: 30%;
-  left: 5%;
-}
+  .item .content{
+    top: 30%;
+    left: 5%;
+  }
 
-.content .name{
-  font-size: 1.5rem;
-}
+  .content .name{
+    font-size: 1.5rem;
+  }
 
-.content .des{
-  margin-top: 0.62rem;
-  margin-bottom: 1.25rem;
-  font-size: 1rem;
-}
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
 
-.content button{
-  padding: 0.3rem 1rem;
-  font-size: 0.8rem;
-}
+  .content button{
+    padding: 0.3rem 1rem;
+    font-size: 0.8rem;
+  }
 
-.button button{
-  padding: 0.2rem 1rem;
-  margin: 0 0.31rem; 
-  font-size: 0.5rem;
- }
+  .button button{
+    padding: 0.2rem 1rem;
+    margin: 0 0.31rem; 
+    font-size: 0.5rem;
+  }
 
 
- .p-container {
-  height: 50vh;
-}
+  .p-container {
+    height: 50vh;
+  }
 
-.container {
-  width: 100%;
-  height: 100%;
-}
+  .container {
+    width: 100%;
+    height: 100%;
+  }
 
+  .booking-section h1{
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+  }
+
+
+
+  form label{
+    padding-bottom: 0.5rem;
+    padding-top: 1.1rem;
+    font-size: 0.8rem;
+  }
+
+
+  form input{
+    padding: 0.2rem;
+    border: none;
+  }
+
+  #mySelect{
+    font-size: 0.8rem;
+  }
+
+  #start-date{
+    font-size:  0.8rem;
+  }
+
+  .form{
+    padding-bottom: 4rem;
+  }
+
+  .form form{
+    padding: 1.5rem 1.5rem;
+  }
+
+  .form{
+    width: 75%;
+  }
+
+
+  form .submit{
+    padding-top: 1.5rem;
+  }
+
+  form .submit input{
+    padding: 0.3rem 1rem;
+  }
+
+  .submit input[type="submit"] {
+    font-size: 0.8rem;
+  }
 
 
 
@@ -737,13 +804,336 @@ select:focus{
 
 /* Tablets */
 @media (min-width: 601px) and (max-width: 768px) {
+  .banner-text img{
+    width: 8%;
+    padding-bottom: 2rem;
+  }
+
+  .banner-text p{
+    padding-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  .banner-text h3{
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .vertical-line{
+    height: 4.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-banner .specials-button{
+    padding: 1rem 0.8rem;
+  }
+
+  .specials-button img{
+    width: 1.4rem;
+    padding: 0 0.2rem;
+  }
+
+  .specials-button{
+    font-size: 0.9rem;
+  }
+
+  .spa-info{
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+
+  .spa-info img{
+    width: 2.5rem;
+  }
+
+  .spa-info h3{
+    font-size: 1.8rem;
+    min-width: 30%;
+    width: 40%;
+    padding-top: 2.3rem;
+  }
+
+  .spa-info p{
+    width: 38%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .spa-info button{
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .spa-button img{
+    width: 1.3rem;
+    padding: 0 0.2rem;
+  }
+
+  .content .name{
+    font-size: 2rem;
+  }
+  
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  .content button{
+    padding: 0.5rem 1rem;
+  }
+
+  .amaranth-image-container{
+    width: 20%;
+    height: 13%;
+    left: 10%;
+    top: 15%;
+  }
+
+  .candles-image-container{
+    width: 23%;
+    height: 23%;
+    right: 8%;
+    top: 10%;
+  }
+
+  .stones-image-container{
+    width: 23%;
+    height: 12%;
+    left: 3%;
+    bottom: 30%;
+  }
+
+  .relax-image-container{
+    width: 22%;
+    height: 25%;
+    right: 4%;
+    bottom: 22%;
+  }
+
+
+  .p-div h2{
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .p-container {
+    padding-bottom: 0;
+  }
+
+
+  .slide .item:nth-child(1){
+    width: 100vw;
+    height: 100%;
+}
+
+  .slide .item:nth-child(2){
+    /* top: 40%; */
+    left: 55%;
+    width: 18%;
+    max-width: 30%;
+    height: 30%;
+  }
+
+  .slide .item:nth-child(n + 3){
+    left: calc(65% + 90px);
+    width: 18%;
+    max-width: 30%;
+    height: 30%;
+    /* top: 40%; */
+  }
+
+  .item .content{
+    top: 25%;
+    left: 5%;
+  }
+
+  .content .name{
+    font-size: 2rem;
+  }
+
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .content button{
+    padding: 0.3rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .button button{
+    padding: 0.3rem 1.3rem;
+    margin: 0 0.31rem; 
+    font-size: 0.5rem;
+  }
+ 
+}
+
+@media (min-width: 769px) and (max-width:1160px) {
+  .banner-text img{
+    width: 8%;
+    padding-bottom: 3rem;
+  }
+
+  .banner-text p{
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .banner-text h3{
+    font-size: 4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .vertical-line{
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-banner .specials-button{
+    padding: 1rem 0.8rem;
+  }
+
+  .specials-button img{
+    width: 1.4rem;
+    padding: 0 0.2rem;
+  }
+
+  .specials-button{
+    font-size: 0.9rem;
+  }
+
+  .spa-info{
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+  }
+
+  .spa-info img{
+    width: 2.9rem;
+  }
+
+  .spa-info h3{
+    font-size: 2rem;
+    min-width: 30%;
+    width: 40%;
+    padding-top: 2.3rem;
+  }
+
+  .spa-info p{
+    width: 38%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    line-height: 1.4rem;
+    font-size: 1rem;
+  }
+
+  .spa-info button{
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .spa-button img{
+    width: 1.3rem;
+    padding: 0 0.2rem;
+  }
+
+
+
+
+  .amaranth-image-container{
+    width: 22%;
+    height: 18%;
+    left: 10%;
+    top: 15%;
+  }
+
+  .candles-image-container{
+    width: 23%;
+    height: 23%;
+    right: 8%;
+    top: 10%;
+  }
+
+  .stones-image-container{
+    width: 23%;
+    height: 12%;
+    left: 3%;
+    bottom: 30%;
+  }
+
+  .relax-image-container{
+    width: 20%;
+    height: 35%;
+    right: 4%;
+    bottom: 18%;
+  }
+
+
+  .p-div h2{
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .content .name{
+    font-size: 2.5rem;
+  }
+  
+  .content .des{
+    margin-top: 0.62rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  .content button{
+    padding: 0.5rem 1rem;
+  }
+
+  .item .content{
+    top: 25%;
+    left: 5%;
+  }
+
+  .button button{
+    padding: 0.3rem 1.3rem;
+    margin: 0 0.31rem; 
+    font-size: 0.5rem;
+  }
+
+
+  .slide .item:nth-child(2){
+    left: 60%;
+    width: 10rem;
+    max-width: 20%;
+    height: 35%;
+  }
+
+  .slide .item:nth-child(n + 3){
+    left: calc(70% + 100px);
+    width: 10rem;
+    max-width: 20%;
+    height: 35%;
+    /* top: 40%; */
+  }
+
+  .booking-section h1{
+    padding-left: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    font-size: 2.9rem;
+  }
+
 
 }
 
 
 
-
-/* Laptops and above */
+/* Laptops and above
 @media (min-width: 769px) {
   .banner-text h3{
     font-size: 3.5rem;
@@ -798,7 +1188,7 @@ select:focus{
     left: calc(65% + 145px);
     width: 20%;
     height: 40%;
-    /* opacity: 0; */
+    /* opacity: 0; 
 }
 
 .item .content{
@@ -825,11 +1215,9 @@ select:focus{
 
   /* .flower-line{
     padding-top: 4rem;
-  } */
+  } 
 
   
-
-
 
   .amaranth-image-container{
     min-width: 5rem;
@@ -857,31 +1245,31 @@ select:focus{
   .amaranth-image-container{
     min-width: 5rem;
     min-height: 5rem;
-    width: 10rem;
-    height: 10rem;
-    left: 14%;
+    width: 12rem;
+    height: 12rem;
+    left: 18%;
     top: 15%;
   }
 
   .candles-image-container{
     width: 12rem;
-    right: 9%;
+    right: 14%;
     top: 13%;
   }
 
   .stones-image-container{
-    width: 15rem;
+    width: 18rem;
     height: 7rem;
     left: 5%;
-    bottom: 25%;
+    bottom: 22%;
   }
 
 
   .relax-image-container{
     width: 15rem;
     height: 18rem;
-    right: 3%;
-    bottom: 20%;
+    right: 8%;
+    bottom: 12%;
   }
 
 
@@ -921,7 +1309,7 @@ select:focus{
     width: 1.5rem;
     padding: 0 0.2rem;
   }
-}
+} */
 
 
 

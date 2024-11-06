@@ -157,7 +157,6 @@ footer {
  }
 
  .hoursList{
-   padding-right: 15rem;
    width: 100%;
    margin-left: 0;
  }
@@ -273,20 +272,6 @@ footer {
  }
 
 
-/* .footer-image::before{
-    width: 100vw;
-    height: 60%;
-    content: "";
-    background-image: url('./images/candles\ 2.png');
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1; /* Place it behind other content 
-} */
-
-
 .footer-image button{
     position: absolute;
     z-index: 1;
@@ -316,3 +301,202 @@ footer {
 
 
 
+/* ---------- Media Query ----------- */
+
+/* phones */
+@media (min-width: 0px) and (max-width: 600px) {
+   .menu-footer p{
+    font-size: 0.9rem;
+   }
+
+   .hours-footer p{
+      font-size: 0.9rem;
+   }
+
+   .contact-footer p{
+      font-size: 0.9rem;
+   }
+
+
+   .menu-footer ul li .links-footer{
+      font-size: 1.2rem;
+   }
+
+   .hours-footer ul li{
+     font-size: 0.8rem;
+     padding-bottom: 0;
+     margin-bottom: 0;
+    }
+
+    .hours-footer ul li:last-of-type{
+      padding-bottom: 1rem;
+    }
+
+    .hours-footer ul a{
+      font-size: 0.8rem;
+    }
+
+    .contact-footer p{
+      font-size: 0.8rem;
+   }
+
+   .contact-footer{
+      padding-bottom: 2rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+   }
+
+
+   .reviews{
+      padding: 1.5rem 0;
+  }
+
+  .review-stars{
+   padding-left: 1rem;
+   }
+
+   .reviews img{
+      width: 0.6em;
+   }
+
+   .reviews p .link{
+      padding-left: 0.2rem;
+      font-size: 0.6em;
+   }
+
+   .reviews p .link strong{
+      font-size: 0.95em;
+   }
+
+   .reviews{
+   display: block;
+   align-items: center;
+   text-align: center;
+   margin: 0 auto;
+   }
+
+   .review-stars{
+      padding-left: 0;
+   }
+
+   .socials ul li .social-link{
+      padding-right: 2rem;
+      font-size: 0.6em;
+   }
+
+   .socials ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   .copyright p{
+      margin: 0 auto;
+      font-size: 0.6em;
+   }
+
+   .copyright p img{
+      width: 2%;
+      padding-right: 0.3rem;
+   }
+
+}
+ 
+ 
+ 
+ /* Tablets */
+ @media (min-width: 601px) and (max-width: 768px) {
+   .menu-footer ul li .links-footer{
+      font-size: 1.6rem;
+   }
+
+   .hours-footer ul li{
+      font-size: 0.9rem;
+      padding-bottom: 0;
+      margin-bottom: 0;
+     }
+
+     .hours-footer ul li:last-of-type{
+      padding-bottom: 1.5rem;
+    }
+
+    .hours-footer ul a{
+      font-size: 0.9rem;
+    }
+
+    .contact-footer p{
+      font-size: 0.9rem;
+   }
+
+    .contact-footer{
+      padding-bottom: 1.5rem;
+   }
+
+
+   
+   .reviews img{
+      width: 0.8em;
+   }
+
+   .reviews p .link{
+      padding-left: 0.2rem;
+      font-size: 0.8em;
+   }
+
+   .reviews p .link strong{
+      font-size: 0.95em;
+   }
+
+   .reviews{
+      display: block;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+   }
+
+   .review-stars{
+      padding-left: 0;
+   }
+
+   .socials ul li .social-link{
+      padding-right: 2rem;
+      font-size: 0.8em;
+   }
+
+   .socials ul{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+   }
+
+   .copyright p{
+      /* padding-left: 1rem; */
+      margin: 0 auto;
+      font-size: 0.8em;
+   }
+
+   .copyright p img{
+      width: 2%;
+      padding-right: 0.3rem;
+   }
+
+   
+ }
+ 
+ 
+ 
+ 
+ /* Laptops and above */
+ /* @media (min-width: 769px) {
+  
+ }
+  */
+ 
+ 
+ 
+ 
+ 
+ 
+ 

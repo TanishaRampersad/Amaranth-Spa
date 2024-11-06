@@ -79,7 +79,7 @@
     /* overflow: hidden; */
 }
 .specialsImage{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     z-index: 1;
     object-fit: cover;
@@ -450,13 +450,14 @@
 
 
   /* --------------------- Horizontal line -------------------------*/
-.flower-line{
+.f-line{
     display: flex;
     width: 100%;
     height: 100%;
     padding-top: 8rem;
     justify-content:space-between;
     align-items: center;
+    background-color: #EAE5DF;
   }
   
   .horizontal-line1{
@@ -471,7 +472,7 @@
     background-color:  #3d3d3d;
   }
   
-  .flower-line img{
+  .f-line img{
     width: 3%;
     height: 3%;
   }
@@ -634,3 +635,690 @@
   }
   
  */
+
+
+
+
+/* -------------- Media Query -------------- */
+
+ /* phones */
+@media (min-width: 0px) and (max-width: 600px) {
+
+
+.specialsText{
+  top: 70%;
+  left: 50%;
+  width: 60%; 
+}
+
+.specialsText img{
+  width: 3rem;
+  padding-bottom: 2rem;
+}
+
+.specialsText p{
+    padding-bottom: 2rem;
+}
+
+.specialsText h3{
+    font-size: 2.5rem;
+    font-family: kaftan-regular;
+    color: #EAE5DF;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+.specials-container{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.monthly-specials h2{
+  font-size: 1.6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.winterSpecials{
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.winterText{
+  width: 90%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.winterSpecials .WS{
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.line-height p{
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+}
+
+.winter-valid{
+  padding-top: 1rem;
+}
+
+
+.holiday-pampering{
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.holidayText{
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.holidayText p{
+  padding-bottom: 1rem;
+}
+
+.holidayText .HP{
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.holiday-valid{
+  padding-bottom: 0;
+}
+
+
+.sweetheart-special{
+  width: 100%;
+  padding: 2rem;
+}
+
+.sweetheartText{
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.sweetheartText p{
+  padding-bottom: 1rem;
+}
+
+.sweetheartText .SS{
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.sweeheartLine p{
+  line-height: 1.5rem;
+}
+
+.sweetheart-valid{
+  padding-bottom: 0;
+}
+
+.call{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.call a{
+  padding-left: 0.3rem; 
+  padding-right: 0.3rem; 
+  font-size: 0.8rem;
+}
+
+/* -------------- Specials section 2 ----------------*/
+
+.Specials-discount-section h2{
+  font-size: 1.6rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+
+.mySlides {
+  height: 50vh;
+  overflow: hidden; 
+  overflow-x: hidden;
+  background-color: #EAE5DF;
+}
+
+.mySlides > div {
+  min-width: 100vw; 
+  flex-shrink: 0;
+}
+
+.clientHeading{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.clientText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.clientText p{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+.valid{
+  font-weight:bold;
+}
+
+
+.loyltyHeading{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.loyaltyText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.loyaltyText p{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+
+}
+
+.birthdayHeading{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.birthdayText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.birthdayText p{
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.slideShow-container{
+  position: relative;
+  /* height: 100%; */
+}
+
+.f-line{
+  padding-top: 5rem;
+}
+
+.f-line img{
+  width: 3%;
+  height: 3%;
+}
+
+}
+
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+
+  .specialsText{
+    top: 70%;
+    left: 50%;
+    width: 90%; 
+  }
+  
+  .specialsText img{
+    width: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .specialsText p{
+      padding-bottom: 2rem;
+  }
+
+  .specialsText h3{
+    font-size: 3rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+
+  .specials-container{
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .monthly-specials h2{
+    font-size: 1.8rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .winterSpecials{
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .winterText{
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .winterSpecials .WS{
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .line-height p{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  
+  .winter-valid{
+    padding-top: 1rem;
+  }
+
+  .holiday-pampering{
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .holidayText{
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  
+  .holidayText p{
+    padding-bottom: 0.9rem;
+  }
+  
+  .holidayText .HP{
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .holiday-valid{
+    padding-bottom: 0;
+  }
+
+  .sweetheart-special{
+    width: 100%;
+    padding: 2rem;
+  }
+  
+  .sweetheartText{
+    width: 90%;
+    padding-top: 2rem;
+    padding-bottom: 0;
+  }
+  
+  .sweetheartText p{
+    padding-bottom: 1rem;
+  }
+  
+  .sweetheartText .SS{
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+  
+  .sweeheartLine p{
+    line-height: 1rem;
+  }
+  
+  .sweetheart-valid{
+    padding-bottom: 0;
+  }
+
+  .call{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  
+  .call a{
+    padding-left: 0.3rem; 
+    padding-right: 0.3rem; 
+    font-size: 0.9rem;
+  }
+
+  /* -------------- Specials section 2 ----------------*/
+
+.Specials-discount-section h2{
+  font-size: 1.8rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.mySlides {
+  height: 70vh;
+  /* overflow: hidden;  */
+  overflow-x: hidden;
+  background-color: #EAE5DF;
+}
+
+.mySlides > div {
+  min-width: 100vw; 
+  flex-shrink: 0;
+}
+
+.clientHeading{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.clientText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.clientText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+.valid{
+  font-weight:bold;
+}
+
+.loyltyHeading{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.loyaltyText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.loyaltyText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.birthdayHeading{
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.birthdayText{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.birthdayText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.f-line{
+  padding-top: 4rem;
+}
+
+.f-line img{
+  width: 3%;
+  height: 3%;
+}
+
+}
+
+
+@media (min-width: 769px) and (max-width:1160px) {
+  .specialsText{
+    top: 70%;
+    left: 50%;
+    width: 90%; 
+  }
+  
+  .specialsText img{
+    width: 3.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .specialsText p{
+      padding-bottom: 2rem;
+  }
+
+  .specialsText h3{
+    font-size: 3.5rem;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+.specials-container{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.monthly-specials h2{
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.winterSpecials{
+  width: 90%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.winterText{
+  width: 90%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.winterSpecials .WS{
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.line-height p{
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+
+.winter-valid{
+  padding-top: 1rem;
+}
+
+.holiday-pampering{
+  width: 90%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  margin: 2rem auto;
+}
+
+.holidayText{
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.holidayText p{
+  padding-bottom: 0.9rem;
+}
+
+.holidayText .HP{
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.holiday-valid{
+  padding-bottom: 0;
+}
+
+
+.sweetheart-special{
+  width: 90%;
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+.sweetheartText{
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+.sweetheartText p{
+  padding-bottom: 0.9rem;
+}
+
+.sweetheartText .SS{
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.sweeheartLine p{
+  line-height: 1.5rem;
+}
+
+.sweetheart-valid{
+  padding-bottom: 0;
+}
+
+.call{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.call a{
+  padding-left: 0.3rem; 
+  padding-right: 0.3rem; 
+  font-size: 1rem;
+}
+
+/* -------------- Specials section 2 ----------------*/
+
+.Specials-discount-section h2{
+  font-size: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+
+.mySlides {
+  height: 70vh;
+  /* overflow: hidden;  */
+  overflow-x: hidden;
+  background-color: #EAE5DF;
+}
+
+.mySlides > div {
+  min-width: 100vw; 
+  flex-shrink: 0;
+}
+
+.clientHeading{
+  font-size: 1.9rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.clientText{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.clientText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+}
+
+.valid{
+  font-weight:bold;
+}
+
+.loyltyHeading{
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.loyaltyText{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.loyaltyText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+
+.birthdayHeading{
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100vw;
+}
+
+.birthdayText{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.birthdayText p{
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.f-line{
+  padding-top: 4rem;
+}
+
+
+
+}
+
+/* Laptops and above */
+/* @media (min-width: 769px) {
+ 
+}
+ */
+
+
+
+
+
+

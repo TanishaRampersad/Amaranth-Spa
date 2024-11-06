@@ -150,6 +150,9 @@ export default function Specials() {
         animation:tween,
         scrub:1, //1-second delay.
         invalidateOnRefresh:true,
+        onEnter: () => {
+            document.querySelector(".Specials-discount-section").parentNode.style.backgroundColor = "#EAE5DF";
+        },
     })
 
  
@@ -201,7 +204,7 @@ export default function Specials() {
                     <div className='sweetheart-special'>
                         <div className='sweetheartText'>
                             <p className='SS'>Sweetheart Special (Couples Massage)</p>
-                            <div className='line-height'>
+                            <div className='line-height sweeheartLine'>
                                 <p>Book a couples massage and receive 20% off and a complimentary bottle of champagne.</p>
                                 <p>Free chocolate truffles for each couple</p>
                                 <p className='sweetheart-valid'>Valid for the entire month of February</p>
@@ -225,13 +228,15 @@ export default function Specials() {
                         <div className='clientText'>
                             <h3 className='clientHeading'>First Time Client Discount</h3>
                             <p>Offer: 20% off the first service.</p>
-                            <p>Valid: Ongoing for new customers.</p>
+                            <p className='valid'>Valid: Ongoing for new customers.</p>
                         </div>
                        
                    
                         <div className='loyaltyText'>
                             <h3 className='loyltyHeading'>Loyalty Program</h3>
-                            <p>Offer: Receive a free 30-minute massage or facial after 5 paid visits.</p>
+                            <div className='loyaltyC'>
+                                <p>Offer: Receive a free 30-minute massage or facial after 5 paid visits.</p>
+                            </div>
                         </div>
                     
                     
@@ -251,7 +256,7 @@ export default function Specials() {
                 {/* <p><Link className='subscribe'>Subscribe</Link> to our email to get Special Discounts</p> */}
             </div>
 
-            <div className='flower-line'>
+            <div className='f-line'>
                 <div className='horizontal-line1'></div>
                 <img src={lotus} loading="lazy" alt="lotus"/>
                 <div className='horizontal-line2'></div>

@@ -149,3 +149,368 @@
 
 
 
+
+
+
+/* ---------  Media Query -------------*/
+
+@media (min-width: 320px) and (max-width: 470px) {
+    * {
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: none;
+    }
+
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 0.5rem; 
+    }
+
+    .secOne{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 90%;
+        padding-top: 5rem;
+    }
+
+    
+    .C h1{
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+    }
+
+    .CP{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .C{
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    
+    .C button{
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .C p{
+        line-height: 1.3rem;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .open{
+        padding-bottom: 3rem;
+    }
+    
+    .C-details{
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .C-details p{
+        line-height: 2rem;
+        font-size: 0.9rem;
+    }
+
+    .C-details p strong{
+        line-height: 2rem;
+        font-size: 0.9rem;
+    }
+    
+    
+    .cPic img{
+        width: 55%;
+        height: 50%;
+        /* display: flex;; */
+        object-fit: cover;
+        justify-content: flex-end;
+    }
+    
+    .cPic{
+        width: 100%;
+        height: 100%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+    }
+  }
+  
+  
+  
+  
+  
+  /* phones */
+  @media (min-width: 470px) and (max-width: 600px) {
+
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 0.5rem; 
+    }
+
+    .secOne{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 90%;
+        padding-top: 5rem;
+    }
+
+    
+    .C h1{
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+
+    .CP{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .C{
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    
+    .C button{
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .C p{
+        line-height: 1.3rem;
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .open{
+        padding-bottom: 3rem;
+    }
+    
+    .C-details{
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .C-details p{
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+
+    .C-details p strong{
+        line-height: 2rem;
+        font-size: 1rem;
+    }
+    
+    
+    .cPic img{
+        width: 50%;
+        height: 40%;
+    }
+    
+    .cPic{
+        width: 100%;
+        height: 100%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+  }
+  
+  
+  
+  /* Tablets */
+  @media (min-width: 601px) and (max-width: 768px) {
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        min-height: 100%;
+        width: 100%;
+        padding: 0 0.5rem; 
+    }
+
+    .secOne{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        width: 90%;
+        padding-top: 5rem;
+    }
+
+    
+    .C h1{
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+
+    .CP{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .C{
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    
+    .C button{
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .C p{
+        line-height: 1.3rem;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    
+    .open{
+        padding-bottom: 3rem;
+    }
+    
+    .C-details{
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .C-details p{
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .C-details p strong{
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    
+    .cPic img{
+        width: 35%;
+        height: 35%;
+    }
+    
+    .cPic{
+        width: 100%;
+        height: 100%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width:1160px) {
+    .contact-section{
+        display: flex;
+        justify-content:center;
+        min-height: 100%;
+        width: 100%;
+        padding: 0 0.5rem; 
+        border: 2px solid green;
+    }
+
+    .secOne{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding-top: 5rem;
+        padding-left: 3rem;
+    }
+
+    
+    .C h1{
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-right: 0;
+        font-size: 1.5rem;
+    }
+
+    .CP{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .C{
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: 100%;
+    }
+    
+    .C button{
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .C p{
+        line-height: 1.3rem;
+        width: 95%;
+        font-size: 1.1rem;
+    }
+    
+    .open{
+        padding-bottom: 3rem;
+    }
+    
+    .C-details{
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    .C-details p{
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .C-details p strong{
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+    
+    
+    .cPic img{
+        width: 15rem;
+        height: 25rem;
+    }
+    
+    .cPic{
+        width: 50%;
+        height: 100%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        transform: translateY(15%);
+    }
+  
+  }

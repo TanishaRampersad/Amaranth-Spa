@@ -106,7 +106,7 @@ export default function Contact() {
             </div>
 
             <div className='cPic'>
-                <img src={pic} loading="lazy" alt="massage"/>
+                <img src={pic} alt="massage"/>
             </div>
         </div>
 

@@ -238,21 +238,18 @@ export default function Massage() {
 
 
             <div className='image-section'>
-                <div className='image1'>
+                <div className='image1 I'>
                     <div className="background-image1">
-                        <div className="overlay"></div>
                     </div>
                 </div>
 
-                <div className='image2'>
+                <div className='image2 I'>
                     <div className="background-image2">
-                        <div className="overlay"></div>
                     </div>
                 </div>
 
-                <div className='image3'>
+                <div className='image3 I'>
                     <div className="background-image3">
-                        <div className="overlay"></div>
                     </div>
                 </div>
             </div>

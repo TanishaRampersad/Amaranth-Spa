@@ -290,7 +290,7 @@ window.scrollTo(0, 0); // Scrolls to the top on load
                 </Link>
             </div>
 
-            <div class="video-banner">
+            <div className="video-banner">
               <video className='banner-video' autoPlay muted loop>
                   <source className="bannerV" src={bannerVideo} type="video/mp4" />
                   Your browser does not support the video tag.

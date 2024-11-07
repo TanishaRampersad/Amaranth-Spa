@@ -207,7 +207,23 @@ nav{
         visibility: visible;
     }
 
- }
+    /* .navResponsive{
+        visibility: hidden;
+        width: 100vw;
+        background-color: #EAE5DF;
+    }
+
+    .navResponsive ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navResponsive ul li{
+        font-size: 0.8rem;
+    } */
+}
 
 
  

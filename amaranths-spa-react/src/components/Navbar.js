@@ -57,15 +57,6 @@ export default function Navbar() {
     //     });
     //   })
 
-    let hamburger = document.querySelector(".menu");
-    let navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", function () {
-        hamburger.classList.toggle("active")
-        navMenu.classList.toggle("active")
-    });
-
-
 
 
     let navLink = document.querySelectorAll('#navigationLink');
@@ -101,7 +92,7 @@ export default function Navbar() {
     return(
       <>
         <nav>
-          <div className='navFirst'>
+          <div className='navFirst navResponsive'>
             <ul>
               {/* <div className='hamburger-menu'> */}
                 <img className="menu" src={hamburger} alt="hamburger menu"></img>

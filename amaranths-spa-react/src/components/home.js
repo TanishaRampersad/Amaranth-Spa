@@ -349,7 +349,7 @@ window.scrollTo(0, 0); // Scrolls to the top on load
               {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${couplesMassage})`, backgroundSize:'cover', backgroundPosition: 'center', position: 'absolute' }}>
                       <div className="content">
-                          <div className="name">Couples Massage</div>
+                          <div className="name">Couples Massage Package</div>
                           <div className="des">Welcome ritual, side-by-side massage, foot ritual and post massage relaxation</div>
                           <Link className="see-more" smooth to="/packages#top">
                             <button>See More</button>
@@ -361,7 +361,7 @@ window.scrollTo(0, 0); // Scrolls to the top on load
               {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${korean})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
-                        <div className="name">Korean Massage</div>
+                        <div className="name">Signature Korean Massage Package</div>
                         <div className="des">Welcome ritual, Korean body scrub, signature Korean massage, aromatherapy treatment and post massage relaxation</div>
                         <Link className="see-more" smooth to="/packages#top">
                           <button>See More</button>
@@ -373,7 +373,7 @@ window.scrollTo(0, 0); // Scrolls to the top on load
               {/* <Link href="#"><span data-cursor-text="View"> */}
                 <div className="item" style={{ backgroundImage: `url(${detox})`, backgroundSize:'cover', backgroundPosition: 'center' }}>
                     <div className="content">
-                        <div className="name">Detox Massage</div>
+                        <div className="name">Detox Massage Package</div>
                         <div className="des">Welcome ritual, body scrub, detoxifying body wrap, detox massage and post-treatment relaxation</div>
                         <Link className="see-more" smooth to="/packages#top">
                           <button>See More</button>
